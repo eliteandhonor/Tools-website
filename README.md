@@ -34,3 +34,4 @@ No build step is required. The files are plain HTML, CSS and JS.
 | UUID Generator | UUID Generator - Create Unique Identifiers | UUID Generator makes version 4 IDs for coding and database tasks. |
 | JSON Formatter | JSON Formatter - Beautify JSON Data | JSON Formatter cleans and indents raw JSON text for easy reading. |
 | CSV to JSON Converter | CSV to JSON Converter - Transform Data Easily | CSV to JSON Converter changes comma-separated values into structured JSON. |
+| Circle Area Calculator | Circle Area Calculator - Find Disk Size Fast | Circle Area Calculator finds the area of a circle instantly from any radius or diameter. |
