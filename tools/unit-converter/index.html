@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit Converter - Convert Units Easily</title>
+<meta name="description" content="Unit Converter helps you switch between metric and imperial measurements instantly. Try this online conversion tool for length and weight." />
+<meta property="og:title" content="Unit Converter"/>
+<meta property="og:description" content="Quickly convert metric and imperial units"/>
+<link rel="canonical" href="https://example.com/tools/unit-converter/" />
+<link rel="stylesheet" href="../../style.min.css">
+<link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script defer src="../../app.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Unit Converter","operatingSystem":"Any","applicationCategory":"Converter","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I change units?","acceptedAnswer":{"@type":"Answer","text":"Choose the unit types from the dropdowns, enter a value, and the result updates automatically."}},{"@type":"Question","name":"Is there a cost?","acceptedAnswer":{"@type":"Answer","text":"No, the Unit Converter is completely free to use."}},{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"After first load, all files are cached so it works offline."}},{"@type":"Question","name":"What units are supported?","acceptedAnswer":{"@type":"Answer","text":"It currently handles common length and weight units like meters, feet, kilograms, and pounds."}},{"@type":"Question","name":"Can I use it on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes, the layout is responsive for phones and tablets."}}]}</script>
+</head>
+<body>
+<header><a href="../../index.html">Home</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">🔄</span> Unit Converter</h1></header>
+<main>
+<p>The <strong>Unit Converter</strong> provides a simple way to switch between different measurement systems. Whether you need to turn meters into feet or kilograms into pounds, this tool makes it straightforward. Select the type of conversion, enter your value, and see the result appear instantly. The interface is uncluttered so you can focus on the numbers that matter. This <em>online unit converter</em> works without signups and caches its scripts on your first visit, letting you continue even when you&rsquo;re offline. For more specialized calculators, check out our <a href="../basic-calculator/">Basic Calculator</a>, <a href="../scientific-calculator/">Scientific Calculator</a>, and <a href="../graphing-calculator/">Graphing Calculator</a>. Try the Unit Converter now!</p>
+<label for="uc-type">Type</label>
+<select id="uc-type"><option value="len">Length</option><option value="wt">Weight</option></select>
+<label for="uc-input">Value</label>
+<input id="uc-input" type="number" value="1">
+<select id="uc-from"></select>
+<select id="uc-to"></select>
+<p id="uc-result" aria-live="polite"></p>
+<section id="faq">
+<h2>FAQ</h2>
+<dl>
+<dt>How accurate is the conversion?</dt><dd>The tool uses standard conversion factors to provide reliable results for everyday calculations.</dd>
+<dt>Can I convert temperatures?</dt><dd>Not yet, but upcoming updates will include temperature and volume units.</dd>
+<dt>Does it save my history?</dt><dd>No history is saved, keeping your usage private.</dd>
+<dt>Is there an app version?</dt><dd>This web version works like an app once cached in your browser.</dd>
+<dt>Who can benefit from this tool?</dt><dd>Students, travelers, and DIY enthusiasts find it handy for quick conversions.</dd>
+</dl>
+</section>
+</main>
+<footer><a href="../../index.html">Home</a></footer>
+<script>
+const units={len:{m:1,ft:0.3048},wt:{kg:1,lb:0.453592}};
+const labels={len:{m:"Meters",ft:"Feet"},wt:{kg:"Kilograms",lb:"Pounds"}};
+const typeSel=document.getElementById('uc-type');
+const fromSel=document.getElementById('uc-from');
+const toSel=document.getElementById('uc-to');
+const input=document.getElementById('uc-input');
+function fillOptions(){const t=typeSel.value;fromSel.innerHTML='';toSel.innerHTML='';Object.keys(units[t]).forEach(u=>{const opt=document.createElement('option');opt.value=u;opt.textContent=labels[t][u];fromSel.appendChild(opt.cloneNode(true));toSel.appendChild(opt);});calc();}
+function calc(){const t=typeSel.value;const from=fromSel.value;const to=toSel.value;const val=parseFloat(input.value)||0;const res=val*units[t][from]/units[t][to];document.getElementById('uc-result').textContent=res.toFixed(4);}
+typeSel.addEventListener('change',fillOptions);fromSel.addEventListener('change',calc);toSel.addEventListener('change',calc);input.addEventListener('input',calc);fillOptions();
+</script>
+</body>
+</html>
