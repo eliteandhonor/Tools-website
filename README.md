@@ -15,3 +15,11 @@ No build step is required. The files are plain HTML, CSS and JS.
 
 | Graphing Calculator | Graphing Calculator - Plot Mathematical Functions | Graphing Calculator plots mathematical functions in real time. Visualize equations with this online graphing tool. |
 | Unit Converter | Unit Converter - Convert Units Easily | Unit Converter helps you switch between metric and imperial measurements instantly. |
+
+| Tip Calculator | Tip Calculator - Split Restaurant Bills Easily | Tip Calculator computes service gratuity and splits bills for dining out. |
+| Percentage Calculator | Percentage Calculator - Find Percent Values Quickly | Percentage Calculator computes percent amounts and changes instantly. |
+| Discount Calculator | Discount Calculator - Save Money on Purchases | Discount Calculator quickly shows the sale price and savings from any discount. |
+| Temperature Converter | Temperature Converter - Switch Celsius and Fahrenheit | Temperature Converter converts values between Celsius and Fahrenheit instantly. |
+| Age Calculator | Age Calculator - Find Your Exact Age | Age Calculator instantly computes your exact age from your birthday. |
+=======
+main
