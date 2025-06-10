@@ -1,1 +1,9 @@
+
+body{background:#121212;color:#e0e0e0}
+header,footer{background:#1e1e1e;box-shadow:0 2px 4px rgba(0,0,0,.6)}
+nav a{color:#80cfff}
+.tool-card{background:#1e1e1e;border:1px solid #333;box-shadow:0 1px 3px rgba(0,0,0,.6)}
+#search input{background:#1e1e1e;border:1px solid #555;color:#e0e0e0}
+=======
 body{background:#121212;color:#e0e0e0}header,footer{background:#1e1e1e}
+

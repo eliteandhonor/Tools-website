@@ -7,6 +7,8 @@
   <url><loc>https://example.com/tools/random-number-generator/</loc></url>
   <url><loc>https://example.com/tools/graphing-calculator/</loc></url>
   <url><loc>https://example.com/tools/unit-converter/</loc></url>
+
+=======
   <url><loc>https://example.com/tools/bmi-calculator/</loc></url>
 
   <url><loc>https://example.com/tools/temperature-converter/</loc></url>
@@ -14,6 +16,12 @@
   <url><loc>https://example.com/tools/percentage-calculator/</loc></url>
   <url><loc>https://example.com/tools/discount-calculator/</loc></url>
   <url><loc>https://example.com/tools/age-calculator/</loc></url>
+
+  <url><loc>https://example.com/tools/bmi-calculator/</loc></url>
+  <url><loc>https://example.com/tools/date-difference-calculator/</loc></url>
+  <url><loc>https://example.com/tools/fraction-calculator/</loc></url>
 =======
+=======
+
 
 </urlset>
