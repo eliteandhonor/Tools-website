@@ -15,6 +15,7 @@ No build step is required. The files are plain HTML, CSS and JS.
 
 | Graphing Calculator | Graphing Calculator - Plot Mathematical Functions | Graphing Calculator plots mathematical functions in real time. Visualize equations with this online graphing tool. |
 | Unit Converter | Unit Converter - Convert Units Easily | Unit Converter helps you switch between metric and imperial measurements instantly. |
+| BMI Calculator | BMI Calculator - Check Body Mass Index Fast | BMI Calculator quickly checks your body mass index to see if you're in a healthy range. |
 
 | Tip Calculator | Tip Calculator - Split Restaurant Bills Easily | Tip Calculator computes service gratuity and splits bills for dining out. |
 | Percentage Calculator | Percentage Calculator - Find Percent Values Quickly | Percentage Calculator computes percent amounts and changes instantly. |
