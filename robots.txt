@@ -1,2 +1,14 @@
 User-agent: *
 Allow: /
+=======
+
+User-agent: *
+Allow: /
+=======
+
+User-agent: *
+Allow: /
+=======
+User-agent: *\nAllow: /
+main
+
