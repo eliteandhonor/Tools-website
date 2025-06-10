@@ -15,6 +15,16 @@ No build step is required. The files are plain HTML, CSS and JS.
 
 | Graphing Calculator | Graphing Calculator - Plot Mathematical Functions | Graphing Calculator plots mathematical functions in real time. Visualize equations with this online graphing tool. |
 | Unit Converter | Unit Converter - Convert Units Easily | Unit Converter helps you switch between metric and imperial measurements instantly. |
+
+| Simple Interest Calculator | Simple Interest Calculator - Estimate Loan Interest Fast | Simple Interest Calculator finds interest from principal, rate and time quickly. |
+| Compound Interest Calculator | Compound Interest Calculator - Grow Savings Over Time | Compound Interest Calculator shows how savings or loans grow when interest compounds. |
+
+=======
+| BMI Calculator | BMI Calculator - Check Body Mass Index Fast | BMI Calculator quickly checks your body mass index to see if you're in a healthy range. |
+
+
+=======
+
 | Tip Calculator | Tip Calculator - Split Restaurant Bills Easily | Tip Calculator computes service gratuity and splits bills for dining out. |
 | Percentage Calculator | Percentage Calculator - Find Percent Values Quickly | Percentage Calculator computes percent amounts and changes instantly. |
 | Discount Calculator | Discount Calculator - Save Money on Purchases | Discount Calculator quickly shows the sale price and savings from any discount. |
