@@ -1,0 +1,12 @@
+:root{--accent:#8ac8ff}
+body{background:#121212;color:#e0e0e0;line-height:1.6}
+header,footer{background:#1e1e1e;box-shadow:0 2px 4px rgba(0,0,0,.6);display:flex;align-items:center;gap:1rem}
+nav a{color:var(--accent);transition:color .2s}
+nav a:hover{color:#b3dfff}
+header a{color:var(--accent);text-decoration:none;font-weight:500}
+header a:hover{color:#b3dfff}
+.theme-toggle{margin-left:auto;background:none;border:0;font-size:1.2rem;cursor:pointer;color:var(--accent);transition:color .2s}
+.theme-toggle:hover{color:#b3dfff}
+.tool-card{background:#1e1e1e;border:1px solid #333;box-shadow:0 2px 4px rgba(0,0,0,.7);transition:transform .2s,box-shadow .2s}
+.tool-card:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.8)}
+#search input{background:#1e1e1e;border:1px solid #555;color:#e0e0e0}
