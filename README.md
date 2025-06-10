@@ -35,3 +35,7 @@ No build step is required. The files are plain HTML, CSS and JS.
 | CSV to JSON Converter | CSV to JSON Converter - Transform Data Easily | CSV to JSON Converter changes comma-separated values into structured JSON. |
 | Circle Area Calculator | Circle Area Calculator - Find Disk Size Fast | Circle Area Calculator finds the area of a circle instantly from any radius or diameter. |
 | Triangle Area Calculator | Triangle Area Calculator - Find Triangle Size Fast | Triangle Area Calculator computes area quickly from base and height. |
+| Epoch Time Converter | Epoch Time Converter - Unix Timestamp Tool | Epoch Time Converter changes regular dates into Unix timestamps and back in an instant. |
+| Paint Coverage Calculator | Paint Coverage Calculator - Estimate Gallons Needed | Paint Coverage Calculator shows how many gallons you need for any room or project. |
+| Color Converter | Color Converter - HEX to RGB and HSL | Color Converter translates HEX color codes to RGB and HSL values instantly. |
+| Base64 Encoder/Decoder | Base64 Encoder/Decoder - Convert Text Quickly | Base64 Encoder/Decoder transforms text to base64 and back instantly in your browser. |
