@@ -35,3 +35,4 @@ No build step is required. The files are plain HTML, CSS and JS.
 | JSON Formatter | JSON Formatter - Beautify JSON Data | JSON Formatter cleans and indents raw JSON text for easy reading. |
 | CSV to JSON Converter | CSV to JSON Converter - Transform Data Easily | CSV to JSON Converter changes comma-separated values into structured JSON. |
 | Circle Area Calculator | Circle Area Calculator - Find Disk Size Fast | Circle Area Calculator finds the area of a circle instantly from any radius or diameter. |
+| Triangle Area Calculator | Triangle Area Calculator - Find Triangle Size Fast | Triangle Area Calculator computes area quickly from base and height. |
