@@ -40,3 +40,5 @@ No build step is required. The files are plain HTML, CSS and JS.
 | Paint Coverage Calculator | Paint Coverage Calculator - Estimate Gallons Needed | Paint Coverage Calculator shows how many gallons you need for any room or project. |
 | Color Converter | Color Converter - HEX to RGB and HSL | Color Converter translates HEX color codes to RGB and HSL values instantly. |
 | Base64 Encoder/Decoder | Base64 Encoder/Decoder - Convert Text Quickly | Base64 Encoder/Decoder transforms text to base64 and back instantly in your browser. |
+| Body Fat Calculator | Body Fat Calculator - Estimate Percentage Quickly | Body Fat Calculator estimates body fat from simple measurements.
+| Pomodoro Timer | Pomodoro Timer - Boost Focus in 25-Minute Sessions | Pomodoro Timer keeps you productive with short work intervals and breaks.
