@@ -8,15 +8,21 @@
 <meta property="og:title" content="Compound Interest Calculator"/>
 <meta property="og:description" content="See savings grow with compound interest"/>
 <link rel="canonical" href="https://example.com/tools/compound-interest-calculator/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="../../style.min.css">
 <link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
 <script defer src="../../app.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Compound Interest Calculator","operatingSystem":"Any","applicationCategory":"Calculator","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is compound interest calculated?","acceptedAnswer":{"@type":"Answer","text":"Enter principal, rate, times per year, and years; the calculator computes total using the standard formula."}},{"@type":"Question","name":"Can I see the final balance?","acceptedAnswer":{"@type":"Answer","text":"Yes, it displays both interest earned and final balance."}},{"@type":"Question","name":"Is this tool free?","acceptedAnswer":{"@type":"Answer","text":"The calculator is free and works offline."}},{"@type":"Question","name":"Does it support monthly compounding?","acceptedAnswer":{"@type":"Answer","text":"Set compounding to 12 to calculate monthly."}},{"@type":"Question","name":"Are my inputs saved anywhere?","acceptedAnswer":{"@type":"Answer","text":"No, all data stays in your browser."}}]}</script>
 </head>
 <body>
 <header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">💹</span> Compound Interest Calculator</h1></div></header>
-<main>
+<main class="container animate__animated animate__fadeIn">
 <p>Compound Interest Calculator reveals how money grows when interest is added to the principal periodically. This <strong>online compound interest calculator</strong> lets you input the starting amount, annual rate, number of compounding periods per year, and the total number of years. By hitting calculate, you see how <em>compound interest</em> accelerates your savings or debt. The script runs entirely on your device so the page remains usable offline once cached. Understanding how compounding works helps you plan long-term financial goals and compare investment options. Try the Compound Interest Calculator now!</p>
 <label>Principal: <input type="number" id="ciPrincipal" aria-label="Principal"></label>
 <label>Rate (% per year): <input type="number" id="ciRate" aria-label="Rate"></label>
