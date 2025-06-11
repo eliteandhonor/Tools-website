@@ -25,4 +25,7 @@ nav a{text-decoration:none;color:var(--accent);font-weight:500;transition:color 
 .site-header nav{margin-left:auto}
 .logo{color:var(--accent);text-decoration:none;font-weight:600;font-size:1.2rem}
 .tool-header h1{margin:0;font-size:1.25rem;display:flex;align-items:center;gap:.5rem}
+.related-tools ul{list-style:none;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
+.related-tools a{text-decoration:none;color:var(--accent);font-weight:500}
+.related-tools a:hover{text-decoration:underline}
 
