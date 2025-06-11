@@ -16,3 +16,9 @@ header a:hover{color:#b3dfff}
 .keys button:hover{background:#cde5ff}
 
 .emoji{color:var(--accent)}
+.site-header,.tool-header{background:#1e1e1e;box-shadow:0 4px 8px rgba(0,0,0,.6)}
+.site-header .container,.tool-header .container{display:flex;align-items:center;gap:1rem}
+.site-header nav{margin-left:auto}
+.logo{color:var(--accent)}
+.tool-header h1{margin:0;font-size:1.25rem;display:flex;align-items:center;gap:.5rem}
+
