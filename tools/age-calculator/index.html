@@ -27,6 +27,7 @@
 <div>
 <label>Date of Birth <input type="date" id="birth" aria-label="Birth date"></label>
 <p id="result" aria-live="polite"></p>
+<button class="copy-btn" data-target="result">Copy</button>
 </div>
 <section id="related" class="related-tools">
 <h2>Related Tools</h2>
@@ -54,13 +55,13 @@ const result=document.getElementById('result');
 function showAge(){
  if(!birth.value){result.textContent='';return;}
  const b=new Date(birth.value);
- const today=new Date();
- if(isNaN(b.getTime())){result.textContent='Please enter a valid date.';return;}
- if(b>today){result.textContent='Birthdate cannot be in the future.';return;}
- let age=today.getFullYear()-b.getFullYear();
- const m=today.getMonth()-b.getMonth();
- if(m<0||m===0&&today.getDate()<b.getDate())age--;
- result.textContent=`You are ${age} years old.`;
+ const t=new Date();
+ let years=t.getFullYear()-b.getFullYear();
+ let months=t.getMonth()-b.getMonth();
+ let days=t.getDate()-b.getDate();
+ if(days<0){months--;days+=new Date(t.getFullYear(),t.getMonth(),0).getDate();}
+ if(months<0){years--;months+=12;}
+ result.textContent=`You are ${years} years, ${months} months, ${days} days old.`;
 }
 birth.addEventListener('input',showAge);
 </script>

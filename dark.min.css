@@ -1,4 +1,3 @@
-/* Resolved merge conflict and unified styles for dark mode */
 :root{--accent:#91caff}
 body{background:#121212;color:#e0e0e0;line-height:1.6;font-family:'Inter',Arial,sans-serif}
 header,footer{background:#1e1e1e;border-bottom:1px solid #333;box-shadow:0 2px 4px rgba(0,0,0,.7);display:flex;align-items:center;gap:1rem}

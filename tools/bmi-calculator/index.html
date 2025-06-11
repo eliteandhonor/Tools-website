@@ -29,6 +29,7 @@
 <label>Height (cm) <input type="number" id="height" aria-label="Height"></label>
 <button id="calc">Calculate</button>
 <p id="bmiResult" aria-live="polite"></p>
+<button class="copy-btn" data-target="bmiResult">Copy</button>
 </div>
 <section id="related" class="related-tools">
 <h2>Related Tools</h2>
@@ -58,8 +59,9 @@ function calc(){
  const weight=parseFloat(w.value);
  const height=parseFloat(h.value)/100;
  if(!weight||!height){r.textContent='';return;}
- const bmi=(weight/(height*height)).toFixed(1);
- r.textContent=`Your BMI is ${bmi}`;
+ const bmi=weight/(height*height);
+ let cat=bmi<18.5?'underweight':bmi<25?'normal':bmi<30?'overweight':'obese';
+ r.textContent=`Your BMI is ${bmi.toFixed(1)} (${cat})`;
 }
 document.getElementById('calc').addEventListener('click',calc);
 </script>
