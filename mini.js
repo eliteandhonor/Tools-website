@@ -1,0 +1,33 @@
+// Alpine stores for theme and search
+function filesToCache(){
+  const links=[ './','tools.css','mini.js'];
+  document.querySelectorAll('a[href$=".html"]').forEach(a=>links.push(a.getAttribute('href')));
+  return links;
+}
+
+if('serviceWorker' in navigator){
+  const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(['./','tools.css','mini.js'])})))) ;self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
+  navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'text/javascript'})));
+}
+
+document.addEventListener('alpine:init',()=>{
+  Alpine.store('theme',{
+    mode:localStorage.getItem('theme')||'dark',
+    init(){this.apply();},
+    toggle(){this.mode=this.mode==='dark'?'light':'dark';this.apply();},
+    apply(){document.documentElement.classList.toggle('light',this.mode==='light');localStorage.setItem('theme',this.mode);}
+  });
+  Alpine.store('search',{query:''});
+});
+
+document.addEventListener('DOMContentLoaded',()=>{
+  AOS.init();
+  gsap.to('#stars',{backgroundPosition:'0 200%',duration:40,ease:'none',repeat:-1});
+  document.querySelectorAll('a[href$=".html"]').forEach(a=>{
+    a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey)return;e.preventDefault();gsap.to('body',{opacity:0,duration:0.4,onComplete:()=>{window.location=a.href;}});});
+  });
+});
+
+function decorateToolPage(){
+  // placeholder to inject shared nav/footer in future
+}
