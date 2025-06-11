@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{search:''}" x-cloak>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiniTools Universe - Handy offline tools</title>
+<meta name="description" content="Explore calculators, converters and utilities in a single dark themed hub. Works offline.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="MiniTools Universe">
+<meta property="og:description" content="Explore calculators, converters and utilities in a single hub.">
+<meta property="og:url" content="https://example.com/index.html">
+<link rel="canonical" href="https://example.com/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Fira+Code&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+<link rel="stylesheet" href="style.min.css">
+<link rel="stylesheet" href="dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        accent: 'var(--mt-accent)',
+        surface: 'var(--mt-surface)',
+        background: 'var(--mt-bg)',
+        text: 'var(--mt-text)'
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="tools.css">
+</head>
+<body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
+<header x-data="{open:false}" class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
+    <button @click="open=!open" class="md:hidden text-accent text-xl mr-2 focus:outline-none focus-visible:ring" aria-label="Menu">
+      <i class="fa-solid fa-bars" x-show="!open"></i>
+      <i class="fa-solid fa-xmark" x-show="open"></i>
+    </button>
+    <nav :class="open?'flex':'hidden md:flex'" class="flex-col md:flex-row gap-4 absolute md:static top-full left-0 w-full bg-background md:bg-transparent p-4 md:p-0">
+      <a href="#calculators" class="hover:text-accent">Calculators</a>
+      <a href="#converters" class="hover:text-accent">Converters</a>
+      <a href="#productivity" class="hover:text-accent">Productivity</a>
+      <a href="#generators" class="hover:text-accent">Generators</a>
+      <a href="#developer" class="hover:text-accent">Developer</a>
+      <a href="#text" class="hover:text-accent">Text Tools</a>
+    </nav>
+    <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring ml-4" aria-label="Toggle theme">
+      <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
+      <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+</header>
+<main class="pt-24">
+  <section id="hero" class="relative text-center py-24 overflow-hidden">
+    <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
+    <h1 class="text-3xl font-semibold mb-4 animate__animated animate__fadeInDown" data-aos="fade-down">All your tools in one place</h1>
+    <p class="mb-6 opacity-80 animate__animated animate__fadeIn" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
+    <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="mx-auto block w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 py-2 rounded-full bg-surface text-text focus-visible:ring accent transition motion-safe:transform-gpu animate__animated animate__zoomIn" data-aos="zoom-in" />
+  </section>
+  <section id="calculators" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Calculators</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/basic-calculator/index.html" x-data="{name:'basic calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🧮</span>
+        <span class="font-semibold">Basic Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Perform everyday arithmetic with ease.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/scientific-calculator/index.html" x-data="{name:'scientific calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🔬</span>
+        <span class="font-semibold">Scientific Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Advanced functions for higher math.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/car-loan-calculator/index.html" x-data="{name:'car loan calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🚗</span>
+        <span class="font-semibold">Car Loan Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Estimate car payments with down payment.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/fuel-cost-calculator/index.html" x-data="{name:'fuel cost calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">⛽</span>
+        <span class="font-semibold">Fuel Cost Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Plan trip expenses by distance and MPG.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+  <section id="converters" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Converters</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/unit-converter/index.html" x-data="{name:'unit converter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">📏</span>
+        <span class="font-semibold">Unit Converter</span>
+        <p class="text-sm opacity-70 mt-1">Convert between common measurements.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/csv-to-json/index.html" x-data="{name:'csv to json'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🗄️</span>
+        <span class="font-semibold">CSV to JSON</span>
+        <p class="text-sm opacity-70 mt-1">Transform CSV files into JSON objects.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/color-converter/index.html" x-data="{name:'color converter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🎨</span>
+        <span class="font-semibold">Color Converter</span>
+        <p class="text-sm opacity-70 mt-1">Switch between HEX, RGB and HSL.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/base64-encoder/index.html" x-data="{name:'base64 encoder'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🔤</span>
+        <span class="font-semibold">Base64 Encoder</span>
+        <p class="text-sm opacity-70 mt-1">Convert text to and from base64.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+  <section id="productivity" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Productivity</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/countdown-timer/index.html" x-data="{name:'countdown timer'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">⏳</span>
+        <span class="font-semibold">Countdown Timer</span>
+        <p class="text-sm opacity-70 mt-1">Track time remaining for any task.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/pomodoro-timer/index.html" x-data="{name:'pomodoro timer'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🍅</span>
+        <span class="font-semibold">Pomodoro Timer</span>
+        <p class="text-sm opacity-70 mt-1">Work in focused 25-minute sessions.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/stopwatch/index.html" x-data="{name:'stopwatch'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">⏱️</span>
+        <span class="font-semibold">Stopwatch</span>
+        <p class="text-sm opacity-70 mt-1">Measure elapsed time precisely.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+  <section id="developer" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Developer</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/json-formatter/index.html" x-data="{name:'json formatter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">{ }</span>
+        <span class="font-semibold">JSON Formatter</span>
+        <p class="text-sm opacity-70 mt-1">Beautify and validate JSON data.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/uuid-generator/index.html" x-data="{name:'uuid generator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🆔</span>
+        <span class="font-semibold">UUID Generator</span>
+        <p class="text-sm opacity-70 mt-1">Create unique identifiers instantly.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/markdown-editor/index.html" x-data="{name:'markdown editor'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">📝</span>
+        <span class="font-semibold">Markdown Editor</span>
+        <p class="text-sm opacity-70 mt-1">Write Markdown with live preview.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+  <section id="generators" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Creative</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/color-picker/index.html" x-data="{name:'color picker'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🎨</span>
+        <span class="font-semibold">Color Picker</span>
+        <p class="text-sm opacity-70 mt-1">Choose colors and copy code values.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+  <section id="entertainment" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Entertainment</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/dice-roller/index.html" x-data="{name:'dice roller'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🎲</span>
+        <span class="font-semibold">Dice Roller</span>
+        <p class="text-sm opacity-70 mt-1">Roll a virtual six-sided die.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+  <section id="text" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Text Tools</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/word-counter/index.html" x-data="{name:'word counter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">✍️</span>
+        <span class="font-semibold">Word Counter</span>
+        <p class="text-sm opacity-70 mt-1">Count words and characters instantly.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/base64-encoder/index.html" x-data="{name:'base64 encoder'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🔤</span>
+        <span class="font-semibold">Base64 Encoder</span>
+        <p class="text-sm opacity-70 mt-1">Convert text to and from base64.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/markdown-editor/index.html" x-data="{name:'markdown editor'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+        <span class="text-3xl block mb-2">📝</span>
+        <span class="font-semibold">Markdown Editor</span>
+        <p class="text-sm opacity-70 mt-1">Live preview of your Markdown text.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+</main>
+<footer class="text-center text-sm opacity-80 py-8">
+  &copy; 2025 MiniTools Universe
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="mini.js" defer></script>
+</body>
+</html>
