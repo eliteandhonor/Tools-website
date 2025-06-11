@@ -35,3 +35,4 @@ header a:hover{color:#b3dfff}
 .desc{max-height:0;overflow:hidden;opacity:0;transition:max-height var(--transition),opacity var(--transition);font-size:.9rem;color:#c0c0c0}.tool-card:hover .desc,.tool-card:focus .desc{max-height:40px;opacity:1}
 
 
+

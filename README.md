@@ -1,6 +1,7 @@
 # MiniTools Universe
 
 This is a simplified demo of the MiniTools Universe static website. It provides an index page, dark mode support and a sample tool.
+
 ## Build instructions
 No build step is required. The files are plain HTML, CSS and JS. Each calculator page now includes small enhancements like keyboard input and copy buttons so you can save results easily.
 // Alpine stores for theme and search
@@ -83,6 +84,7 @@ function decorateToolPage(){
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
+
 
 
 

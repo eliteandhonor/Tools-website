@@ -56,6 +56,7 @@ tailwind.config = {
     <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring ml-4" aria-label="Toggle theme">
       <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
       <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+    </button>
   </div>
 </header>
 <main class="pt-24">
@@ -307,6 +308,8 @@ tailwind.config = {
         <span class="text-3xl block mb-2">📝</span>
         <span class="font-semibold">Markdown Editor</span>
         <p class="text-sm opacity-70 mt-1">Live preview of your Markdown text.</p>
+        <i aria-hidden="true" class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
     </div>
   </section>
 </main>
@@ -325,11 +328,11 @@ tailwind.config = {
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
 <script src="mini.js" defer></script>
 <script>
-  // Initialize AOS (Animate on Scroll) after the DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => AOS.init({ once: true }));
+  document.addEventListener('DOMContentLoaded', () => AOS.init({once: true}));
 </script>
-
 </body>
 </html>
+  // Initialize AOS (Animate on Scroll) after the DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => AOS.init({ once: true }));
 
 

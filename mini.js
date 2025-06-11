@@ -27,6 +27,7 @@ document.addEventListener('alpine:init',()=>{
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
+  AOS.init({once:true});
   AOS.init();
   gsap.to('#stars',{backgroundPosition:'0 200%',duration:40,ease:'none',repeat:-1});
   document.querySelectorAll('a[href$=".html"]').forEach(a=>{
@@ -50,5 +51,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 function decorateToolPage(){
   // placeholder to inject shared nav/footer in future
 }
+
 
 
