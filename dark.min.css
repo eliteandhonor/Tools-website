@@ -1,6 +1,6 @@
 :root{--accent:#91caff}
-body{background:#121212;color:#e0e0e0;line-height:1.6}
-header,footer{background:#1e1e1e;box-shadow:0 4px 8px rgba(0,0,0,.6);display:flex;align-items:center;gap:1rem}
+body{background:#121212;color:#e0e0e0;line-height:1.6;font-family:'Inter',Arial,sans-serif}
+header,footer{background:#1e1e1e;border-bottom:1px solid #333;box-shadow:0 2px 4px rgba(0,0,0,.7);display:flex;align-items:center;gap:1rem}
 nav a{color:var(--accent);transition:color .2s}
 nav a:hover{color:#b3dfff}
 header a{color:var(--accent);text-decoration:none;font-weight:500}
@@ -8,8 +8,9 @@ header a:hover{color:#b3dfff}
 .theme-toggle{margin-left:auto;background:none;border:0;font-size:1.2rem;cursor:pointer;color:var(--accent);transition:transform .2s,color .2s}
 .theme-toggle:hover{transform:rotate(20deg);color:#cde5ff}
 #search input{background:#1e1e1e;border:1px solid #555;color:#e0e0e0;box-shadow:0 2px 4px rgba(0,0,0,.6)}
-.tool-card{background:#1e1e1e;border:1px solid #333;box-shadow:0 2px 6px rgba(0,0,0,.7);transition:transform .25s,box-shadow .25s}
-.tool-card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,.8)}
+#hero{background:#1e1e1e;border:1px solid #333;box-shadow:0 4px 8px rgba(0,0,0,.7);border-radius:20px;padding:5rem 1rem;margin:2rem 0;text-align:center}
+.tool-card{background:#1e1e1e;border:1px solid #444;box-shadow:0 2px 4px rgba(0,0,0,.5);transition:transform .3s,box-shadow .3s}
+.tool-card:hover{transform:translateY(-6px);box-shadow:0 12px 20px rgba(0,0,0,.8)}
 .tool-card a{display:block}
 #calculator input{background:#1e1e1e;border:1px solid #444;color:#e0e0e0}
 .keys button{background:var(--accent);color:#000}
