@@ -7,6 +7,8 @@ No build step is required. The files are plain HTML, CSS and JS. Each calculator
 
 ## Keyword table
 
+| Car Loan Calculator | Car Loan Calculator - Estimate Payments with Down Payment | Car Loan Calculator factors a down payment so you can budget for your next vehicle. |
+| Fuel Cost Calculator | Fuel Cost Calculator - Estimate Trip Fuel Expense | Fuel Cost Calculator computes fuel costs from distance, price and MPG. |
 | Tool | Meta Title | Meta Description |
 |------|------------|------------------|
 | Basic Calculator | Basic Calculator - Quick Online Arithmetic | Basic Calculator to solve everyday arithmetic quickly. Use this online calculator for sums, differences, products and quotients. |
