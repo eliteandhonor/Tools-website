@@ -4,10 +4,45 @@ This is a simplified demo of the MiniTools Universe static website. It provides 
 
 ## Build instructions
 No build step is required. The files are plain HTML, CSS and JS. Each calculator page now includes small enhancements like keyboard input and copy buttons so you can save results easily.
+// Alpine stores for theme and search
+function filesToCache(){
+  const links=[ './','tools.css','mini.js'];
+  const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
+  document.querySelectorAll('a[href$=".html"]').forEach(a=>links.push(a.getAttribute('href')));
+  return links;
+}
+if('serviceWorker' in navigator){
+  const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(['./','tools.css','mini.js'])})))) ;self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
+  const files=filesToCache();
+  const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(files)}))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
+  navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'text/javascript'})));
+document.addEventListener('alpine:init',()=>{
+  Alpine.store('theme',{
+    mode:localStorage.getItem('theme')||'dark',
+    init(){this.apply();},
+    toggle(){this.mode=this.mode==='dark'?'light':'dark';this.apply();},
+    apply(){document.documentElement.classList.toggle('light',this.mode==='light');localStorage.setItem('theme',this.mode);}
+  });
+  Alpine.store('search',{query:''});
+});
+document.addEventListener('DOMContentLoaded',()=>{
+  AOS.init();
+  gsap.to('#stars',{backgroundPosition:'0 200%',duration:40,ease:'none',repeat:-1});
+  document.querySelectorAll('a[href$=".html"]').forEach(a=>{
+    a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey)return;e.preventDefault();gsap.to('body',{opacity:0,duration:0.4,onComplete:()=>{window.location=a.href;}});});
+  document.querySelectorAll('.tool-card').forEach(card=>{
+    const arrow=card.querySelector('.fa-arrow-right');
+    if(!arrow)return;
+    card.addEventListener('mouseenter',()=>gsap.to(arrow,{x:6,opacity:1,duration:0.3}));
+    card.addEventListener('mouseleave',()=>gsap.to(arrow,{x:0,opacity:0,duration:0.3}));
+function decorateToolPage(){
+  // placeholder to inject shared nav/footer in future
 
 ## Keyword table
 | Tool | Meta Title | Meta Description |
 |------|------------|-----------------|
+
+|------|------------|------------------|
 | Basic Calculator | Basic Calculator - Quick Online Arithmetic | Basic Calculator to solve everyday arithmetic quickly. Use this online calculator for sums, differences, products and quotients. |
 | Scientific Calculator | Scientific Calculator - Advanced Functions Online | Scientific Calculator with trigonometry and exponent features for complex math. |
 | Word Counter | Word Counter - Count Words Instantly | Word Counter counts words and characters instantly in your text. |
@@ -44,6 +79,14 @@ No build step is required. The files are plain HTML, CSS and JS. Each calculator
 | Base64 Encoder/Decoder | Base64 Encoder/Decoder - Convert Text Quickly | Base64 Encoder/Decoder transforms text to base64 and back instantly in your browser. |
 | Body Fat Calculator | Body Fat Calculator - Estimate Percentage Quickly | Body Fat Calculator estimates body fat from simple measurements.
 | Pomodoro Timer | Pomodoro Timer - Boost Focus in 25-Minute Sessions | Pomodoro Timer now includes pause and reset options for flexible sessions.
+| Body Fat Calculator | Body Fat Calculator - Estimate Percentage Quickly | Body Fat Calculator estimates body fat from simple measurements. |
+| Pomodoro Timer | Pomodoro Timer - Boost Focus in 25-Minute Sessions | Pomodoro Timer now includes pause and reset options for flexible sessions. |
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
+
+
+
+
+
+

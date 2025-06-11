@@ -1,3 +1,4 @@
+:root{--accent:#91caff}
 :root{--accent:#91caff;--transition:.3s}
 body{background:#121212;color:#e0e0e0;line-height:1.6;font-family:'Inter',Arial,sans-serif}
 header,footer{background:#1e1e1e;border-bottom:1px solid #333;box-shadow:0 2px 4px rgba(0,0,0,.7);display:flex;align-items:center;gap:1rem}
@@ -13,6 +14,7 @@ header a:hover{color:#b3dfff}
 .tool-card::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(145,202,255,.15));opacity:0;transition:opacity var(--transition)}
 .tool-card:hover::after{opacity:1}
 .tool-card:hover{transform:translateY(-6px);box-shadow:0 12px 20px rgba(0,0,0,.8)}
+.tool-card{background:#1e1e1e;border:1px solid #444;box-shadow:0 2px 4px rgba(0,0,0,.5);transition:transform .3s,box-shadow .3s}
 .tool-card .emoji{display:block;font-size:2rem;margin-bottom:.5rem;background:rgba(145,202,255,.2);border-radius:50%;padding:.5rem;transition:transform var(--transition)}
 .tool-card:hover .emoji{transform:rotate(10deg) scale(1.1)}
 .tool-card a{display:block}
@@ -31,3 +33,8 @@ header a:hover{color:#b3dfff}
 .related-tools a:hover{color:#b3dfff}
 
 .desc{max-height:0;overflow:hidden;opacity:0;transition:max-height var(--transition),opacity var(--transition);font-size:.9rem;color:#c0c0c0}.tool-card:hover .desc,.tool-card:focus .desc{max-height:40px;opacity:1}
+
+
+
+
+
