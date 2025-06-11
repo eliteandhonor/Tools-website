@@ -55,8 +55,7 @@
       :class="$store.theme.mode">
 
 <!-- ── Header ─────────────────────────────────────────────── -->
-<header
-  class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
+<header class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
     <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
 
@@ -111,6 +110,7 @@
     <h2 class="text-xl font-semibold mb-4">Calculators</h2>
     <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
+      <!-- Basic -->
       <a href="tools/basic-calculator/index.html"
          x-data="{name:'basic calculator'}"
          x-show="name.includes(search.toLowerCase())"
@@ -125,6 +125,7 @@
                   group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
       </a>
 
+      <!-- Scientific -->
       <a href="tools/scientific-calculator/index.html"
          x-data="{name:'scientific calculator'}"
          x-show="name.includes(search.toLowerCase())"
@@ -139,7 +140,36 @@
                   group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
       </a>
 
-      <!-- Add more calculators here if desired -->
+      <!-- Car Loan -->
+      <a href="tools/car-loan-calculator/index.html"
+         x-data="{name:'car loan calculator'}"
+         x-show="name.includes(search.toLowerCase())"
+         class="tool-card group relative bg-surface rounded-lg p-4
+                ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50
+                transition animate__animated animate__zoomIn"
+         data-aos="fade-up">
+        <span class="text-3xl block mb-2">🚗</span>
+        <span class="font-semibold">Car Loan Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Estimate car payments with down payment.</p>
+        <i class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0
+                  group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+
+      <!-- Fuel Cost -->
+      <a href="tools/fuel-cost-calculator/index.html"
+         x-data="{name:'fuel cost calculator'}"
+         x-show="name.includes(search.toLowerCase())"
+         class="tool-card group relative bg-surface rounded-lg p-4
+                ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50
+                transition animate__animated animate__zoomIn"
+         data-aos="fade-up">
+        <span class="text-3xl block mb-2">⛽</span>
+        <span class="font-semibold">Fuel Cost Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Plan trip expenses by distance and MPG.</p>
+        <i class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0
+                  group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+
     </div>
   </section>
 
@@ -417,5 +447,8 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"            defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"   defer></script>
 <script src="mini.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => AOS.init({ once: true }));
+</script>
 </body>
 </html>
