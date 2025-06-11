@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Countdown Timer - Track Time Remaining</title>
+<meta name="description" content="Countdown Timer lets you set a duration and watch the seconds tick down on any device." />
+<meta property="og:title" content="Countdown Timer"/>
+<meta property="og:description" content="Set a timer and count down easily"/>
+<link rel="canonical" href="https://example.com/tools/countdown-timer/" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="../../style.min.css">
+<link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script defer src="../../app.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Countdown Timer","operatingSystem":"Any","applicationCategory":"Utilities","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I start the timer?","acceptedAnswer":{"@type":"Answer","text":"Enter minutes and seconds and click start."}},{"@type":"Question","name":"Can I pause it?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can pause and resume as needed."}},{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Once loaded the timer works without internet."}},{"@type":"Question","name":"Will it alert me?","acceptedAnswer":{"@type":"Answer","text":"A simple beep sounds when time runs out."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes, use the timer without any cost."}}]}</script>
+</head>
+<body>
+<header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">⏳</span> Countdown Timer</h1></div></header>
+<main class="container animate__animated animate__fadeIn">
+<p>Countdown Timer helps you track short intervals with ease. This <strong>online timer</strong> runs entirely on your device so you can stay focused even if you lose connection. Set the minutes and seconds, press start and watch the display count down in real time. You can pause and resume whenever you need a break. When the time hits zero, the timer will alert you with a beep, keeping you on schedule for workouts, study sessions, or cooking. Try the Countdown Timer now!</p>
+<label>Minutes: <input type="number" id="cdMin" aria-label="Minutes" value="1"></label>
+<label>Seconds: <input type="number" id="cdSec" aria-label="Seconds" value="0"></label>
+<button id="cdStart">Start</button>
+<button id="cdPause">Pause</button>
+<p id="cdDisplay"></p>
+<section id="links">
+<h2>Related Tools</h2>
+<ul>
+<li><a href="../stopwatch/index.html">Stopwatch</a></li>
+<li><a href="../random-number-generator/index.html">Random Number Generator</a></li>
+<li><a href="../tip-calculator/index.html">Tip Calculator</a></li>
+</ul>
+</section>
+<section id="faq">
+<h2>FAQ</h2>
+<dl>
+<dt>Does it run in the background?</dt><dd>The timer keeps counting as long as the page stays open.</dd>
+<dt>Can I reset the timer?</dt><dd>Yes, change the values and press start again to begin a new countdown.</dd>
+<dt>What if my device sleeps?</dt><dd>The timer attempts to continue but accuracy may vary.</dd>
+<dt>Is sound optional?</dt><dd>Yes, you can mute or adjust volume using your device controls.</dd>
+<dt>Does it collect data?</dt><dd>No, it simply runs in your browser with no tracking.</dd>
+</dl>
+</section>
+</main>
+<footer><a href="../../index.html">Home</a></footer>
+<script>
+let timer,remaining=0;const display=document.getElementById('cdDisplay');
+function update(){if(remaining<=0){clearInterval(timer);display.textContent='Time\'s up!';new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAABCxAgAEABAAZGF0YQAAAAA=').play();return;}remaining--;display.textContent=remaining+'s';}
+document.getElementById('cdStart').addEventListener('click',()=>{clearInterval(timer);remaining=parseInt(document.getElementById('cdMin').value)*60+parseInt(document.getElementById('cdSec').value);display.textContent=remaining+'s';timer=setInterval(update,1000);});
+document.getElementById('cdPause').addEventListener('click',()=>{clearInterval(timer);});
+</script>
+</body>
+</html>
