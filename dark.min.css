@@ -1,0 +1,27 @@
+:root{--accent:#91caff}
+body{background:#121212;color:#e0e0e0;line-height:1.6}
+header,footer{background:#1e1e1e;box-shadow:0 4px 8px rgba(0,0,0,.6);display:flex;align-items:center;gap:1rem}
+nav a{color:var(--accent);transition:color .2s}
+nav a:hover{color:#b3dfff}
+header a{color:var(--accent);text-decoration:none;font-weight:500}
+header a:hover{color:#b3dfff}
+.theme-toggle{margin-left:auto;background:none;border:0;font-size:1.2rem;cursor:pointer;color:var(--accent);transition:transform .2s,color .2s}
+.theme-toggle:hover{transform:rotate(20deg);color:#cde5ff}
+#search input{background:#1e1e1e;border:1px solid #555;color:#e0e0e0;box-shadow:0 2px 4px rgba(0,0,0,.6)}
+.tool-card{background:#1e1e1e;border:1px solid #333;box-shadow:0 2px 6px rgba(0,0,0,.7);transition:transform .25s,box-shadow .25s}
+.tool-card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,.8)}
+.tool-card a{display:block}
+#calculator input{background:#1e1e1e;border:1px solid #444;color:#e0e0e0}
+.keys button{background:var(--accent);color:#000}
+.keys button:hover{background:#cde5ff}
+
+.emoji{color:var(--accent)}
+.site-header,.tool-header{background:#1e1e1e;box-shadow:0 4px 8px rgba(0,0,0,.6)}
+.site-header .container,.tool-header .container{display:flex;align-items:center;gap:1rem}
+.site-header nav{margin-left:auto}
+.logo{color:var(--accent)}
+.tool-header h1{margin:0;font-size:1.25rem;display:flex;align-items:center;gap:.5rem}
+.related-tools ul{list-style:none;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
+.related-tools a{text-decoration:none;color:var(--accent)}
+.related-tools a:hover{color:#b3dfff}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BMR Calculator - Estimate Calorie Needs</title>
+<meta name="description" content="BMR Calculator quickly estimates your basal metabolic rate so you know how many calories you burn at rest." />
+<meta property="og:title" content="BMR Calculator"/>
+<meta property="og:description" content="Estimate daily calorie needs"/>
+<link rel="canonical" href="https://example.com/tools/bmr-calculator/" />
+<link rel="stylesheet" href="../../style.min.css">
+<link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script defer src="../../app.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"BMR Calculator","operatingSystem":"Any","applicationCategory":"Calculator","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate BMR?","acceptedAnswer":{"@type":"Answer","text":"Enter your gender, weight, height and age then press calculate."}},{"@type":"Question","name":"Which formula is used?","acceptedAnswer":{"@type":"Answer","text":"This tool uses the Mifflin-St Jeor equation for accuracy."}},{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, once the page loads you can use it without internet."}},{"@type":"Question","name":"Are my numbers stored?","acceptedAnswer":{"@type":"Answer","text":"No data is saved or sent anywhere."}},{"@type":"Question","name":"Can I switch units?","acceptedAnswer":{"@type":"Answer","text":"Currently inputs are in metric units for simplicity."}}]}</script>
+</head>
+<body>
+<header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">🔥</span> BMR Calculator</h1></div></header>
+<main>
+<p>BMR Calculator shows how many calories your body burns at rest. This <strong>online BMR tool</strong> uses the Mifflin-St Jeor equation, favored for its precision. Simply select your gender and enter your weight in kilograms, height in centimeters, and age in years. When you hit calculate, it reveals the calories you need just to maintain basic functions. Because the math runs locally in your browser, the tool still works even when you go offline. Knowing your BMR helps plan diets and track progress. Try the BMR Calculator now!</p>
+<div>
+<label>Gender <select id="gender" aria-label="Gender"><option value="M">Male</option><option value="F">Female</option></select></label>
+<label>Weight (kg) <input type="number" id="weight" aria-label="Weight"></label>
+<label>Height (cm) <input type="number" id="height" aria-label="Height"></label>
+<label>Age <input type="number" id="age" aria-label="Age"></label>
+<button id="bmrCalc">Calculate</button>
+<p id="bmrResult"></p>
+</div>
+<section id="links">
+<h2>Related Tools</h2>
+<ul>
+<li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+<li><a href="../age-calculator/index.html">Age Calculator</a></li>
+<li><a href="../basic-calculator/index.html">Basic Calculator</a></li>
+</ul>
+</section>
+<section id="faq">
+<h2>FAQ</h2>
+<dl>
+<dt>What does BMR stand for?</dt><dd>BMR stands for Basal Metabolic Rate, the number of calories your body uses at rest.</dd>
+<dt>Why should I know my BMR?</dt><dd>Understanding your BMR helps you plan calorie intake for weight management.</dd>
+<dt>Can I use pounds and inches?</dt><dd>This version is metric only, but you can convert units with the Unit Converter tool.</dd>
+<dt>Does it consider activity?</dt><dd>No, BMR measures resting calories. Use it with activity multipliers to plan diets.</dd>
+<dt>Is this tool free?</dt><dd>Yes, the BMR Calculator is completely free with no ads or tracking.</dd>
+</dl>
+</section>
+</main>
+<footer><a href="../../index.html">Home</a></footer>
+<script>
+function calcBMR(){
+ const g=document.getElementById('gender').value;
+ const w=parseFloat(document.getElementById('weight').value)||0;
+ const h=parseFloat(document.getElementById('height').value)||0;
+ const a=parseFloat(document.getElementById('age').value)||0;
+ let bmr=g==='M'?10*w+6.25*h-5*a+5:10*w+6.25*h-5*a-161;
+ document.getElementById('bmrResult').textContent=`BMR: ${bmr.toFixed(0)} calories/day`;
+}
+document.getElementById('bmrCalc').addEventListener('click',calcBMR);
+</script>
+</body>
+</html>
