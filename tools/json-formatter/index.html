@@ -13,15 +13,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 <link rel="stylesheet" href="../../style.min.css">
 <link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script defer src="../../app.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON Formatter","operatingSystem":"Any","applicationCategory":"DeveloperTool","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 </head>
 <body>
 <header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">{}</span> JSON Formatter</h1></div></header>
-<main class="container animate__animated animate__fadeIn">
+<main data-aos="fade-in" class="container animate__animated animate__fadeIn">
 <p>The <strong>JSON Formatter</strong> cleans up messy JSON so you can read it easily. Paste your data and click format to see proper indentation and syntax highlighting. This <em>online JSON formatter</em> works offline after first load. Try the JSON Formatter now!</p>
 <textarea id="json-input" aria-label="JSON input" rows="6" cols="40"></textarea>
 <button id="json-btn">Format</button>

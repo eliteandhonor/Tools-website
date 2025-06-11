@@ -55,3 +55,8 @@ if ('serviceWorker' in navigator) {
   const url = URL.createObjectURL(blob);
   navigator.serviceWorker.register(url);
 }
+
+// Initialize AOS animations if library is present
+if (window.AOS) {
+  AOS.init();
+}
