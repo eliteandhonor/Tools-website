@@ -1,5 +1,6 @@
 // Alpine stores for theme and search
 function filesToCache(){
+  const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
   const links=[ './','tools.css','mini.js'];
   const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
   document.querySelectorAll('a[href$=".html"]').forEach(a=>links.push(a.getAttribute('href')));
@@ -7,6 +8,8 @@ function filesToCache(){
 }
 
 if('serviceWorker' in navigator){
+  const files=filesToCache();
+  const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(files)}))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
   const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(['./','tools.css','mini.js'])})))) ;self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
   const files=filesToCache();
   const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(files)}))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
