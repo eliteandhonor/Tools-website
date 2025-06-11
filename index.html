@@ -33,10 +33,14 @@ tailwind.config = {
 <link rel="stylesheet" href="tools.css">
 </head>
 <body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
-<header class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
+<header x-data="{open:false}" class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
     <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
-    <nav class="hidden md:flex gap-4">
+    <button @click="open=!open" class="md:hidden text-accent text-xl mr-2 focus:outline-none focus-visible:ring" aria-label="Menu">
+      <i class="fa-solid fa-bars" x-show="!open"></i>
+      <i class="fa-solid fa-xmark" x-show="open"></i>
+    </button>
+    <nav :class="open?'flex':'hidden md:flex'" class="flex-col md:flex-row gap-4 absolute md:static top-full left-0 w-full bg-background md:bg-transparent p-4 md:p-0">
       <a href="#calculators" class="hover:text-accent">Calculators</a>
       <a href="#converters" class="hover:text-accent">Converters</a>
       <a href="#productivity" class="hover:text-accent">Productivity</a>
@@ -44,28 +48,28 @@ tailwind.config = {
       <a href="#developer" class="hover:text-accent">Developer</a>
       <a href="#text" class="hover:text-accent">Text Tools</a>
     </nav>
-    <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring" aria-label="Toggle theme">
+    <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring ml-4" aria-label="Toggle theme">
       <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>MiniTools Universe – Handy offline tools</title>
-  <meta name="description"
-        content="Explore calculators, converters and utilities in a single dark-themed hub. Works offline.">
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Framework CSS -->
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/"
-        crossorigin="anonymous">
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        href="https://unpkg.com/aos@next/dist/aos.css"/>
-  <!-- Site styles -->
-  <link rel="stylesheet" href="style.min.css">
+    <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
+      <a href="tools/basic-calculator/index.html" x-data="{name:'basic calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/scientific-calculator/index.html" x-data="{name:'scientific calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/car-loan-calculator/index.html" x-data="{name:'car loan calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/fuel-cost-calculator/index.html" x-data="{name:'fuel cost calculator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/unit-converter/index.html" x-data="{name:'unit converter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/csv-to-json/index.html" x-data="{name:'csv to json'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/color-converter/index.html" x-data="{name:'color converter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/base64-encoder/index.html" x-data="{name:'base64 encoder'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/countdown-timer/index.html" x-data="{name:'countdown timer'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/pomodoro-timer/index.html" x-data="{name:'pomodoro timer'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/stopwatch/index.html" x-data="{name:'stopwatch'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/json-formatter/index.html" x-data="{name:'json formatter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/uuid-generator/index.html" x-data="{name:'uuid generator'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/markdown-editor/index.html" x-data="{name:'markdown editor'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/color-picker/index.html" x-data="{name:'color picker'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/dice-roller/index.html" x-data="{name:'dice roller'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/word-counter/index.html" x-data="{name:'word counter'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/base64-encoder/index.html" x-data="{name:'base64 encoder'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
+      <a href="tools/markdown-editor/index.html" x-data="{name:'markdown editor'}" x-show="name.includes($root.search.toLowerCase())" class="tool-card group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition animate__animated animate__zoomIn" data-aos="fade-up">
   <link rel="stylesheet" href="dark.min.css" id="darkCss"
         media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="tools.css">
