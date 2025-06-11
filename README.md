@@ -52,3 +52,4 @@ No build step is required. The files are plain HTML, CSS and JS. Each calculator
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
 
+
