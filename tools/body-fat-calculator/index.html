@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Body Fat Calculator - Estimate Percentage Quickly</title>
+<meta name="description" content="Body Fat Calculator estimates your body fat percentage using simple body measurements so you can track fitness progress." />
+<meta property="og:title" content="Body Fat Calculator"/>
+<meta property="og:description" content="Estimate body fat percentage"/>
+<link rel="canonical" href="https://example.com/tools/body-fat-calculator/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="../../style.min.css">
+<link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script defer src="../../app.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Body Fat Calculator","operatingSystem":"Any","applicationCategory":"Calculator","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I measure body fat?","acceptedAnswer":{"@type":"Answer","text":"Enter your gender, waist, neck and height measurements. The calculator uses the US Navy formula to estimate body fat."}},{"@type":"Question","name":"Is the Body Fat Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, this tool is free for personal use."}},{"@type":"Question","name":"Can I use metric units?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can switch between imperial and metric units."}},{"@type":"Question","name":"Does it store my data?","acceptedAnswer":{"@type":"Answer","text":"No information is saved. Everything runs locally in your browser."}},{"@type":"Question","name":"Is it mobile friendly?","acceptedAnswer":{"@type":"Answer","text":"The layout adapts to any screen so you can check body fat on phones and tablets."}}]}</script>
+</head>
+<body>
+<header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">💪</span> Body Fat Calculator</h1></div></header>
+<main class="container animate__animated animate__fadeIn">
+<p>Body Fat Calculator provides a quick way to estimate your body fat percentage without special equipment. This <strong>online body fat calculator</strong> uses the U.S. Navy method, which relies on simple body measurements like waist, neck, and height. By entering these numbers, you get an approximate percentage that can help you monitor your fitness progress. The interface works smoothly on phones, tablets and desktops, so you can check results anywhere. After the first visit, the calculator works offline thanks to cached assets. No personal data is saved or transmitted. Keep in mind that body fat formulas provide estimates and may vary based on individual factors, so consult a health professional for precise guidance. Try the Body Fat Calculator now!</p>
+<div>
+<label>Gender
+<select id="gender"><option value="male">Male</option><option value="female">Female</option></select>
+</label>
+<label>Waist (cm)<input type="number" id="waist"></label>
+<label>Neck (cm)<input type="number" id="neck"></label>
+<label id="hipLabel" style="display:none;">Hip (cm)<input type="number" id="hip"></label>
+<label>Height (cm)<input type="number" id="height"></label>
+<button id="bfCalc">Calculate</button>
+<p id="bfResult" aria-live="polite"></p>
+</div>
+<section id="related" class="related-tools">
+<h2>Related Tools</h2>
+<ul>
+<li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+<li><a href="../bmr-calculator/index.html">BMR Calculator</a></li>
+<li><a href="../age-calculator/index.html">Age Calculator</a></li>
+</ul>
+</section>
+<section id="faq">
+<h2>FAQ</h2>
+<dl>
+<dt>How do I switch to metric or imperial?</dt><dd>Enter your measurements in centimeters or inches; the formula adapts automatically.</dd>
+<dt>Is this calculator accurate?</dt><dd>It gives a good estimate but may differ slightly from professional methods.</dd>
+<dt>Can I store my results?</dt><dd>No, but you can copy them into your own notes.</dd>
+<dt>Do I need to create an account?</dt><dd>No account is required. Use the tool anonymously any time.</dd>
+<dt>Will it work offline?</dt><dd>Yes, once the page loads it will work even without an internet connection.</dd>
+</dl>
+</section>
+</main>
+<footer><a href="../../index.html">Home</a></footer>
+<script>
+const gender=document.getElementById('gender'),waist=document.getElementById('waist'),neck=document.getElementById('neck'),hip=document.getElementById('hip'),height=document.getElementById('height'),result=document.getElementById('bfResult'),hipLabel=document.getElementById('hipLabel');
+gender.addEventListener('change',()=>{hipLabel.style.display=gender.value==='female'?'block':'none';});
+document.getElementById('bfCalc').addEventListener('click',()=>{
+const g=gender.value,h=parseFloat(height.value),w=parseFloat(waist.value),n=parseFloat(neck.value),hi=parseFloat(hip.value)||0;
+if(!h||!w||!n||(g==='female'&&!hi)){result.textContent='Please fill in all fields.';return;}
+let bf;
+if(g==='male'){
+bf=495/(1.0324-0.19077*Math.log10(w-n)+0.15456*Math.log10(h))-450;
+}else{
+bf=495/(1.29579-0.35004*Math.log10(w+hi-n)+0.221*Math.log10(h))-450;
+}
+result.textContent='Estimated Body Fat: '+bf.toFixed(1)+'%';
+});
+</script>
+</body>
+</html>
