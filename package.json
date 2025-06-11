@@ -1,0 +1,7 @@
+{
+  "name": "minitools-universe",
+  "scripts": {
+    "build": "node build.js",
+    "preview": "npx http-serve -p 8080"
+  }
+}

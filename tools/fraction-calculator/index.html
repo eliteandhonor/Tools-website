@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fraction Calculator - Work with Fractions Fast</title>
+<meta name="description" content="Fraction Calculator lets you add, subtract, multiply, and divide fractions instantly. Use this online fraction solver for homework or recipes." />
+<meta name="robots" content="index,follow">
+<meta property="og:url" content="https://example.com/tools/fraction-calculator/">
+<meta property="og:title" content="Fraction Calculator"/>
+<meta property="og:description" content="Solve fraction problems easily"/>
+<link rel="canonical" href="https://example.com/tools/fraction-calculator/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+<link rel="stylesheet" href="../../style.min.css">
+<link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script defer src="../../app.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fraction Calculator","operatingSystem":"Any","applicationCategory":"EducationalApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I add fractions?","acceptedAnswer":{"@type":"Answer","text":"Enter the numerators and denominators, choose addition, and the result shows the simplified sum."}},{"@type":"Question","name":"Can I multiply fractions?","acceptedAnswer":{"@type":"Answer","text":"Yes, select multiply and the calculator will display the product in simplest form."}},{"@type":"Question","name":"Does it reduce fractions?","acceptedAnswer":{"@type":"Answer","text":"Results are automatically simplified to the lowest terms."}},{"@type":"Question","name":"Will it work offline?","acceptedAnswer":{"@type":"Answer","text":"After the first visit the tool functions without internet."}},{"@type":"Question","name":"Is my input stored anywhere?","acceptedAnswer":{"@type":"Answer","text":"No data leaves your browser so your work stays private."}}]}</script>
+</head>
+<body>
+<header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">¼</span> Fraction Calculator</h1></div></header>
+<main data-aos="fade-in" class="container animate__animated animate__fadeIn">
+<p>Fraction Calculator makes working with fractions straightforward. This <strong>online fraction calculator</strong> handles common tasks like adding, subtracting, multiplying, and dividing with ease. Simply enter two fractions, choose the operation, and see the result displayed in simplest form. Whether you need a quick <em>fraction solver</em> for homework problems or to adjust a recipe, this tool calculates everything in your browser. Since it runs entirely client-side, it continues to work offline once loaded. The clean design focuses on usability so you can concentrate on the math. Get accurate answers every time and master tricky fraction exercises. Try the Fraction Calculator now!</p>
+<form id="fracForm" aria-label="Fraction calculator form">
+<label>Fraction 1 <input type="number" id="num1" placeholder="Numerator" style="width:4em"> / <input type="number" id="den1" placeholder="Denominator" style="width:4em"></label><br>
+<label>Fraction 2 <input type="number" id="num2" placeholder="Numerator" style="width:4em"> / <input type="number" id="den2" placeholder="Denominator" style="width:4em"></label><br>
+<label>Operation
+<select id="op">
+<option value="add">+</option>
+<option value="sub">-</option>
+<option value="mul">×</option>
+<option value="div">÷</option>
+</select>
+</label>
+<button type="button" id="fracBtn">Calculate</button>
+</form>
+<p id="fracResult" aria-live="polite"></p>
+<section id="related">
+<h2>Related Tools</h2>
+<ul>
+<li><a href="../basic-calculator/index.html">Basic Calculator</a></li>
+<li><a href="../percentage-calculator/index.html">Percentage Calculator</a></li>
+<li><a href="../discount-calculator/index.html">Discount Calculator</a></li>
+</ul>
+</section>
+<section id="faq">
+<h2>FAQ</h2>
+<dl>
+<dt>How precise are the calculations?</dt><dd>The tool uses standard fraction arithmetic to provide exact results in simplest form.</dd>
+<dt>Can I calculate mixed numbers?</dt><dd>Enter improper fractions for mixed numbers; the result displays the simplified fraction.</dd>
+<dt>Is there a limit to numerator size?</dt><dd>You can enter any integer values, though very large numbers may be harder to read.</dd>
+<dt>Does it handle negative fractions?</dt><dd>Yes, both positive and negative fractions are supported.</dd>
+<dt>Can I use it on my phone?</dt><dd>The responsive layout works smoothly on mobile devices for quick checks anywhere.</dd>
+</dl>
+</section>
+</main>
+<footer><a href="../../index.html">Home</a></footer>
+<script>
+function gcd(a,b){return b?gcd(b,a%b):Math.abs(a);}
+function simplify(n,d){const g=gcd(n,d);return [n/g,d/g];}
+function calc(){const n1=parseInt(document.getElementById('num1').value)||0;
+const d1=parseInt(document.getElementById('den1').value)||1;
+const n2=parseInt(document.getElementById('num2').value)||0;
+const d2=parseInt(document.getElementById('den2').value)||1;
+let n,d;
+switch(document.getElementById('op').value){
+case 'add':n=n1*d2+n2*d1;d=d1*d2;break;
+case 'sub':n=n1*d2-n2*d1;d=d1*d2;break;
+case 'mul':n=n1*n2;d=d1*d2;break;
+case 'div':n=n1*d2;d=d1*n2;break;}
+[n,d]=simplify(n,d);
+document.getElementById('fracResult').textContent=`Result: ${n}/${d}`;}
+document.getElementById('fracBtn').addEventListener('click',calc);
+</script>
+</body>
+</html>
