@@ -8,6 +8,8 @@ No build step is required. The files are plain HTML, CSS and JS. Each calculator
 ## Keyword table
 | Tool | Meta Title | Meta Description |
 |------|------------|-----------------|
+
+|------|------------|------------------|
 | Basic Calculator | Basic Calculator - Quick Online Arithmetic | Basic Calculator to solve everyday arithmetic quickly. Use this online calculator for sums, differences, products and quotients. |
 | Scientific Calculator | Scientific Calculator - Advanced Functions Online | Scientific Calculator with trigonometry and exponent features for complex math. |
 | Word Counter | Word Counter - Count Words Instantly | Word Counter counts words and characters instantly in your text. |
@@ -44,6 +46,9 @@ No build step is required. The files are plain HTML, CSS and JS. Each calculator
 | Base64 Encoder/Decoder | Base64 Encoder/Decoder - Convert Text Quickly | Base64 Encoder/Decoder transforms text to base64 and back instantly in your browser. |
 | Body Fat Calculator | Body Fat Calculator - Estimate Percentage Quickly | Body Fat Calculator estimates body fat from simple measurements.
 | Pomodoro Timer | Pomodoro Timer - Boost Focus in 25-Minute Sessions | Pomodoro Timer now includes pause and reset options for flexible sessions.
+| Body Fat Calculator | Body Fat Calculator - Estimate Percentage Quickly | Body Fat Calculator estimates body fat from simple measurements. |
+| Pomodoro Timer | Pomodoro Timer - Boost Focus in 25-Minute Sessions | Pomodoro Timer now includes pause and reset options for flexible sessions. |
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
+

@@ -1,6 +1,7 @@
 // Alpine stores for theme and search
 function filesToCache(){
   const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
+  const links=[ './','tools.css','mini.js'];
   document.querySelectorAll('a[href$=".html"]').forEach(a=>links.push(a.getAttribute('href')));
   return links;
 }
@@ -8,6 +9,7 @@ function filesToCache(){
 if('serviceWorker' in navigator){
   const files=filesToCache();
   const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(files)}))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
+  const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(['./','tools.css','mini.js'])})))) ;self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
   navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'text/javascript'})));
 }
 
@@ -32,3 +34,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 function decorateToolPage(){
   // placeholder to inject shared nav/footer in future
 }
+
