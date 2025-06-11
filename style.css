@@ -5,6 +5,7 @@
   --text:#f0f6fc;
   --accent:#58a6ff;
   --radius:12px;
+  --transition:0.3s ease;
 }
 * {box-sizing:border-box;}
 body {
@@ -37,11 +38,14 @@ a:focus{outline:2px dashed var(--accent); outline-offset:2px;}
 
 /* Tool grid */
 .tool-grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;padding:1rem;}
-.tool-card {background:var(--bg-secondary);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.4);transition:transform .3s, box-shadow .3s;opacity:0;transform:translateY(20px);}
+.tool-card {background:var(--bg-secondary);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.4);transition:transform var(--transition),box-shadow var(--transition);opacity:0;transform:translateY(20px);position:relative;overflow:hidden;}
+.tool-card::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(88,166,255,.15));opacity:0;transition:opacity var(--transition);}
+.tool-card:hover::after{opacity:1;}
+.tool-card:hover .emoji{transform:rotate(10deg) scale(1.1);}
+.tool-card .emoji{transition:transform var(--transition);display:block;font-size:2rem;margin-bottom:.5rem;background:rgba(88,166,255,.2);border-radius:50%;padding:.5rem;}
 .tool-card.visible {opacity:1;transform:translateY(0);}
 .tool-card:hover {transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,.6);}
-.icon {display:inline-block;font-size:2rem;margin-bottom:.5rem;background:rgba(88,166,255,.2);border-radius:50%;padding:.5rem;}
-.desc {max-height:0;overflow:hidden;opacity:0;transition:max-height .3s, opacity .3s;font-size:.9rem;color:#c9d1d9;}
+.desc {max-height:0;overflow:hidden;opacity:0;transition:max-height var(--transition),opacity var(--transition);font-size:.9rem;color:#c9d1d9;}
 .tool-card:hover .desc,.tool-card:focus .desc {max-height:40px;opacity:1;}
 
 /* Footer */
