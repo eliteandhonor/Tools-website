@@ -1,137 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{search:''}" x-cloak>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <title>MiniTools Universe – Handy Online Utilities</title>
-  <meta name="description"
-        content="All your favorite calculators, converters, timers and more in a single offline-friendly hub.">
-
-  <!-- Open Graph / social preview -->
-  <meta property="og:title" content="MiniTools Universe">
-  <meta property="og:description"
-        content="Collection of handy online utilities – calculators, converters, creative tools and more.">
-  <link rel="canonical" href="https://example.com/">
-
-  <!-- Fonts & CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        integrity="sha384-TNPe8tkCbZ2M1zDh/QEqplLWYwgdEN0OZK0s8AjtKoa6HgMHtYjgJv1bLvK+cvM/"
-        crossorigin="anonymous">
-
-  <!-- Site styles -->
-  <link rel="stylesheet" href="style.min.css">
-  <!-- Dark-mode override (disabled by default, enabled via JS) -->
-  <link rel="stylesheet" href="dark.min.css" id="darkCss"
-        media="(prefers-color-scheme: dark)">
-
-  <!-- Scripts (deferred) -->
-  <script defer src="app.min.js"></script>
-  <script defer
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG"
-          crossorigin="anonymous"></script>
-</head>
-
-<body>
-<header class="site-header">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a href="index.html" class="logo">MiniTools Universe</a>
-
-    <nav aria-label="Main">
-      <ul class="d-flex gap-3 m-0 list-unstyled">
-        <li><a href="#calculators">Calculators</a></li>
-        <li><a href="#converters">Converters</a></li>
-        <li><a href="#productivity">Productivity</a></li>
-        <li><a href="#generators">Generators</a></li>
-        <li><a href="#developer">Developer</a></li>
-        <li><a href="#text">Text Tools</a></li>
-      </ul>
+<title>MiniTools Universe - Handy offline tools</title>
+<meta name="description" content="Explore calculators, converters and utilities in a single dark themed hub. Works offline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Fira+Code&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        accent: 'var(--mt-accent)',
+        surface: 'var(--mt-surface)',
+        background: 'var(--mt-bg)',
+        text: 'var(--mt-text)'
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="tools.css">
+<body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
+<header class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
+    <nav class="hidden md:flex gap-4">
+      <a href="#calculators" class="hover:text-accent">Calculators</a>
+      <a href="#converters" class="hover:text-accent">Converters</a>
+      <a href="#productivity" class="hover:text-accent">Productivity</a>
+      <a href="#generators" class="hover:text-accent">Generators</a>
+      <a href="#developer" class="hover:text-accent">Developer</a>
+      <a href="#text" class="hover:text-accent">Text Tools</a>
     </nav>
-
-    <!-- Dark-mode toggle -->
-    <button class="theme-toggle btn btn-link p-0 fs-4" id="themeToggle"
-            aria-label="Toggle dark mode">🌙</button>
+    <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring" aria-label="Toggle theme">
+      <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
+      <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+    </button>
   </div>
-</header>
-
-<main class="container py-4">
-  <!-- ── Hero ──────────────────────────────────────────────────────── -->
-  <section id="hero" class="text-center position-relative mb-5">
-    <h1 class="display-5 fw-semibold">All your tools in one place</h1>
-    <p class="lead">Explore our growing set of utilities and use them offline.</p>
-
-    <input type="search" id="toolSearch" class="form-control mx-auto"
-           style="max-width: 420px"
-           placeholder="Search tools…" aria-label="Search tools" autofocus>
-
-    <!-- Decorative stars -->
-    <svg class="position-absolute top-0 start-0 w-100 h-100"
-         preserveAspectRatio="none" aria-hidden="true">
-      <circle cx="20%" cy="30%" r="1"></circle>
-      <circle cx="40%" cy="80%" r="1"></circle>
-      <circle cx="70%" cy="50%" r="1"></circle>
-      <circle cx="90%" cy="20%" r="1"></circle>
-      <circle cx="15%" cy="70%" r="1"></circle>
-    </svg>
-  </section>
-
-  <!-- ── Calculators ──────────────────────────────────────────────── -->
-  <section id="calculators">
-    <h2>Calculators</h2>
-    <div class="tool-grid row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-      <article class="tool-card col"><span class="emoji">🧮</span><a href="tools/basic-calculator/index.html">Basic Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">📐</span><a href="tools/scientific-calculator/index.html">Scientific Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">📈</span><a href="tools/graphing-calculator/index.html">Graphing Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">💵</span><a href="tools/tip-calculator/index.html">Tip Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">📊</span><a href="tools/percentage-calculator/index.html">Percentage Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">🏷️</span><a href="tools/discount-calculator/index.html">Discount Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">🎂</span><a href="tools/age-calculator/index.html">Age Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">⚖️</span><a href="tools/bmi-calculator/index.html">BMI Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">📆</span><a href="tools/date-difference-calculator/index.html">Date Difference Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">¼</span><a href="tools/fraction-calculator/index.html">Fraction Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">💰</span><a href="tools/simple-interest-calculator/index.html">Simple Interest Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">💹</span><a href="tools/compound-interest-calculator/index.html">Compound Interest Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">🏦</span><a href="tools/loan-calculator/index.html">Loan Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">🔥</span><a href="tools/bmr-calculator/index.html">BMR Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">💪</span><a href="tools/body-fat-calculator/index.html">Body Fat Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">⏱️</span><a href="tools/epoch-time-converter/index.html">Epoch Time Converter</a></article>
-      <article class="tool-card col"><span class="emoji">🎨</span><a href="tools/paint-coverage-calculator/index.html">Paint Coverage Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">⭕</span><a href="tools/circle-area-calculator/index.html">Circle Area Calculator</a></article>
-      <article class="tool-card col"><span class="emoji">🔺</span><a href="tools/triangle-area-calculator/index.html">Triangle Area Calculator</a></article>
-    </div>
-  </section>
-
-  <!-- ── Converters ──────────────────────────────────────────────── -->
-  <section id="converters" class="mt-5">
-    <h2>Converters</h2>
-    <div class="tool-grid row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-      <article class="tool-card col"><span class="emoji">🔄</span><a href="tools/unit-converter/index.html">Unit Converter</a></article>
-      <article class="tool-card col"><span class="emoji">🌡️</span><a href="tools/temperature-converter/index.html">Temperature Converter</a></article>
-      <article class="tool-card col"><span class="emoji">🕑</span><a href="tools/time-zone-converter/index.html">Time Zone Converter</a></article>
-      <article class="tool-card col"><span class="emoji">💱</span><a href="tools/currency-converter/index.html">Currency Converter</a></article>
-      <article class="tool-card col"><span class="emoji">🎨</span><a href="tools/color-converter/index.html">Color Converter</a></article>
-      <article class="tool-card col"><span class="emoji">🔤</span><a href="tools/base64-encoder/index.html">Base64 Encoder/Decoder</a></article>
-    </div>
-  </section>
-
-  <!-- ── Productivity ────────────────────────────────────────────── -->
-  <section id="productivity" class="mt-5">
-    <h2>Productivity</h2>
-    <div class="tool-grid row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-      <article class="tool-card col"><span class="emoji">⏳</span><a href="tools/countdown-timer/index.html">Countdown Timer</a></article>
-      <article class="tool-card col"><span class="emoji">⏱️</span><a href="tools/stopwatch/index.html">Stopwatch</a></article>
-      <article class="tool-card col"><span class="emoji">🍅</span><a href="tools/pomodoro-timer/index.html">Pomodoro Timer</a></article>
-    </div>
-  </section>
-
-  <!-- ── Generators ──────────────────────────────────────────────── -->
-  <section id="generators" class="mt-5">
+<main class="pt-24">
+  <section id="hero" class="relative text-center py-24 overflow-hidden">
+    <div id="stars" class="absolute inset-0 pointer-events-none"></div>
+    <h1 class="text-3xl font-semibold mb-4" data-aos="fade-down">All your tools in one place</h1>
+    <p class="mb-6 opacity-80" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
+    <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="mx-auto block w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 py-2 rounded-full bg-surface text-text focus-visible:ring accent transition motion-safe:transform-gpu" data-aos="zoom-in" />
+  <section id="calculators" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Calculators</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/basic-calculator/index.html" x-data="{name:'basic calculator'}" x-show="name.includes(search.toLowerCase())" class="group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🧮</span>
+        <span class="font-semibold">Basic Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Perform everyday arithmetic with ease.</p>
+        <i class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      <a href="tools/scientific-calculator/index.html" x-data="{name:'scientific calculator'}" x-show="name.includes(search.toLowerCase())" class="group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🔬</span>
+        <span class="font-semibold">Scientific Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Advanced functions for higher math.</p>
+        <i class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+<footer class="text-center text-sm opacity-80 py-8">
+  &copy; 2025 MiniTools Universe
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="mini.js" defer></script>
     <h2>Generators</h2>
     <div class="tool-grid row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
       <article class="tool-card col"><span class="emoji">🎲</span><a href="tools/random-number-generator/index.html">Random Number Generator</a></article>
