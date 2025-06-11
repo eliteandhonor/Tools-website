@@ -1,0 +1,19 @@
+:root{
+  --mt-bg:#101114;
+  --mt-surface:#1e1f23;
+  --mt-text:#e6eaf1;
+  --mt-accent:#4e82ff;
+  font-family:'Inter',sans-serif;
+}
+:root.light{
+  --mt-bg:#fafbfd;
+  --mt-surface:#ffffff;
+  --mt-text:#1b1d21;
+  --mt-accent:#2e60ff;
+}
+body{background:var(--mt-bg);color:var(--mt-text);}
+.font-inter{font-family:'Inter',sans-serif;}
+.bg-surface{background-color:var(--mt-surface);}
+.text-accent{color:var(--mt-accent);}
+.ring-accent\/50{--tw-ring-color:rgb(78 130 255 / 0.5);}
+input:focus-visible{outline:none;}

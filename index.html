@@ -1,4 +1,85 @@
 <!DOCTYPE html>
+<html lang="en" x-data="{search:''}" x-cloak>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiniTools Universe - Handy offline tools</title>
+<meta name="description" content="Explore calculators, converters and utilities in a single dark themed hub. Works offline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Fira+Code&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        accent: 'var(--mt-accent)',
+        surface: 'var(--mt-surface)',
+        background: 'var(--mt-bg)',
+        text: 'var(--mt-text)'
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="tools.css">
+</head>
+<body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
+<header class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
+    <nav class="hidden md:flex gap-4">
+      <a href="#calculators" class="hover:text-accent">Calculators</a>
+      <a href="#converters" class="hover:text-accent">Converters</a>
+      <a href="#productivity" class="hover:text-accent">Productivity</a>
+      <a href="#generators" class="hover:text-accent">Generators</a>
+      <a href="#developer" class="hover:text-accent">Developer</a>
+      <a href="#text" class="hover:text-accent">Text Tools</a>
+    </nav>
+    <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring" aria-label="Toggle theme">
+      <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
+      <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+</header>
+<main class="pt-24">
+  <section id="hero" class="relative text-center py-24 overflow-hidden">
+    <div id="stars" class="absolute inset-0 pointer-events-none"></div>
+    <h1 class="text-3xl font-semibold mb-4" data-aos="fade-down">All your tools in one place</h1>
+    <p class="mb-6 opacity-80" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
+    <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="mx-auto block w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 py-2 rounded-full bg-surface text-text focus-visible:ring accent transition motion-safe:transform-gpu" data-aos="zoom-in" />
+  </section>
+  <section id="calculators" class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-xl font-semibold mb-4">Calculators</h2>
+    <div class="grid gap-6 auto-cols-fr md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a href="tools/basic-calculator/index.html" x-data="{name:'basic calculator'}" x-show="name.includes(search.toLowerCase())" class="group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🧮</span>
+        <span class="font-semibold">Basic Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Perform everyday arithmetic with ease.</p>
+        <i class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="tools/scientific-calculator/index.html" x-data="{name:'scientific calculator'}" x-show="name.includes(search.toLowerCase())" class="group relative bg-surface rounded-lg p-4 ring-1 ring-white/5 hover:-translate-y-1 hover:ring-accent/50 transition" data-aos="fade-up">
+        <span class="text-3xl block mb-2">🔬</span>
+        <span class="font-semibold">Scientific Calculator</span>
+        <p class="text-sm opacity-70 mt-1">Advanced functions for higher math.</p>
+        <i class="fa-solid fa-arrow-right absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+  </section>
+</main>
+<footer class="text-center text-sm opacity-80 py-8">
+  &copy; 2025 MiniTools Universe
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="mini.js" defer></script>
+=======
 <html lang="en">
 <head>
   <meta charset="UTF-8">
