@@ -18,6 +18,7 @@ nav a{text-decoration:none;color:var(--accent);font-weight:500;transition:color 
 .keys button{padding:.75rem;font-size:1rem;border:0;border-radius:6px;background:var(--accent);color:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);cursor:pointer;transition:background .2s,transform .1s}
 .keys button:hover{background:#376ad6}
 .keys button:active{transform:scale(.97)}
+
 .emoji{font-size:2rem;display:block;margin-bottom:.25rem}
 .site-header,.tool-header{background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:10}
 .site-header .container,.tool-header .container{display:flex;align-items:center;gap:1rem}
@@ -27,4 +28,5 @@ nav a{text-decoration:none;color:var(--accent);font-weight:500;transition:color 
 .related-tools ul{list-style:none;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
 .related-tools a{text-decoration:none;color:var(--accent);font-weight:500}
 .related-tools a:hover{text-decoration:underline}
+
 
