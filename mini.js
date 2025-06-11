@@ -38,9 +38,17 @@ document.addEventListener('DOMContentLoaded',()=>{
     card.addEventListener('mouseenter',()=>gsap.to(arrow,{x:6,opacity:1,duration:0.3}));
     card.addEventListener('mouseleave',()=>gsap.to(arrow,{x:0,opacity:0,duration:0.3}));
   });
+  document.querySelectorAll('.copy-btn').forEach(btn=>{
+    btn.classList.add('btn','btn-primary','mt-2');
+  });
+  document.querySelectorAll('main > div:first-of-type').forEach(el=>{
+    el.classList.add('card','p-4','shadow','mt-4','animate__animated','animate__zoomIn');
+    el.setAttribute('data-aos','zoom-in');
+  });
 });
 
 function decorateToolPage(){
   // placeholder to inject shared nav/footer in future
 }
+
 

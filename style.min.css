@@ -22,6 +22,10 @@ nav a{text-decoration:none;color:var(--accent);font-weight:500;transition:color 
 .keys button{padding:.75rem;font-size:1rem;border:0;border-radius:6px;background:var(--accent);color:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);cursor:pointer;transition:background .2s,transform .1s}
 .keys button:hover{background:#376ad6}
 .keys button:active{transform:scale(.97)}
+.copy-btn{background:var(--accent);color:#fff;border:0;border-radius:var(--radius);padding:.4rem .75rem;cursor:pointer;transition:background var(--transition),transform var(--transition)}
+.copy-btn:hover{background:#3a6fd8}
+.copy-btn:active{transform:scale(.97)}
+main>div:first-of-type{background:var(--bg-secondary);padding:1.5rem;border-radius:var(--radius);box-shadow:0 4px 8px rgba(0,0,0,.5);max-width:420px;margin:1.5rem auto}
 
 .emoji{font-size:2rem;display:block;margin-bottom:.25rem}
 .site-header,.tool-header{background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:10}
@@ -32,6 +36,7 @@ nav a{text-decoration:none;color:var(--accent);font-weight:500;transition:color 
 .related-tools ul{list-style:none;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
 .related-tools a{text-decoration:none;color:var(--accent);font-weight:500}
 .related-tools a:hover{text-decoration:underline}
+
 
 
 

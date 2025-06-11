@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Markdown Editor - Write and Preview Markdown</title>
 <meta name="description" content="Markdown Editor converts your text to HTML in real time so you can copy clean markup." />
+<meta name="robots" content="index,follow">
+<meta property="og:url" content="https://example.com/tools/markdown-editor/">
 <meta property="og:title" content="Markdown Editor"/>
 <meta property="og:description" content="Edit Markdown and see the result instantly"/>
 <link rel="canonical" href="https://example.com/tools/markdown-editor/" />
@@ -30,6 +32,7 @@
 <p><strong>Markdown Editor</strong> lets you write Markdown and instantly preview the HTML output. It&rsquo;s ideal for note taking, blogging or preparing documentation. The editor runs completely in your browser so your words never leave your device and the tool stays available offline. Type on the left, read the formatted result on the right and copy the final markup when you&rsquo;re done. Try the Markdown Editor now!</p>
 <div class="row">
 <div class="col-md-6 mb-3">
+<textarea id="md" rows="10" class="w-100"></textarea>
 <textarea id="md" rows="10" class="w-100" aria-label="Markdown input" placeholder="Type your Markdown here..."></textarea>
 </div>
 <div class="col-md-6">
@@ -62,6 +65,7 @@ function render(){const src=document.getElementById('md').value;document.getElem
 </script>
 </body>
 </html>
+
 
 
 
