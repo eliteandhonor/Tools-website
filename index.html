@@ -43,33 +43,60 @@ tailwind.config = {
 </head>
 <body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
   <a class="skip-link" href="#main">Skip to content</a>
-<header x-data="{open:false}" class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
+<header x-data="{open:false}" class="fixed top-0 left-0 right-0 backdrop-blur bg-background/80 border-b border-white/10 z-50">
   <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
     <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
-    <button @click="open=!open" class="md:hidden text-accent text-xl mr-2 focus:outline-none focus-visible:ring" aria-label="Menu">
-      <i class="fa-solid fa-bars" x-show="!open"></i>
-      <i class="fa-solid fa-xmark" x-show="open"></i>
-    </button>
-    <nav :class="open?'flex':'hidden md:flex'" class="flex-col md:flex-row gap-4 absolute md:static top-full left-0 w-full bg-background md:bg-transparent p-4 md:p-0">
-      <a href="#calculators" class="text-text hover:text-accent">Calculators</a>
-      <a href="#converters" class="text-text hover:text-accent">Converters</a>
-      <a href="#productivity" class="text-text hover:text-accent">Productivity</a>
-      <a href="#generators" class="text-text hover:text-accent">Generators</a>
-      <a href="#developer" class="text-text hover:text-accent">Developer</a>
-      <a href="#text" class="text-text hover:text-accent">Text Tools</a>
+    <nav class="hidden md:flex gap-4">
+      <a href="#calculators" class="hover:text-accent">Calculators</a>
+      <a href="#converters" class="hover:text-accent">Converters</a>
+      <a href="#productivity" class="hover:text-accent">Productivity</a>
+      <a href="#generators" class="hover:text-accent">Generators</a>
+      <a href="#developer" class="hover:text-accent">Developer</a>
+      <a href="#text" class="hover:text-accent">Text Tools</a>
     </nav>
-    <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring ml-4" aria-label="Toggle theme">
-      <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
-      <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
-    </button>
+    <div class="flex items-center">
+      <button @click="open=true" class="md:hidden text-accent text-xl mr-3 focus:outline-none focus-visible:ring" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring" aria-label="Toggle theme">
+        <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
+        <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
   </div>
+  <nav x-cloak x-bind:class="open ? 'translate-x-0' : '-translate-x-full'" class="fixed inset-y-0 left-0 w-64 bg-background p-4 space-y-4 transform transition-transform md:hidden">
+    <button @click="open=false" class="text-accent text-xl mb-4 focus:outline-none focus-visible:ring" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="#calculators" @click="open=false" class="block hover:text-accent">Calculators</a>
+    <a href="#converters" @click="open=false" class="block hover:text-accent">Converters</a>
+    <a href="#productivity" @click="open=false" class="block hover:text-accent">Productivity</a>
+    <a href="#generators" @click="open=false" class="block hover:text-accent">Generators</a>
+    <a href="#developer" @click="open=false" class="block hover:text-accent">Developer</a>
+    <a href="#text" @click="open=false" class="block hover:text-accent">Text Tools</a>
+  </nav>
 </header>
 <main id="main" class="pt-24">
   <section id="hero" class="relative text-center py-24 overflow-hidden">
     <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
-    <h1 class="text-3xl font-semibold mb-4" data-aos="fade-down">All your tools in one place</h1>
+    <h1 class="text-4xl md:text-5xl font-semibold mb-4" data-aos="fade-down">All your tools in one place</h1>
     <p class="mb-6 opacity-80" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
-    <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="mx-auto block w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 py-2 rounded-full bg-surface text-text focus-visible:ring-2 focus-visible:ring-accent transition motion-safe:transform-gpu" data-aos="zoom-in" />
+    <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="mx-auto block w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 py-3 rounded-full shadow bg-surface text-text focus-visible:ring-2 focus-visible:ring-accent transition motion-safe:transform-gpu" data-aos="zoom-in" />
+  </section>
+
+  <section id="features" class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto px-4 text-center">
+    <div>
+      <div class="text-3xl mb-2">⚡</div>
+      <h3 class="font-semibold">Fast &amp; light</h3>
+    </div>
+    <div>
+      <div class="text-3xl mb-2">🔌</div>
+      <h3 class="font-semibold">Offline ready</h3>
+    </div>
+    <div>
+      <div class="text-3xl mb-2">💻</div>
+      <h3 class="font-semibold">Open source</h3>
+    </div>
   </section>
   <section id="calculators" class="max-w-6xl mx-auto px-4 mt-16">
     <h2 class="text-xl font-semibold mb-4">Calculators</h2>
@@ -222,7 +249,8 @@ tailwind.config = {
   </section>
 </main>
 <footer class="text-center text-sm opacity-80 py-8">
-  &copy; 2025 MiniTools Universe
+  &copy; 2025 MiniTools Universe – <a href="https://github.com/example/tools-website" class="hover:text-accent">GitHub</a>
+  <div class="mt-2">Built with <span aria-label="love">❤</span> by MiniTools Universe</div>
 </footer>
 <script src="/vendor/cdn/alpine.min.js" defer></script>
 <script src="/vendor/cdn/aos.js" defer></script>

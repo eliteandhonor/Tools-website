@@ -84,6 +84,8 @@ dependency retrieval when OminiReq evaluates new tools:
 
 ### 🔄 Active
 
+- [x] Redesign `index.html` with improved layout, accessibility and modern styling (assigned → **OminiUI**) (header, hero & footer refreshed)
+
 
 ### ✅ Completed
 - [x] Ensure `npm run build` copies `index.html` and tool pages to `dist/` so `pa11y` tests run on actual pages (assigned → **OminiUI**) (HTML copied)
