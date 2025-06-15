@@ -1,3 +1,4 @@
+/* global Alpine AOS gsap ScrollTrigger plausible */
 // Alpine stores for theme and search and service worker
 function filesToCache(){
   const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
