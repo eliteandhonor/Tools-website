@@ -56,17 +56,8 @@
 ## Task List
 
 ### 🔄 Active
-- [x] Remove duplicate Google Fonts link and add an aria-label to the color input in `tools/color-picker/index.html` (assigned → **OminiUI**)
-- [x] Add `og:image` meta tags referencing OpenMoji icons for index and tool pages, then update `sitemap.xml` if needed (assigned → **OminiSEO**)
-- [x] Document offline caching and the Dexie database in `README.md` (assigned → **OminiDoc**)
-- [x] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
-- [x] Add missing `src/styles/tailwind.css` so `npm run build` succeeds (assigned → **OminiUI**) (file committed)
-- [x] Insert skip link on all pages and style in `tools.css` (assigned → **OminiUI**) (adds skip-link element and style)
-- [x] Document local vendor CDN assets and emoji/SVG image replacements in `README.md` (assigned → **OminiDoc**) (added vendor section)
-- [x] Download `workbox-sw.js` during build and load it from `/vendor/workbox/`; update `sw.js` accordingly (assigned → **OminiReq**) (build copies local library)
-- [x] Provide PowerShell script for Windows to download OpenMoji icons into `assets/` (assigned → **OminiReq**) (script added)
-
-- [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
+- [ ] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**)
+- [ ] Create docs/external-libraries.md and link it from README.md (assigned → **OminiDoc**)
 
 
 ### ✅ Completed
@@ -78,5 +69,16 @@
 - [x] Populate icons in `manifest.webmanifest` and ensure canonical tags across pages (assigned → **OminiSEO**) (added emoji-based URLs).
 - [x] Add `esbuild` and `workbox-cli` dev dependencies (assigned → **OminiReq**) (noted in package.json).
 - [x] Verify internal links using **LinkCheckAgent** (spawned via OminiForge) (linkchecker ran with encoding warnings).
+
+- [x] Remove duplicate Google Fonts link and add an aria-label to the color input in `tools/color-picker/index.html` (assigned → **OminiUI**)
+- [x] Add `og:image` meta tags referencing OpenMoji icons for index and tool pages, then update `sitemap.xml` if needed (assigned → **OminiSEO**)
+- [x] Document offline caching and the Dexie database in `README.md` (assigned → **OminiDoc**)
+- [x] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
+- [x] Add missing `src/styles/tailwind.css` so `npm run build` succeeds (assigned → **OminiUI**) (file committed)
+- [x] Insert skip link on all pages and style in `tools.css` (assigned → **OminiUI**) (adds skip-link element and style)
+- [x] Document local vendor CDN assets and emoji/SVG image replacements in `README.md` (assigned → **OminiDoc**) (added vendor section)
+- [x] Download `workbox-sw.js` during build and load it from `/vendor/workbox/`; update `sw.js` accordingly (assigned → **OminiReq**) (build copies local library)
+- [x] Provide PowerShell script for Windows to download OpenMoji icons into `assets/` (assigned → **OminiReq**) (script added)
+- [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
 
 ---
