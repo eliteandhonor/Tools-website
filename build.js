@@ -1,3 +1,5 @@
+/* eslint-env node */
+/* global require, process */
 const {execSync}=require('child_process');
 try{
   execSync('npx tailwindcss -m -o style.min.css');

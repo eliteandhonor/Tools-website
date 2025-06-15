@@ -1,0 +1,5 @@
+*.min.css
+dist/**
+style.css
+tools.css
+src/styles/tailwind.css
