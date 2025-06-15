@@ -8,6 +8,11 @@ The repository includes prebuilt `style.min.css` and `app.min.js`, so you can si
 ## Offline caching and database
 The site uses a Workbox service worker (`sw.js`) to precache assets and keep pages available offline. Runtime caching covers fonts, scripts and images so tools load instantly on repeat visits. Recent tool results are stored with Dexie.js (`db.js`) in an `mtu` IndexedDB database for offline retrieval.
 
+## Local vendor assets
+For full offline capability, copy any CDN-hosted files—such as Google Fonts, Bootstrap, Font Awesome or AOS—into a `vendor/` folder and update your HTML to reference these local copies. The service worker will then precache them alongside your own styles and scripts.
+
+Images are replaced by emojis or inline SVG wherever possible to keep pages small and search-friendly.
+
 ## Omini agents
 This project uses a set of "Omini agents" defined in `AGENTS.md` to keep docs, UI, SEO and code in sync.
 
