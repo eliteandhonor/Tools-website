@@ -105,5 +105,7 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**) (added policy section)
 - [x] Expand `requirements.txt` with documentation and CLI helpers; list allowed research domains (assigned → **OminiReq**)
 - [x] Research offline search libraries to power an "Omini Search" feature (assigned → **OminiReq**) (considered Fuse.js, Lunr.js, FlexSearch)
+- [x] Implement offline search with Fuse.js and generated index (assigned → **OminiLogic**) (Fuse integration and index build)
+- [x] Document search setup and usage (assigned → **OminiDoc**) (README updated)
 
 ---

@@ -5,6 +5,9 @@ This is a simplified demo of the MiniTools Universe static website. It provides 
 ## Build instructions
 The repository includes prebuilt `style.min.css` and `app.min.js`, so you can simply open `index.html` without any compilation. If you modify the CSS or JavaScript sources or need a production build, run `npm run build` to regenerate assets and copy pages into `dist/`.
 
+## Site search
+Run `npm install` to fetch dev dependencies, including Fuse.js. `npm run build` will create `search-index.json` from `tools.csv` and copy it with `search.js` into `dist/`. The home page loads `search.js` and `fuse.min.js` from `vendor/cdn/` so you can quickly filter tools offline using the search box.
+
 ## Offline caching and database
 The site uses a Workbox service worker (`sw.js`) to precache assets and keep pages available offline. Runtime caching covers fonts, scripts and images so tools load instantly on repeat visits. Recent tool results are stored with Dexie.js (`db.js`) in an `mtu` IndexedDB database for offline retrieval. See [docs/external-libraries.md](docs/external-libraries.md) for the CDN snippets we use and guidance on mirroring them locally.
 
