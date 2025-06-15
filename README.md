@@ -41,7 +41,7 @@ The repository includes prebuilt `style.min.css` and `app.min.js`, so you can si
 | Paint Coverage Calculator | Paint Coverage Calculator - Estimate Gallons Needed | Paint Coverage Calculator shows how many gallons you need for any room or project. |
 | Color Converter | Color Converter - HEX to RGB and HSL | Color Converter translates HEX color codes to RGB and HSL values instantly. |
 | Fuel Cost Calculator | Fuel Cost Calculator - Estimate Trip Fuel Expense | Fuel Cost Calculator computes fuel costs from distance, price and MPG. |
-| Base64 Encoder/Decoder | Base64 Encoder/Decoder - Convert Text Quickly | Base64 Encoder/Decoder transforms text to base64 and back instantly in your browser. |
+| Base64 Encoder/Decoder | Base64 Encoder/Decoder - Convert Text Quickly | Base64 Encoder/Decoder converts text to and from base64 instantly. Offline, secure and free. |
 | Body Fat Calculator | Body Fat Calculator - Estimate Percentage Quickly | Body Fat Calculator estimates body fat from simple measurements. |
 | Pomodoro Timer | Pomodoro Timer - Boost Focus in 25-Minute Sessions | Pomodoro Timer now includes pause and reset options for flexible sessions. |
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
