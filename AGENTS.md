@@ -59,6 +59,7 @@
 - [x] Add `og:image` meta tags referencing OpenMoji icons for index and tool pages, then update `sitemap.xml` if needed (assigned → **OminiSEO**)
 - [x] Document offline caching and the Dexie database in `README.md` (assigned → **OminiDoc**)
 - [x] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
+- [x] Add missing `src/styles/tailwind.css` so `npm run build` succeeds (assigned → **OminiUI**) (file committed)
 
 
 ### ✅ Completed
