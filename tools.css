@@ -17,3 +17,5 @@ body{background:var(--mt-bg);color:var(--mt-text);}
 .text-accent{color:var(--mt-accent);}
 .ring-accent\/50{--tw-ring-color:rgb(78 130 255 / 0.5);}
 input:focus-visible{outline:none;}
+.skip-link{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+.skip-link:focus{position:static;width:auto;height:auto;margin:0;padding:.5em 1em;background:var(--mt-accent);color:#fff;z-index:100;}

@@ -42,6 +42,7 @@ tailwind.config = {
 </script>
 </head>
 <body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
+  <a class="skip-link" href="#main">Skip to content</a>
 <header x-data="{open:false}" class="fixed top-0 w-full backdrop-blur bg-background/80 z-50 border-b border-white/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
     <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
@@ -63,7 +64,7 @@ tailwind.config = {
     </button>
   </div>
 </header>
-<main class="pt-24">
+<main id="main" class="pt-24">
   <section id="hero" class="relative text-center py-24 overflow-hidden">
     <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
     <h1 class="text-3xl font-semibold mb-4" data-aos="fade-down">All your tools in one place</h1>
