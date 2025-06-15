@@ -51,12 +51,12 @@ tailwind.config = {
       <i class="fa-solid fa-xmark" x-show="open"></i>
     </button>
     <nav :class="open?'flex':'hidden md:flex'" class="flex-col md:flex-row gap-4 absolute md:static top-full left-0 w-full bg-background md:bg-transparent p-4 md:p-0">
-      <a href="#calculators" class="hover:text-accent">Calculators</a>
-      <a href="#converters" class="hover:text-accent">Converters</a>
-      <a href="#productivity" class="hover:text-accent">Productivity</a>
-      <a href="#generators" class="hover:text-accent">Generators</a>
-      <a href="#developer" class="hover:text-accent">Developer</a>
-      <a href="#text" class="hover:text-accent">Text Tools</a>
+      <a href="#calculators" class="text-text hover:text-accent">Calculators</a>
+      <a href="#converters" class="text-text hover:text-accent">Converters</a>
+      <a href="#productivity" class="text-text hover:text-accent">Productivity</a>
+      <a href="#generators" class="text-text hover:text-accent">Generators</a>
+      <a href="#developer" class="text-text hover:text-accent">Developer</a>
+      <a href="#text" class="text-text hover:text-accent">Text Tools</a>
     </nav>
     <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring ml-4" aria-label="Toggle theme">
       <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
