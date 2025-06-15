@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static toolkit site (Tailwind CSS + ESLint v9 + Stylelint)",
   "scripts": {
-    "lint:js": "eslint .",
+    "lint:js": "eslint . --ignore-pattern vendor --ignore-pattern assets",
     "lint:css": "stylelint \"**/*.css\" --allow-empty-input",
     "lint:html": "htmlhint \"**/*.html\"",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",

@@ -13,6 +13,8 @@ For full offline capability, copy any CDN-hosted files—such as Google Fonts, B
 
 Images are replaced by emojis or inline SVG wherever possible to keep pages small and search-friendly.
 
+To fetch the OpenMoji PNGs referenced by `og:image` tags and the web manifest, run `scripts\download-openmoji.ps1` on Windows. This populates the local `assets/` directory so the site works offline.
+
 ## Omini agents
 This project uses a set of "Omini agents" defined in `AGENTS.md` to keep docs, UI, SEO and code in sync.
 
