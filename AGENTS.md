@@ -64,6 +64,8 @@ local paths. `docs/external-libraries.md` lists the snippets to mirror.
 
 ### 🔄 Active
 
+- [ ] Ensure `npm run build` copies `index.html` and tool pages to `dist/` so `pa11y` tests run on actual pages (assigned → **OminiUI**)
+
 ### ✅ Completed
 - [x] Mirror CDN CSS/JS in vendor/ and update HTML references (assigned → **OminiUI**) (local files added)
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
