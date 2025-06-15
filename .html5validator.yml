@@ -1,0 +1,8 @@
+root: .
+blacklist:
+  - node_modules
+  - dist
+ignore_re:
+  - 'Attribute "x-[^" ]*" not allowed'
+  - 'Attribute ":[^" ]*" not allowed'
+  - 'Attribute "@[^" ]*" not allowed'
