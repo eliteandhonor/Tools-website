@@ -1,4 +1,4 @@
-/* global Alpine AOS gsap ScrollTrigger plausible */
+/* global Alpine AOS gsap ScrollTrigger */
 // Alpine stores for theme and search and service worker
 function filesToCache(){
   const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
@@ -48,10 +48,3 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
 });
 
-// Plausible custom event helper
-function trackRun(tool){
-  if(window.plausible) plausible('tool_run',{props:{tool}});
-}
-
-// Expose decorate function for tool pages
-function decorateToolPage(){}
