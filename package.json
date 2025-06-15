@@ -9,7 +9,8 @@
     "lint:html": "htmlhint \"**/*.html\"",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
     "build": "mkdir -p dist/css vendor/workbox && cp node_modules/workbox-sw/build/workbox-sw.js vendor/workbox/workbox-sw.js && npx tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o dist/css/styles.css --minify && cp index.html manifest.webmanifest robots.txt sitemap.xml style.min.css dark.min.css tools.css mini.js app.min.js db.js sw.js dist/ && cp -r tools vendor dist/",
-    "start": "http-server dist -p 8080"
+    "start": "http-server dist -p 8080",
+    "toc": "doctoc AGENTS.md"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -24,6 +25,7 @@
     "http-server": "^14.1.1",
     "pa11y": "^9.0.0",
     "esbuild": "^0.20.0",
-    "workbox-cli": "^7.0.0"
+    "workbox-cli": "^7.0.0",
+    "doctoc": "^2.2.1"
   }
 }

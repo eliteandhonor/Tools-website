@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [MiniTools Universe — Omini Agents Specification](#minitools%E2%80%AFuniverse-%omini%E2%80%AFagents-specification)
+  - [Core Specialist Agents](#core-specialist-agents)
+  - [CDN Usage & Vendor Policy](#cdn-usage--vendor-policy)
+    - [Additional Allowed Domains](#additional-allowed-domains)
+  - [Meta / Management Agents](#meta--management-agents)
+    - [**OminiForge**  (Organic Custom Agent Creator)](#ominiforge-%C2%A0organic%E2%80%AFcustom-agent-creator)
+    - [**OminiTaskMaster**  (Task‑List Coordinator)](#ominitaskmaster-%C2%A0task%E2%80%91list-coordinator)
+  - [Spawned Agents](#spawned-agents)
+  - [Archive](#archive)
+    - [**LinkCheckAgent**](#linkcheckagent)
+  - [Task List](#task%E2%80%AFlist)
+    - [🔄 Active](#%E2%80%AFactive)
+    - [✅ Completed](#%E2%80%AFcompleted)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # MiniTools Universe — Omini Agents Specification
 
 > **Sole Source of Truth**  
@@ -104,6 +124,6 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
 - [x] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**) (added policy section)
 - [x] Expand `requirements.txt` with documentation and CLI helpers; list allowed research domains (assigned → **OminiReq**)
-- [x] Research offline search libraries to power an "Omini Search" feature (assigned → **OminiReq**) (considered Fuse.js, Lunr.js, FlexSearch)
+- [x] Add `mdformat` and `doctoc` to streamline AGENTS.md updates (assigned → **OminiReq**)
 
 ---

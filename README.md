@@ -18,6 +18,9 @@ To fetch the OpenMoji PNGs referenced by `og:image` tags and the web manifest, r
 ## Omini agents
 This project uses a set of "Omini agents" defined in `AGENTS.md` to keep docs, UI, SEO and code in sync.
 
+### Updating AGENTS.md
+Run `npm run toc` to refresh the table of contents and `mdformat AGENTS.md` to tidy up formatting.
+
 ## Keyword table
 | Tool | Meta Title | Meta Description |
 |------|------------|-----------------|
