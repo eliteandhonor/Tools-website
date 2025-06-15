@@ -8,7 +8,7 @@
     "lint:css": "stylelint \"**/*.css\" --allow-empty-input",
     "lint:html": "htmlhint \"**/*.html\"",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
-    "build": "mkdir -p dist/css && npx tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o dist/css/styles.css --minify",
+    "build": "mkdir -p dist/css vendor/workbox && cp node_modules/workbox-sw/build/workbox-sw.js vendor/workbox/workbox-sw.js && npx tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o dist/css/styles.css --minify",
     "start": "http-server dist -p 8080"
   },
   "devDependencies": {

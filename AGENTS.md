@@ -63,6 +63,7 @@
 - [x] Add missing `src/styles/tailwind.css` so `npm run build` succeeds (assigned → **OminiUI**) (file committed)
 - [x] Insert skip link on all pages and style in `tools.css` (assigned → **OminiUI**) (adds skip-link element and style)
 - [x] Document local vendor CDN assets and emoji/SVG image replacements in `README.md` (assigned → **OminiDoc**) (added vendor section)
+- [x] Download `workbox-sw.js` during build and load it from `/vendor/workbox/`; update `sw.js` accordingly (assigned → **OminiReq**) (build copies local library)
 
 
 ### ✅ Completed

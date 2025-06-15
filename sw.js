@@ -1,6 +1,10 @@
 /* eslint-env serviceworker */
 /* global importScripts, workbox */
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js');
+try{
+  importScripts('/vendor/workbox/workbox-sw.js');
+}catch(e){
+  importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js');
+}
 self.skipWaiting();
 workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST||[]);
