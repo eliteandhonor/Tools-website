@@ -2,26 +2,33 @@
   "name": "tools-website",
   "version": "0.1.0",
   "private": true,
-  "description": "Tools Website - Static site with Tailwind CSS and linters",
+  "description": "Static toolkit site (Tailwind CSS + ESLint v9 + Stylelint)",
   "scripts": {
-    "lint:js": "eslint .",
-    "lint:css": "stylelint \"**/*.css\"",
-    "lint:html": "htmlhint \"**/*.html\"",
-    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
-    "build": "mkdir -p dist/css && tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o dist/css/styles.css --minify",
+    "lint:js":   "eslint .",
+    "lint:css":  "stylelint \"**/*.css\"",
+    "lint:html": "htmlhint  \"**/*.html\"",
+    "lint":      "npm run lint:js && npm run lint:css && npm run lint:html",
+
+    "build": "mkdir -p dist/css && npx tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o dist/css/styles.css --minify",
     "start": "http-server dist -p 8080"
   },
+
   "devDependencies": {
-    "@eslint/js": "^9.29.0",
-    "eslint": "^9.29.0",
-    "globals": "^16.2.0",
-    "stylelint": "^16.15.0",
+    /* --- JS / HTML / CSS quality --- */
+    "@eslint/js":                "^9.29.0",
+    "eslint":                    "^9.29.0",
+    "globals":                   "^16.2.0",
+    "stylelint":                 "^16.15.0",
     "stylelint-config-standard": "^38.0.0",
-    "htmlhint": "^1.5.1",
-    "tailwindcss": "^4.1.0",
-    "postcss": "^8.5.5",
+    "htmlhint":                  "^1.5.1",
+
+    /* --- Build / serve --- */
+    "tailwindcss":  "^3.4.4",      // CLI included – invoked with `npx tailwindcss`
+    "postcss":      "^8.4.38",
     "autoprefixer": "^10.4.21",
-    "pa11y": "^9.0.0",
-    "http-server": "^14.1.1"
+    "http-server":  "^14.1.1",
+
+    /* --- Accessibility --- */
+    "pa11y": "^9.0.0"
   }
 }
