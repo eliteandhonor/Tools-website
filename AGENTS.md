@@ -59,7 +59,7 @@
 - [ ] *example* Create meta descriptions for the new “Base‑64 Encoder” page (assigned → **OminiSEO**).
 - [x] Clean up `README.md` and document build steps (assigned → **OminiDoc**) (removed stray JS and clarified build script).
 - [x] Deduplicate fonts/scripts and footers in `index.html`, add manifest link (assigned → **OminiUI**). (cleaned head & footer)
-- [ ] Refactor `mini.js` to remove duplicate service-worker logic (assigned → **OminiLogic**).
+- [x] Refactor `mini.js` to remove duplicate service-worker logic (assigned → **OminiLogic**). (deduplicated SW and AOS init)
 - [ ] Populate icons in `manifest.webmanifest` and ensure canonical tags across pages (assigned → **OminiSEO**).
 - [ ] Add `esbuild` and `workbox-cli` dev dependencies (assigned → **OminiReq**).
 - [ ] Verify internal links using **LinkCheckAgent** (spawned via OminiForge).
