@@ -56,7 +56,7 @@
 ## Task List
 
 ### 🔄 Active
-- [ ] *example* Create meta descriptions for the new “Base‑64 Encoder” page (assigned → **OminiSEO**).
+- [x] *example* Create meta descriptions for the new “Base‑64 Encoder” page (assigned → **OminiSEO**) (added meta description and og tags).
 - [x] Clean up `README.md` and document build steps (assigned → **OminiDoc**) (removed stray JS and clarified build script).
 - [x] Deduplicate fonts/scripts and footers in `index.html`, add manifest link (assigned → **OminiUI**). (cleaned head & footer)
 - [x] Refactor `mini.js` to remove duplicate service-worker logic (assigned → **OminiLogic**). (deduplicated SW and AOS init)
