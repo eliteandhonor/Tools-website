@@ -17,6 +17,7 @@
 | **OminiReq** | Dependency and tooling advice | Need for new lib/tool; recurring code patterns | Recommend libraries/dev‑tools; update `requirements.txt` (or note npm/dev deps) |
 | **OminiSEO** | Organic‑search optimisation | New page; content changes; scheduled audit | Craft meta tags & JSON‑LD; update sitemap & internal links; run SEO checks |
 | **OminiLogic** | JavaScript logic & algorithm tuning | New tool logic; bug/perf report | Optimise code; expand features; verify correctness & suggest simple tests |
+> **Offline libraries**: When feasible, copy third-party files into the `/vendor` directory so tools work offline. CDN URLs remain only as optional fallbacks. See related tasks above.
 
 ---
 
