@@ -60,6 +60,7 @@
 - [x] Document offline caching and the Dexie database in `README.md` (assigned → **OminiDoc**)
 - [x] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
 - [x] Add missing `src/styles/tailwind.css` so `npm run build` succeeds (assigned → **OminiUI**) (file committed)
+- [x] Add `<meta name="theme-color" content="#007bff">` across index pages (assigned → **OminiSEO**) (added tag sitewide)
 
 
 ### ✅ Completed
