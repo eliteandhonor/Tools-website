@@ -66,6 +66,8 @@
 - [x] Download `workbox-sw.js` during build and load it from `/vendor/workbox/`; update `sw.js` accordingly (assigned → **OminiReq**) (build copies local library)
 - [x] Provide PowerShell script for Windows to download OpenMoji icons into `assets/` (assigned → **OminiReq**) (script added)
 
+- [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
+
 
 ### ✅ Completed
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
