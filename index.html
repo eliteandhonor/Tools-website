@@ -4,14 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MiniTools Universe - Handy offline tools</title>
-<meta name="description" content="Explore calculators, converters and utilities in a single dark themed hub. Works offline.">
+<meta name="description" content="Explore calculators, converters and utilities in one emoji-filled hub. Offline ready and blazing fast.">
+<meta name="keywords" content="calculator, converter, offline tools, emoji tools, minitools">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="MiniTools Universe">
 <meta property="og:description" content="Explore calculators, converters and utilities in a single hub.">
 <meta property="og:url" content="https://example.com/index.html">
 <link rel="canonical" href="https://example.com/index.html">
 <meta property="og:image" content="assets/index-wrench.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
 <link rel="manifest" href="manifest.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MiniTools Universe",
+  "url": "https://example.com/index.html",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://example.com/index.html?search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
@@ -43,27 +59,27 @@ tailwind.config = {
 </head>
 <body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
   <a class="skip-link" href="#main">Skip to content</a>
-<header x-data="{open:false}" class="fixed top-0 left-0 right-0 backdrop-blur bg-background/80 border-b border-white/10 z-50">
-  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-    <a href="#" class="font-semibold text-lg">MiniTools Universe</a>
-    <nav class="hidden md:flex gap-4">
-      <a href="#calculators" class="hover:text-accent">Calculators</a>
-      <a href="#converters" class="hover:text-accent">Converters</a>
-      <a href="#productivity" class="hover:text-accent">Productivity</a>
-      <a href="#generators" class="hover:text-accent">Generators</a>
-      <a href="#developer" class="hover:text-accent">Developer</a>
-      <a href="#text" class="hover:text-accent">Text Tools</a>
-    </nav>
-    <div class="flex items-center">
-      <button @click="open=true" class="md:hidden text-accent text-xl mr-3 focus:outline-none focus-visible:ring" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <button @click="$store.theme.toggle()" class="text-accent text-xl focus:outline-none focus-visible:ring" aria-label="Toggle theme">
-        <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
-        <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
-      </button>
-    </div>
+<header x-data="{open:false}" class="navbar bg-background/80 backdrop-blur sticky top-0 z-50 border-b border-white/10">
+  <div class="flex-1">
+    <a href="#" class="btn btn-ghost normal-case text-lg">MiniTools 🔧</a>
   </div>
+  <nav class="hidden md:flex gap-2">
+    <a href="#calculators" class="btn btn-ghost btn-sm">Calculators</a>
+    <a href="#converters" class="btn btn-ghost btn-sm">Converters</a>
+    <a href="#productivity" class="btn btn-ghost btn-sm">Productivity</a>
+    <a href="#generators" class="btn btn-ghost btn-sm">Generators</a>
+    <a href="#developer" class="btn btn-ghost btn-sm">Developer</a>
+    <a href="#text" class="btn btn-ghost btn-sm">Text Tools</a>
+  </nav>
+  <div class="md:hidden flex-none">
+    <button @click="open=true" class="btn btn-ghost" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <button @click="$store.theme.toggle()" class="btn btn-ghost ml-2" aria-label="Toggle theme">
+    <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
+    <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+  </button>
   <nav x-cloak x-bind:class="open ? 'translate-x-0' : '-translate-x-full'" class="fixed inset-y-0 left-0 w-64 bg-background p-4 space-y-4 transform transition-transform md:hidden">
     <button @click="open=false" class="text-accent text-xl mb-4 focus:outline-none focus-visible:ring" aria-label="Close menu">
       <i class="fa-solid fa-xmark"></i>
@@ -77,25 +93,27 @@ tailwind.config = {
   </nav>
 </header>
 <main id="main" class="pt-24">
-  <section id="hero" class="relative text-center py-24 overflow-hidden">
+<section id="hero" class="hero min-h-[60vh] bg-gradient-to-br from-slate-800 to-slate-950 text-center py-20 overflow-hidden">
     <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
-    <h1 class="text-4xl md:text-5xl font-semibold mb-4" data-aos="fade-down">All your tools in one place</h1>
-    <p class="mb-6 opacity-80" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
-    <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="mx-auto block w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 py-3 rounded-full shadow bg-surface text-text focus-visible:ring-2 focus-visible:ring-accent transition motion-safe:transform-gpu" data-aos="zoom-in" />
+    <div class="hero-content flex flex-col">
+      <h1 class="text-5xl font-bold mb-4" data-aos="fade-down">All your tools in one place</h1>
+      <p class="mb-6 opacity-80" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
+      <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="input input-bordered w-full max-w-md mx-auto" data-aos="zoom-in" />
+    </div>
   </section>
 
   <section id="features" class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto px-4 text-center">
-    <div>
+    <div class="stat bg-surface rounded-box py-4">
       <div class="text-3xl mb-2">⚡</div>
-      <h3 class="font-semibold">Fast &amp; light</h3>
+      <div class="stat-title">Fast &amp; light</div>
     </div>
-    <div>
+    <div class="stat bg-surface rounded-box py-4">
       <div class="text-3xl mb-2">🔌</div>
-      <h3 class="font-semibold">Offline ready</h3>
+      <div class="stat-title">Offline ready</div>
     </div>
-    <div>
+    <div class="stat bg-surface rounded-box py-4">
       <div class="text-3xl mb-2">💻</div>
-      <h3 class="font-semibold">Open source</h3>
+      <div class="stat-title">Open source</div>
     </div>
   </section>
   <section id="calculators" class="max-w-6xl mx-auto px-4 mt-16">
@@ -248,9 +266,11 @@ tailwind.config = {
     </div>
   </section>
 </main>
-<footer class="text-center text-sm opacity-80 py-8">
-  &copy; 2025 MiniTools Universe – <a href="https://github.com/example/tools-website" class="hover:text-accent">GitHub</a>
-  <div class="mt-2">Built with <span aria-label="love">❤</span> by MiniTools Universe</div>
+<footer class="footer footer-center p-8 bg-background text-text text-sm">
+  <div>
+    <p>&copy; 2025 MiniTools Universe – <a href="https://github.com/example/tools-website" class="link">GitHub</a></p>
+    <p class="mt-2">Built with <span aria-label="love">❤</span> by MiniTools Universe</p>
+  </div>
 </footer>
 <script src="/vendor/cdn/alpine.min.js" defer></script>
 <script src="/vendor/cdn/aos.js" defer></script>
