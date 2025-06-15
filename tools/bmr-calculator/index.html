@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 <link rel="stylesheet" href="../../style.min.css">
 <link rel="stylesheet" href="../../dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="../../tools.css">
 <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script defer src="../../app.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6ZvzLJz2GV5/C/PObbIVdQydb9h9NP7VDaRao7IhiHBpjz2uVH54camz1Dtr1cG" crossorigin="anonymous"></script>
@@ -26,8 +27,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate BMR?","acceptedAnswer":{"@type":"Answer","text":"Enter your gender, weight, height and age then press calculate."}},{"@type":"Question","name":"Which formula is used?","acceptedAnswer":{"@type":"Answer","text":"This tool uses the Mifflin-St Jeor equation for accuracy."}},{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, once the page loads you can use it without internet."}},{"@type":"Question","name":"Are my numbers stored?","acceptedAnswer":{"@type":"Answer","text":"No data is saved or sent anywhere."}},{"@type":"Question","name":"Can I switch units?","acceptedAnswer":{"@type":"Answer","text":"Currently inputs are in metric units for simplicity."}}]}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 <header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><span class="emoji">🔥</span> BMR Calculator</h1></div></header>
-<main data-aos="fade-in" class="container animate__animated animate__fadeIn">
+<main id="main" data-aos="fade-in" class="container animate__animated animate__fadeIn">
 <p>BMR Calculator shows how many calories your body burns at rest. This <strong>online BMR tool</strong> uses the Mifflin-St Jeor equation, favored for its precision. Simply select your gender and enter your weight in kilograms, height in centimeters, and age in years. When you hit calculate, it reveals the calories you need just to maintain basic functions. Because the math runs locally in your browser, the tool still works even when you go offline. Knowing your BMR helps plan diets and track progress. Try the BMR Calculator now!</p>
 <div>
 <label>Gender <select id="gender" aria-label="Gender"><option value="M">Male</option><option value="F">Female</option></select></label>
