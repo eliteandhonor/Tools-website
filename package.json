@@ -14,21 +14,16 @@
   },
 
   "devDependencies": {
-    /* --- JS / HTML / CSS quality --- */
     "@eslint/js":                "^9.29.0",
     "eslint":                    "^9.29.0",
     "globals":                   "^16.2.0",
     "stylelint":                 "^16.15.0",
     "stylelint-config-standard": "^38.0.0",
     "htmlhint":                  "^1.5.1",
-
-    /* --- Build / serve --- */
-    "tailwindcss":  "^3.4.4",      // CLI included – invoked with `npx tailwindcss`
+    "tailwindcss":  "^3.4.4",      
     "postcss":      "^8.4.38",
     "autoprefixer": "^10.4.21",
     "http-server":  "^14.1.1",
-
-    /* --- Accessibility --- */
     "pa11y": "^9.0.0"
   }
 }
