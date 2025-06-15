@@ -1,24 +1,32 @@
 {
   "name": "minitools-universe",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Static HTML tool suite with dev helpers",
   "scripts": {
     "serve": "live-server .",
     "preview": "http-serve -p 8080 .",
     "build": "tailwindcss -m -o style.min.css",
+
     "run": "dotenv -e .env -- node scripts/codex.js \"$PROMPT\"",
-    "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && eslint '**/*.js'",
+
+    "lint:html": "htmlhint '**/*.html'",
+    "lint:css":  "stylelint '**/*.css'",
+    "lint:js":   "eslint '**/*.{js,jsx}'",
+    "lint":      "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:js:fix": "eslint --fix '**/*.{js,jsx}'",
+
     "minify:html": "html-minifier-terser --collapse-whitespace --remove-comments -o dist/ %s",
-    "minify:css": "cleancss -o dist/style.min.css style.css",
-    "minify:js": "terser --compress --mangle -o dist/app.min.js -- app.js",
-    "audit": "lighthouse http://localhost:8080 --chrome-flags='--headless' --only-categories=performance,accessibility,seo",
+    "minify:css":  "cleancss -o dist/style.min.css style.css",
+    "minify:js":   "terser --compress --mangle -o dist/app.min.js -- app.js",
+
+    "audit":        "lighthouse http://localhost:8080 --chrome-flags='--headless' --only-categories=performance,accessibility,seo",
     "accessibility": "pa11y http://localhost:8080",
-    "check-links": "linkinator http://localhost:8080 --recurse"
+    "check-links":   "linkinator http://localhost:8080 --recurse"
   },
   "devDependencies": {
     "eslint": "^9.29.0",
     "stylelint": "^16.20.0",
-    "htmlhint": "^1.5.1",
+    "htmlhint": "^1.3.0",
     "live-server": "^1.2.2",
     "http-serve": "^1.0.0",
     "html-minifier-terser": "^7.2.0",
@@ -30,10 +38,9 @@
     "sitemap-generator": "^8.5.1",
     "dotenv-cli": "^8.0.0",
     "openai": "^5.3.0",
+
     "@tailwindcss/cli": "^0.1.0",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.10"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "engines": { "node": ">=20" }
 }
