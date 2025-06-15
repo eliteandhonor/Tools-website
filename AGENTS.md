@@ -61,6 +61,7 @@
 - [x] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
 - [x] Add missing `src/styles/tailwind.css` so `npm run build` succeeds (assigned → **OminiUI**) (file committed)
 - [x] Insert skip link on all pages and style in `tools.css` (assigned → **OminiUI**) (adds skip-link element and style)
+- [x] Document local vendor CDN assets and emoji/SVG image replacements in `README.md` (assigned → **OminiDoc**) (added vendor section)
 
 
 ### ✅ Completed
