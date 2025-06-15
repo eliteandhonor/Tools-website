@@ -3,26 +3,23 @@
   "version": "0.1.1",
   "description": "Static HTML tool suite with dev helpers",
   "scripts": {
-    /* ─────────── General local-dev helpers ─────────── */
-    "serve": "live-server .",                                   // instant-reload dev server :contentReference[oaicite:0]{index=0}
-    "preview": "http-serve -p 8080 .",                          // lightweight prod-like preview :contentReference[oaicite:1]{index=1}
-    "build": "node build.js",                                   // your custom build step
-    /* ─────────── Quality / optimisation tasks ─────────── */
-    "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && eslint '**/*.js'",   // HTML/CSS/JS linters :contentReference[oaicite:2]{index=2}
-    "minify:html": "html-minifier-terser --collapse-whitespace --remove-comments -o dist/ %s", // HTML shrinker :contentReference[oaicite:3]{index=3}
-    "minify:css": "cleancss -o dist/style.min.css style.css",   // CSS optimiser
-    "minify:js": "terser --compress --mangle -o dist/app.min.js -- app.js",        // JS minifier
-    /* ─────────── Audits / checks ─────────── */
-    "audit": "lighthouse http://localhost:8080 --chrome-flags='--headless' --only-categories=performance,accessibility,seo", // perf + SEO review :contentReference[oaicite:4]{index=4}
-    "accessibility": "pa11y http://localhost:8080",             // WCAG scan
-    "check-links": "linkinator http://localhost:8080 --recurse" // broken-link crawl
+    "serve": "live-server .",
+    "preview": "http-serve -p 8080 .",
+    "build": "node build.js",
+    "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && eslint '**/*.js'",
+    "minify:html": "html-minifier-terser --collapse-whitespace --remove-comments -o dist/ %s",
+    "minify:css": "cleancss -o dist/style.min.css style.css",
+    "minify:js": "terser --compress --mangle -o dist/app.min.js -- app.js",
+    "audit": "lighthouse http://localhost:8080 --chrome-flags='--headless' --only-categories=performance,accessibility,seo",
+    "accessibility": "pa11y http://localhost:8080",
+    "check-links": "linkinator http://localhost:8080 --recurse"
   },
   "devDependencies": {
     "eslint": "^9.29.0",
     "stylelint": "^16.20.0",
     "htmlhint": "^1.5.1",
     "live-server": "^1.2.2",
-    "http-serve": "^1.0.0",          // tiny static server used by “preview” :contentReference[oaicite:5]{index=5}
+    "http-serve": "^1.0.0",
     "html-minifier-terser": "^7.2.0",
     "clean-css-cli": "^5.6.3",
     "terser": "^5.42.0",
@@ -31,5 +28,7 @@
     "linkinator": "^6.1.2",
     "sitemap-generator": "^8.5.1"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }
