@@ -17,7 +17,14 @@
 | **OminiReq** | Dependency and tooling advice | Need for new lib/tool; recurring code patterns | Recommend libraries/dev‑tools; update `requirements.txt` (or note npm/dev deps) |
 | **OminiSEO** | Organic‑search optimisation | New page; content changes; scheduled audit | Craft meta tags & JSON‑LD; update sitemap & internal links; run SEO checks |
 | **OminiLogic** | JavaScript logic & algorithm tuning | New tool logic; bug/perf report | Optimise code; expand features; verify correctness & suggest simple tests |
+
 > **Third‑party libraries only**: CDN links are used by default, but critical assets may be copied to `vendor/` for offline availability.
+
+## CDN Usage & Vendor Policy
+To keep pages lightweight we reference frameworks like Tailwind, Alpine and GSAP
+via CDN links. When preparing an offline bundle or improving load times, download
+each CDN file into the `vendor/` directory and update the HTML to point to these
+local paths. `docs/external-libraries.md` lists the snippets to mirror.
 
 ---
 
@@ -56,9 +63,6 @@
 ## Task List
 
 ### 🔄 Active
-- [ ] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**)
-- [ ] Create docs/external-libraries.md and link it from README.md (assigned → **OminiDoc**)
-
 
 ### ✅ Completed
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
@@ -80,5 +84,6 @@
 - [x] Download `workbox-sw.js` during build and load it from `/vendor/workbox/`; update `sw.js` accordingly (assigned → **OminiReq**) (build copies local library)
 - [x] Provide PowerShell script for Windows to download OpenMoji icons into `assets/` (assigned → **OminiReq**) (script added)
 - [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
+- [x] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**) (added policy section)
 
 ---
