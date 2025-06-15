@@ -1,13 +1,24 @@
-// eslint.config.js  (ESLint ≥ 9)
 import js from "@eslint/js";
+import globals from "globals";
 
 export default [
+  // Base ESLint recommended config for JavaScript
   js.configs.recommended,
   {
-    files: ["**/*.js"],
-    languageOptions: { sourceType: "module", ecmaVersion: 2022 },
+    languageOptions: {
+      // Specify ECMAScript features and global environments
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+      }
+    },
     rules: {
-      "no-console": "warn"
+      // Example additional rules/customizations
+      "no-unused-vars": "warn",
+      "no-undef": "error",
+      "eqeqeq": "error",
+      "no-console": "off"
     }
   }
 ];
