@@ -64,9 +64,9 @@ local paths. `docs/external-libraries.md` lists the snippets to mirror.
 
 ### 🔄 Active
 
-- [ ] Ensure `npm run build` copies `index.html` and tool pages to `dist/` so `pa11y` tests run on actual pages (assigned → **OminiUI**)
 
 ### ✅ Completed
+- [x] Ensure `npm run build` copies `index.html` and tool pages to `dist/` so `pa11y` tests run on actual pages (assigned → **OminiUI**) (HTML copied)
 - [x] Mirror CDN CSS/JS in vendor/ and update HTML references (assigned → **OminiUI**) (local files added)
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
 - [x] *example* Create meta descriptions for the new “Base-64 Encoder” page (assigned → **OminiSEO**) (added meta description and og tags).
