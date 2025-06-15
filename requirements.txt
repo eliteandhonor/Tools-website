@@ -8,15 +8,13 @@ minify-html==0.16.4
 jsmin==3.0.1
 watchdog==6.0.0
 
-# SEO & link checking (versions required by pyseoanalyzer)
+# SEO & link checking (aligned with pyseoanalyzer pins)
 pyseoanalyzer==2025.4.3
 beautifulsoup4==4.13.3
 lxml==5.3.1
+urllib3==2.3.0
 linkchecker==10.5.0
+requests==2.32.3        # works with urllib3 2.3.x
 
 # Image processing
 pillow==11.2.1
-
-# HTTP helpers
-requests==2.32.3
-urllib3==2.2.3
