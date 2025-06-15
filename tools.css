@@ -2,20 +2,20 @@
   --mt-bg:#101114;
   --mt-surface:#1e1f23;
   --mt-text:#e6eaf1;
-  --mt-accent:#4e82ff;
+  --mt-accent:#91caff;
   font-family:'Inter',sans-serif;
 }
 :root.light{
   --mt-bg:#fafbfd;
   --mt-surface:#ffffff;
   --mt-text:#1b1d21;
-  --mt-accent:#2e60ff;
+  --mt-accent:#3873dd;
 }
 body{background:var(--mt-bg);color:var(--mt-text);}
 .font-inter{font-family:'Inter',sans-serif;}
 .bg-surface{background-color:var(--mt-surface);}
 .text-accent{color:var(--mt-accent);}
-.ring-accent\/50{--tw-ring-color:rgb(78 130 255 / 0.5);}
+  .ring-accent\/50{--tw-ring-color:rgb(145 202 255 / 0.5);}
 input:focus-visible{outline:none;}
 .skip-link{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
 .skip-link:focus{position:static;width:auto;height:auto;margin:0;padding:.5em 1em;background:var(--mt-accent);color:#fff;z-index:100;}
