@@ -104,5 +104,6 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
 - [x] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**) (added policy section)
 - [x] Expand `requirements.txt` with documentation and CLI helpers; list allowed research domains (assigned → **OminiReq**)
+- [x] Research offline search libraries to power an "Omini Search" feature (assigned → **OminiReq**) (considered Fuse.js, Lunr.js, FlexSearch)
 
 ---
