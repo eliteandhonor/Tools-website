@@ -2,21 +2,21 @@ openai==1.86.0
 python-dotenv==1.1.0
 rich==14.0.0
 
-# Site-quality & optimisation tools
+# Site quality & optimisation
 html5validator==0.4.2
 minify-html==0.16.4
 jsmin==3.0.1
 watchdog==6.0.0
 
-# SEO & link checking (BeautifulSoup 4.13.3 required here)
+# SEO & link checking (versions required by pyseoanalyzer)
 pyseoanalyzer==2025.4.3
-linkchecker==10.5.0
 beautifulsoup4==4.13.3
-lxml==5.4.0
+lxml==5.3.1
+linkchecker==10.5.0
 
 # Image processing
 pillow==11.2.1
 
-# HTTP utilities used by several tools
+# HTTP helpers
 requests==2.32.3
 urllib3==2.2.3
