@@ -17,7 +17,7 @@
 | **OminiReq** | Dependency and tooling advice | Need for new lib/tool; recurring code patterns | Recommend libraries/dev‑tools; update `requirements.txt` (or note npm/dev deps) |
 | **OminiSEO** | Organic‑search optimisation | New page; content changes; scheduled audit | Craft meta tags & JSON‑LD; update sitemap & internal links; run SEO checks |
 | **OminiLogic** | JavaScript logic & algorithm tuning | New tool logic; bug/perf report | Optimise code; expand features; verify correctness & suggest simple tests |
-> **Third‑party libraries only**: Load all external assets exclusively from reputable CDNs; do **not** mirror them locally in `/vendor`. Offline functionality for these assets is not required.
+> **Third‑party libraries only**: CDN links are used by default, but critical assets may be copied to `vendor/` for offline availability.
 
 ---
 
