@@ -15,3 +15,5 @@ yarn-error.log*
 
 # Env files
 .env
+vendor/workbox/
+assets/*.png

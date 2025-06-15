@@ -19,6 +19,7 @@ export default [
       "no-undef": "error",
       "eqeqeq": "error",
       "no-console": "off"
-    }
+    },
+    ignores: ["vendor/**/*", "assets/**/*"]
   }
 ];
