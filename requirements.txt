@@ -1,0 +1,12 @@
+openai==1.86.0
+python-dotenv==1.1.0
+rich==14.0.0
+html5validator==0.4.2
+minify-html==0.16.4
+jsmin==3.0.1
+watchdog==6.0.0
+pyseoanalyzer==2025.4.3
+linkchecker==10.5.0
+pillow==11.2.1
+beautifulsoup4==4.13.4
+lxml==5.4.0
