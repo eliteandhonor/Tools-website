@@ -84,10 +84,11 @@ dependency retrieval when OminiReq evaluates new tools:
 
 ### 🔄 Active
 
-- [x] Redesign `index.html` with improved layout, accessibility and modern styling (assigned → **OminiUI**) (header, hero & footer refreshed)
-
+_No open tasks_
 
 ### ✅ Completed
+- [x] Redesign `index.html` with improved layout, accessibility and modern styling (assigned → **OminiUI**) (header, hero & footer refreshed)
+- [x] Refresh overall landing page using DaisyUI components and enhance SEO meta tags (assigned → **OminiUI**, **OminiSEO**) (hero & footer restyled, meta added)
 - [x] Ensure `npm run build` copies `index.html` and tool pages to `dist/` so `pa11y` tests run on actual pages (assigned → **OminiUI**) (HTML copied)
 - [x] Mirror CDN CSS/JS in vendor/ and update HTML references (assigned → **OminiUI**) (local files added)
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
