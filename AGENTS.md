@@ -40,6 +40,9 @@ dependency retrieval when OminiReq evaluates new tools:
 - `unpkg.com`
 - `fonts.googleapis.com`
 - `fonts.gstatic.com`
+- `pa11y.org`
+- `registry.npmjs.org`
+
 
 ---
 
