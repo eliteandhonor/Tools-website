@@ -1,0 +1,1 @@
+console.error("Unknown plugin: `daisyui`\nAvailable plugins: `aspect-ratio`, `forms`, `line-clamp`, `typography`, `container-queries`")

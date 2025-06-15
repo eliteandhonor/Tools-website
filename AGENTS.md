@@ -65,6 +65,7 @@ local paths. `docs/external-libraries.md` lists the snippets to mirror.
 ### 🔄 Active
 
 ### ✅ Completed
+- [x] Mirror CDN CSS/JS in vendor/ and update HTML references (assigned → **OminiUI**) (local files added)
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
 - [x] *example* Create meta descriptions for the new “Base-64 Encoder” page (assigned → **OminiSEO**) (added meta description and og tags).
 - [x] Clean up `README.md` and document build steps (assigned → **OminiDoc**) (removed stray JS and clarified build script).
