@@ -1,15 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./**/*.html",
-    "./**/*.js"
+    './src/**/*.{html,js,ts,jsx,tsx,vue,md}',
+    './public/**/*.html'
   ],
   theme: {
-    extend: {
-      // Extend the default theme if needed
-    }
+    extend: {}
   },
-  plugins: [
-    // Add Tailwind CSS plugins here if needed, e.g., forms, typography
-  ]
-};
+  plugins: []
+}
