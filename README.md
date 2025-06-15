@@ -5,6 +5,9 @@ This is a simplified demo of the MiniTools Universe static website. It provides 
 ## Build instructions
 The repository includes prebuilt `style.min.css` and `app.min.js`, so you can simply open `index.html` without any compilation. If you modify the CSS or JavaScript sources, run `node build.js` to regenerate the minified assets and refresh the service worker cache.
 
+## Omini agents
+This project uses a set of "Omini agents" defined in `AGENTS.md` to keep docs, UI, SEO and code in sync.
+
 ## Keyword table
 | Tool | Meta Title | Meta Description |
 |------|------------|-----------------|
@@ -47,9 +50,3 @@ The repository includes prebuilt `style.min.css` and `app.min.js`, so you can si
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
-
-
-
-
-
-
