@@ -41,31 +41,30 @@
 
 ## Spawned Agents
 *(Created dynamically by **OminiForge** – section empty until first spawn.)*
-### **LinkCheckAgent**
-*Purpose* Check all HTML pages for broken internal links.
-*Duties* Run `linkinator` or `linkchecker` and report any errors.
-
 
 ---
 
 ## Archive
 *(Retired spawned agents are moved here.)*
+### **LinkCheckAgent**
+*Purpose* Check all HTML pages for broken internal links.
+*Duties* Run `linkinator` or `linkchecker` and report any errors.
 
 ---
 
 ## Task List
 
 ### 🔄 Active
-- [x] *example* Create meta descriptions for the new “Base‑64 Encoder” page (assigned → **OminiSEO**) (added meta description and og tags).
+
+
+### ✅ Completed
+- [x] Added `<link rel="manifest">` to all pages (OminiUI).
+- [x] *example* Create meta descriptions for the new “Base-64 Encoder” page (assigned → **OminiSEO**) (added meta description and og tags).
 - [x] Clean up `README.md` and document build steps (assigned → **OminiDoc**) (removed stray JS and clarified build script).
 - [x] Deduplicate fonts/scripts and footers in `index.html`, add manifest link (assigned → **OminiUI**). (cleaned head & footer)
 - [x] Refactor `mini.js` to remove duplicate service-worker logic (assigned → **OminiLogic**). (deduplicated SW and AOS init)
 - [x] Populate icons in `manifest.webmanifest` and ensure canonical tags across pages (assigned → **OminiSEO**) (added emoji-based URLs).
 - [x] Add `esbuild` and `workbox-cli` dev dependencies (assigned → **OminiReq**) (noted in package.json).
 - [x] Verify internal links using **LinkCheckAgent** (spawned via OminiForge) (linkchecker ran with encoding warnings).
-
-
-### ✅ Completed
-- [x] Added `<link rel="manifest">` to all pages (OminiUI).
 
 ---
