@@ -48,15 +48,3 @@ if (hero && !prefersReduced) {
   });
 }
 
-// Service worker via blob
-if ('serviceWorker' in navigator) {
-  const sw = `const CACHE='mtu-v1';self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['index.html','style.css','app.js'])))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})`;
-  const blob = new Blob([sw], {type:'text/javascript'});
-  const url = URL.createObjectURL(blob);
-  navigator.serviceWorker.register(url);
-}
-
-// Initialize AOS animations if library is present
-if (window.AOS) {
-  AOS.init();
-}
