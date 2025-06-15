@@ -41,6 +41,10 @@
 
 ## Spawned Agents
 *(Created dynamically by **OminiForge** – section empty until first spawn.)*
+### **LinkCheckAgent**
+*Purpose* Check all HTML pages for broken internal links.
+*Duties* Run `linkinator` or `linkchecker` and report any errors.
+
 
 ---
 
@@ -53,6 +57,13 @@
 
 ### 🔄 Active
 - [ ] *example* Create meta descriptions for the new “Base‑64 Encoder” page (assigned → **OminiSEO**).
+- [ ] Clean up `README.md` and document build steps (assigned → **OminiDoc**).
+- [ ] Deduplicate fonts/scripts and footers in `index.html`, add manifest link (assigned → **OminiUI**).
+- [ ] Refactor `mini.js` to remove duplicate service-worker logic (assigned → **OminiLogic**).
+- [ ] Populate icons in `manifest.webmanifest` and ensure canonical tags across pages (assigned → **OminiSEO**).
+- [ ] Add `esbuild` and `workbox-cli` dev dependencies (assigned → **OminiReq**).
+- [ ] Verify internal links using **LinkCheckAgent** (spawned via OminiForge).
+
 
 ### ✅ Completed
 - [x] Added `<link rel="manifest">` to all pages (OminiUI).
