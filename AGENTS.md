@@ -55,10 +55,10 @@
 ## Task List
 
 ### 🔄 Active
-- [ ] Remove duplicate Google Fonts link and add an aria-label to the color input in `tools/color-picker/index.html` (assigned → **OminiUI**)
-- [ ] Add `og:image` meta tags referencing OpenMoji icons for index and tool pages, then update `sitemap.xml` if needed (assigned → **OminiSEO**)
-- [ ] Document offline caching and the Dexie database in `README.md` (assigned → **OminiDoc**)
-- [ ] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
+- [x] Remove duplicate Google Fonts link and add an aria-label to the color input in `tools/color-picker/index.html` (assigned → **OminiUI**)
+- [x] Add `og:image` meta tags referencing OpenMoji icons for index and tool pages, then update `sitemap.xml` if needed (assigned → **OminiSEO**)
+- [x] Document offline caching and the Dexie database in `README.md` (assigned → **OminiDoc**)
+- [x] Configure `html5validator` to allow custom `x-*` attributes and integrate it into the CI workflow (assigned → **OminiReq**)
 
 
 ### ✅ Completed
