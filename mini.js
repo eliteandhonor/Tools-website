@@ -1,7 +1,7 @@
 /* global Alpine AOS gsap ScrollTrigger */
 // Alpine stores for theme and search and service worker
 function filesToCache(){
-  const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css'];
+  const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css','search.js','search-index.json','vendor/cdn/fuse.min.js'];
   document.querySelectorAll('a[href$=".html"]').forEach(a=>links.push(a.getAttribute('href')));
   return links;
 }
