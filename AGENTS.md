@@ -42,6 +42,8 @@ dependency retrieval when OminiReq evaluates new tools:
 - `fonts.gstatic.com`
 - `pa11y.org`
 - `registry.npmjs.org`
+- `plausible.io`
+- `content-autofill.googleapis.com`
 
 
 ---
