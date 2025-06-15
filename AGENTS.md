@@ -26,6 +26,21 @@ via CDN links. When preparing an offline bundle or improving load times, downloa
 each CDN file into the `vendor/` directory and update the HTML to point to these
 local paths. `docs/external-libraries.md` lists the snippets to mirror.
 
+### Additional Allowed Domains
+The following external domains are explicitly permitted for research and
+dependency retrieval when OminiReq evaluates new tools:
+
+- `pypi.org`
+- `github.com`
+- `api.github.com`
+- `raw.githubusercontent.com`
+- `docs.python.org`
+- `cdnjs.cloudflare.com`
+- `cdn.jsdelivr.net`
+- `unpkg.com`
+- `fonts.googleapis.com`
+- `fonts.gstatic.com`
+
 ---
 
 ## Meta / Management Agents
@@ -88,5 +103,6 @@ local paths. `docs/external-libraries.md` lists the snippets to mirror.
 - [x] Provide PowerShell script for Windows to download OpenMoji icons into `assets/` (assigned → **OminiReq**) (script added)
 - [x] Summarize CDN usage in `docs/external-libraries.md` and link from `README.md` (assigned → **OminiDoc**) (external libs documented)
 - [x] Document CDN usage and vendor policy in AGENTS.md (assigned → **OminiDoc**) (added policy section)
+- [x] Expand `requirements.txt` with documentation and CLI helpers; list allowed research domains (assigned → **OminiReq**)
 
 ---
