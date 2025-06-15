@@ -1,14 +1,22 @@
-openai==1.86.0            # Official OpenAI API library (latest as of 2025-06):contentReference[oaicite:0]{index=0}
-python-dotenv==1.1.0      # For loading .env files (latest stable):contentReference[oaicite:1]{index=1}
-rich==14.0.0              # Rich text formatting in terminal (latest):contentReference[oaicite:2]{index=2}
-html5validator==0.4.2     # HTML5 validator CLI (latest, requires Java 8):contentReference[oaicite:3]{index=3}
-minify-html==0.16.4       # Fast HTML/CSS/JS minifier (latest):contentReference[oaicite:4]{index=4}
-jsmin==3.0.1              # JavaScript minifier (latest):contentReference[oaicite:5]{index=5}
-watchdog==6.0.0           # File system monitoring (latest):contentReference[oaicite:6]{index=6}
-pyseoanalyzer==2025.4.3   # SEO analyzer (latest version):contentReference[oaicite:7]{index=7}
-linkchecker==10.5.0       # Website link checker (latest stable):contentReference[oaicite:8]{index=8}
-pillow==11.2.1            # Pillow (PIL fork) for image processing:contentReference[oaicite:9]{index=9}
-lxml==5.4.0               # HTML/XML parser (latest, wheels available):contentReference[oaicite:10]{index=10}
-beautifulsoup4==4.12.3    # HTML parser library (downgraded for compatibility)
-requests==2.32.3          # HTTP library for web requests (stable version)
-urllib3==2.2.3            # HTTP connection library (pinned to match requests)
+openai==1.86.0
+python-dotenv==1.1.0
+rich==14.0.0
+
+# Site-quality & optimisation tools
+html5validator==0.4.2
+minify-html==0.16.4
+jsmin==3.0.1
+watchdog==6.0.0
+
+# SEO & link checking (BeautifulSoup 4.13.3 required here)
+pyseoanalyzer==2025.4.3
+linkchecker==10.5.0
+beautifulsoup4==4.13.3
+lxml==5.4.0
+
+# Image processing
+pillow==11.2.1
+
+# HTTP utilities used by several tools
+requests==2.32.3
+urllib3==2.2.3
