@@ -20,6 +20,6 @@ export default [
       "eqeqeq": "error",
       "no-console": "off"
     },
-    ignores: ["vendor/**/*", "assets/**/*"]
+    ignores: ["vendor/**/*", "assets/**/*", "dist/**/*"]
   }
 ];

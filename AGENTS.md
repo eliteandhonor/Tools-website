@@ -114,5 +114,6 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Research offline search libraries to power an "Omini Search" feature (assigned → **OminiReq**) (considered Fuse.js, Lunr.js, FlexSearch)
 - [x] Implement offline search with Fuse.js and generated index (assigned → **OminiLogic**) (Fuse integration and index build)
 - [x] Document search setup and usage (assigned → **OminiDoc**) (README updated)
+- [x] Ignore `dist/` in ESLint config to silence vendor build errors (assigned → **OminiReq**)
 
 ---

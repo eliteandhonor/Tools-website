@@ -2,7 +2,7 @@
 /* global importScripts, workbox */
 try{
   importScripts('/vendor/workbox/workbox-sw.js');
-}catch(e){
+}catch{
   importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js');
 }
 self.skipWaiting();
