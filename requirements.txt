@@ -1,34 +1,20 @@
 openai==1.86.0
 python-dotenv==1.1.0
-# Offline CDN Asset Manager CLI
-rich==14.0.0
-
 # Site quality & optimisation
 html5validator==0.4.2
 minify-html==0.16.4
 jsmin==3.0.1
 watchdog==6.0.0
-
 # SEO & link checking (aligned with pyseoanalyzer pins)
 pyseoanalyzer==2025.4.3
 beautifulsoup4==4.13.3
 lxml==5.3.1
 urllib3==2.3.0
 linkchecker==10.5.0
-requests==2.32.3        # works with urllib3 2.3.x  # offline asset manager
-
-# Image processing
-pillow==11.2.1        # offline asset manager
-
 # Docs & build helpers
 mkdocs==1.6.1
 jinja2==3.1.6
 markdown==3.8
 python-slugify==8.0.4
-
-# CLI & HTTP utilities
-httpx==0.28.1        # offline asset manager
-typer==0.16.0        # offline asset manager
-
 # Testing
 pytest==8.4.0
