@@ -92,12 +92,12 @@ dependency retrieval when OminiReq evaluates new tools:
 
 - [ ] Check that offline bundles and meta tags remain SEO friendly (assigned → **OminiSEO**)
 - [ ] Run an offline audit of all pages (assigned → **OminiOffline**)
-- [ ] Resolve sidebar overlap and search bar alignment issues (assigned → **OminiUI**)
+- [x] Resolve sidebar overlap and search bar alignment issues (assigned → **OminiUI**) (search field has id and sidebar closes on click-away)
 - [x] Run pa11y audits for accessibility (assigned → **OminiUI**) (Lighthouse unavailable)
 - [x] Update Node dependencies and fix security warnings (assigned → **OminiReq**) (esbuild & workbox-cli updated)
 - [ ] Document CLI and GUI usage of `download_assets.py` (assigned → **OminiDoc**)
 - [ ] Implement manifest hashing and GUI features in `download_assets.py` (assigned → **OminiPy**)
-- [ ] Adjust sidebar toggle logic to prevent overlap bug (assigned → **OminiLogic**)
+- [x] Adjust sidebar toggle logic to prevent overlap bug (assigned → **OminiLogic**) (added escape and click-away handlers)
 
 ### ✅ Completed
 - [x] Redesign `index.html` with improved layout, accessibility and modern styling (assigned → **OminiUI**) (header, hero & footer refreshed)
