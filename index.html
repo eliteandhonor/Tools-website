@@ -35,24 +35,6 @@
 <link rel="stylesheet" href="style.min.css">
 <link rel="stylesheet" href="dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="tools.css">
-<script src="vendor/cdn/tailwind.js"></script>
-<script>
-tailwind.config = {
-  darkMode: 'class',
-  plugins: [daisyui],
-  daisyui: { themes: ['retro', 'dark'] },
-  theme: {
-    extend: {
-      colors: {
-        accent: 'var(--mt-accent)',
-        surface: 'var(--mt-surface)',
-        background: 'var(--mt-bg)',
-        text: 'var(--mt-text)'
-      }
-    }
-  }
-};
-</script>
 </head>
 <body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -273,10 +255,24 @@ tailwind.config = {
     <p class="mt-2">Built with <span aria-label="love">❤</span> by MiniTools Universe</p>
   </div>
 </footer>
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.store('theme', {
+      mode: localStorage.getItem('theme') || 'dark',
+      init() { this.apply(); },
+      toggle() { this.mode = this.mode === 'dark' ? 'light' : 'dark'; this.apply(); },
+      apply() {
+        document.documentElement.classList.toggle('light', this.mode === 'light');
+        localStorage.setItem('theme', this.mode);
+      }
+    });
+    Alpine.store('search', { query: '' });
+  });
+</script>
 <script src="vendor/cdn/alpine.min.js" defer></script>
 <script src="vendor/cdn/aos.js" defer></script>
 <script defer src="vendor/cdn/alpine-ui.min.js"></script>
-<script type="module">import {gsap} from "vendor/cdn/gsap.min.js";import {ScrollTrigger} from "vendor/cdn/ScrollTrigger.min.js";gsap.registerPlugin(ScrollTrigger);window.gsap=gsap;window.ScrollTrigger=ScrollTrigger;</script>
+<script type="module">import {gsap} from "./vendor/cdn/gsap.min.js";import {ScrollTrigger} from "./vendor/cdn/ScrollTrigger.min.js";gsap.registerPlugin(ScrollTrigger);window.gsap=gsap;window.ScrollTrigger=ScrollTrigger;</script>
 <script type="module" src="db.js"></script>
 <script src="https://plausible.io/js/plausible.js" data-domain="example.com" defer></script>
 <script src="vendor/cdn/fuse.min.js"></script>

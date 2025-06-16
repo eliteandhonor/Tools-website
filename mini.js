@@ -1,26 +1,9 @@
 /* global Alpine AOS gsap ScrollTrigger */
-// Alpine stores for theme and search and service worker
-function filesToCache(){
-  const links=['./','style.min.css','dark.min.css','mini.js','app.min.js','tools.css','search.js','search-index.json','vendor/cdn/fuse.min.js'];
-  document.querySelectorAll('a[href$=".html"]').forEach(a=>links.push(a.getAttribute('href')));
-  return links;
-}
+// Registers service worker and handles page animations
 
 if('serviceWorker' in navigator){
-  const files=filesToCache();
-  const sw=`const C='mtu-v2';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(${JSON.stringify(files)}))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
-  navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'text/javascript'})));
+  navigator.serviceWorker.register('sw.js');
 }
-
-document.addEventListener('alpine:init',()=>{
-  Alpine.store('theme',{
-    mode:localStorage.getItem('theme')||'dark',
-    init(){this.apply();},
-    toggle(){this.mode=this.mode==='dark'?'light':'dark';this.apply();},
-    apply(){document.documentElement.classList.toggle('light',this.mode==='light');localStorage.setItem('theme',this.mode);}
-  });
-  Alpine.store('search',{query:''});
-});
 
 document.addEventListener('DOMContentLoaded',()=>{
   if(window.AOS) AOS.init({once:true});
