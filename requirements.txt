@@ -1,5 +1,7 @@
 openai==1.86.0
 python-dotenv==1.1.0
+# Offline CDN Asset Manager CLI
+
 # Site quality & optimisation
 html5validator==0.4.2
 minify-html==0.16.4
@@ -11,10 +13,17 @@ beautifulsoup4==4.13.3
 lxml==5.3.1
 urllib3==2.3.0
 linkchecker==10.5.0
+
+# Image processing
+
 # Docs & build helpers
 mkdocs==1.6.1
 jinja2==3.1.6
 markdown==3.8
 python-slugify==8.0.4
+
+# CLI & HTTP utilities
+
 # Testing
 pytest==8.4.0
+
