@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(window.gsap){
         e.preventDefault();
         gsap.to('body',{opacity:0,duration:0.4,onComplete:()=>{window.location=a.href;}});
+      } else {
+        // If gsap is not available, allow default navigation
       }
     });
   });
