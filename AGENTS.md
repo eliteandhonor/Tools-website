@@ -123,5 +123,6 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Document search setup and usage (assigned → **OminiDoc**) (README updated)
 - [x] Ignore `dist/` in ESLint config to silence vendor build errors (assigned → **OminiReq**)
 - [x] Document vendor/cdn structure and CDN replacement policy (assigned → **OminiDoc**)
+- [x] Migrate `.eslintignore` to `eslint.config.js`, update lint script and add `"type": "module"` to `package.json` (assigned → **OminiReq**)
 
 ---

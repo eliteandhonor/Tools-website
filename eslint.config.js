@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import globals from "globals";
 
 export default [
+  { ignores: ["vendor/**/*", "assets/**/*", "dist/**/*"] },
   // Base ESLint recommended config for JavaScript
   js.configs.recommended,
   {
@@ -19,7 +20,6 @@ export default [
       "no-undef": "error",
       "eqeqeq": "error",
       "no-console": "off"
-    },
-    ignores: ["vendor/**/*", "assets/**/*", "dist/**/*"]
+    }
   }
 ];
