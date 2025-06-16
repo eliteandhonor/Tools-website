@@ -66,3 +66,4 @@ This project uses a set of "Omini agents" defined in `AGENTS.md` to keep docs, U
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
+
