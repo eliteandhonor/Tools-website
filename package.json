@@ -2,6 +2,7 @@
   "name": "tools-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "Static toolkit site (Tailwind CSS + ESLint v9 + Stylelint)",
   "scripts": {
     "lint:js": "eslint . --ignore-pattern vendor --ignore-pattern assets --ignore-pattern dist",
