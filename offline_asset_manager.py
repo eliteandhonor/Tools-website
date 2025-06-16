@@ -7,9 +7,19 @@ from zipfile import ZipFile, ZIP_DEFLATED
 
 import requests
 import typer
+from rich.console import Console
+from rich.progress import (
+    Progress,
+    SpinnerColumn,
+    BarColumn,
+    DownloadColumn,
+    TransferSpeedColumn,
+    TimeRemainingColumn,
+)
 from tkinter import Tk, filedialog, messagebox, StringVar, BooleanVar, ttk
 
 app = typer.Typer(add_completion=False)
+console = Console()
 
 BUILT_IN_ASSETS = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
@@ -26,10 +36,11 @@ def sha256sum(path: Path) -> str:
     return hash_obj.hexdigest()
 
 
-def ensure_head_ok(session: requests.Session, url: str) -> None:
-    resp = session.head(url, timeout=10)
+def ensure_head_ok(session: requests.Session, url: str) -> int:
+    resp = session.head(url, allow_redirects=True, timeout=10)
     if resp.status_code != 200:
         raise RuntimeError(f"HEAD {resp.status_code}")
+    return int(resp.headers.get("content-length", 0))
 
 
 def download_file(
@@ -39,8 +50,15 @@ def download_file(
     output_dir: Path,
     verify_only: bool,
     manifest: dict,
+    *,
+    progress: Progress | None = None,
+    task: int | None = None,
+    size: int = 0,
 ) -> None:
-    ensure_head_ok(session, url)
+    if size == 0:
+        size = ensure_head_ok(session, url)
+    else:
+        ensure_head_ok(session, url)
     rel = dest.relative_to(output_dir)
     if verify_only:
         if not dest.exists():
@@ -49,11 +67,17 @@ def download_file(
             raise RuntimeError(f"Hash mismatch for {dest}")
         return
     if dest.exists() and manifest.get(str(rel)) == sha256sum(dest):
+        console.log(f"Using cached {rel}")
         return
     dest.parent.mkdir(parents=True, exist_ok=True)
-    resp = session.get(url, timeout=10)
+    resp = session.get(url, stream=True, timeout=10)
     resp.raise_for_status()
-    dest.write_bytes(resp.content)
+    with dest.open("wb") as f:
+        for chunk in resp.iter_content(chunk_size=8192):
+            if chunk:
+                f.write(chunk)
+                if progress and task is not None:
+                    progress.update(task, advance=len(chunk))
     manifest[str(rel)] = sha256sum(dest)
 
 
@@ -65,29 +89,61 @@ def build_manifest(asset_urls, output_dir: Path, verify_only: bool) -> dict:
         try:
             manifest = json.loads(manifest_path.read_text())
         except Exception:
+            console.print("[yellow]Warning: manifest corrupted; rebuilding[/yellow]")
             manifest = {}
-    for url in asset_urls:
-        parsed = urlparse(url)
-        dest = output_dir / parsed.netloc / parsed.path.lstrip("/")
-        download_file(session, url, dest, output_dir, verify_only, manifest)
+    progress = Progress(
+        SpinnerColumn(),
+        "[progress.description]{task.description}",
+        BarColumn(),
+        DownloadColumn(),
+        TransferSpeedColumn(),
+        TimeRemainingColumn(),
+        console=console,
+    )
+    with progress:
+        for url in asset_urls:
+            parsed = urlparse(url)
+            dest = output_dir / parsed.netloc / parsed.path.lstrip("/")
+            size = ensure_head_ok(session, url)
+            if verify_only:
+                console.log(f"Verifying {url}")
+                download_file(session, url, dest, output_dir, True, manifest)
+            else:
+                task = progress.add_task(f"{parsed.path.split('/')[-1]}", total=size or None)
+                download_file(
+                    session,
+                    url,
+                    dest,
+                    output_dir,
+                    False,
+                    manifest,
+                    progress=progress,
+                    task=task,
+                    size=size,
+                )
     manifest_path.write_text(json.dumps(manifest, indent=2))
     return manifest
 
 
 def create_zip(output_dir: Path) -> None:
     zip_path = output_dir.with_suffix(".zip")
+    console.log(f"Creating {zip_path.name}")
     with ZipFile(zip_path, "w", ZIP_DEFLATED) as zf:
         for file in output_dir.rglob("*"):
             if file.is_file():
                 zf.write(file, file.relative_to(output_dir))
 
 
-def run_manager(config: Path | None, output: Path, verify_only: bool, zip_output: bool) -> None:
+def run_manager(
+    config: Path | None, output: Path, verify_only: bool, zip_output: bool
+) -> None:
     assets = BUILT_IN_ASSETS.copy()
     if config and config.exists():
+        console.log(f"Loading config {config}")
         data = json.loads(config.read_text())
         assets.extend(data.get("assets", []))
     output.mkdir(parents=True, exist_ok=True)
+    console.print(f"[bold]Processing {len(assets)} assets[/bold]")
     build_manifest(assets, output, verify_only)
     if zip_output and not verify_only:
         create_zip(output)
@@ -107,7 +163,7 @@ def main(
     try:
         run_manager(config, output, verify_only, zip_output)
     except Exception as exc:
-        typer.echo(f"Error: {exc}")
+        console.print(f"[red]Error: {exc}[/red]")
         raise typer.Exit(code=1)
 
 

@@ -20,3 +20,14 @@ python offline_asset_manager.py [options]
 - `--headless` – Run without launching the Tkinter GUI.
 
 Run the script with `-h` to see all options. When launched without arguments the GUI opens by default.
+
+## Example output
+
+Running without options downloads the built-in assets and shows progress bars:
+
+```
+Processing 3 assets
+⠸ bootstrap.min.css       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.8/? kB 245.6 MB/s
+⠸ bootstrap.bundle.min.js ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.7/? kB  128.4 MB/s
+⠸ jquery.min.js           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/? kB  119.4 MB/s
+```
