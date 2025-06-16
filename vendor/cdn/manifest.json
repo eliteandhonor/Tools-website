@@ -1,0 +1,370 @@
+{
+  "TailwindCSS/tailwindcss-browser.js": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.9",
+    "downloaded_at": "2025-06-16T07:20:53.678690",
+    "size": 259691,
+    "sha256": "3499a1273d74584641b0a8cc199f3637d0489493a17d2a6f4f362f0bea0eac39"
+  },
+  "Bootstrap/dist/js/bootstrap.bundle.min.js": {
+    "library": "bootstrap",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js",
+    "downloaded_at": "2025-06-16T07:20:53.939326",
+    "size": 80668,
+    "sha256": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  "Bootstrap/dist/css/bootstrap.min.css": {
+    "library": "bootstrap",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css",
+    "downloaded_at": "2025-06-16T07:20:53.955168",
+    "size": 232855,
+    "sha256": "d939d21f27010c09b6c2966681d8b4cfcd64ca418f240922518f967fded16ef6"
+  },
+  "DaisyUI/daisyui.css": {
+    "library": "daisyui",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/daisyui@5.0.43",
+    "downloaded_at": "2025-06-16T07:20:53.813537",
+    "size": 796378,
+    "sha256": "5b2dca7bfc6fd212654ce96455476fd0d78338d13d01b4f4bc2cf6117b8bba41"
+  },
+  "AlpineJS/dist/cdn.min.js": {
+    "library": "alpinejs",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.067542",
+    "size": 44660,
+    "sha256": "3d988c906334fada157d7a88ef1eedcd9bdfb478df83e9b705e6468f0d6c8dd2"
+  },
+  "GSAP/dist/ScrollTrigger.min.js": {
+    "library": "gsap",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.171911",
+    "size": 42667,
+    "sha256": "65f6c13748b0c8d8f9eabd0373a130ac293b3f16bf34aaa946d953980372b932"
+  },
+  "GSAP/dist/gsap.min.js": {
+    "library": "gsap",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.188447",
+    "size": 71520,
+    "sha256": "efc85c7eb141819717cda0033484a84b1c890d13b02e355a2fec79d424b20e7a"
+  },
+  "Font Awesome/webfonts/fa-regular-400.woff2": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-regular-400.woff2",
+    "downloaded_at": "2025-06-16T07:20:54.300087",
+    "size": 24948,
+    "sha256": "8e7e5ea1b15f62ab14dbd41768e8fbcd21cc859a4ea5da812457ee714299fb35"
+  },
+  "Font Awesome/css/all.min.css": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css",
+    "downloaded_at": "2025-06-16T07:20:54.302026",
+    "size": 102025,
+    "sha256": "1edb1725a9ea8ca4dcf2f5508cee183218aa1685e47c1b23056717f754f58ebf"
+  },
+  "Font Awesome/webfonts/fa-brands-400.woff2": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-brands-400.woff2",
+    "downloaded_at": "2025-06-16T07:20:54.309873",
+    "size": 108020,
+    "sha256": "748332090c4b8e20f95d0ff59f0be20fa9c889359d3b36d4b886d73376054207"
+  },
+  "Font Awesome/webfonts/fa-solid-900.woff2": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-solid-900.woff2",
+    "downloaded_at": "2025-06-16T07:20:54.314302",
+    "size": 150124,
+    "sha256": "7152a6933ee3d690ec2af3d09da9d701723d16aa3410a6d80f28ff8866f3b880"
+  },
+  "Font Awesome/webfonts/fa-v4compatibility.woff2": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-v4compatibility.woff2",
+    "downloaded_at": "2025-06-16T07:20:54.422083",
+    "size": 4564,
+    "sha256": "694a17c3d9d6c05f8aac63c544615552a4b220e9a4de863d87341a6bcfc1bc8d"
+  },
+  "Font Awesome/webfonts/fa-regular-400.ttf": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-regular-400.ttf",
+    "downloaded_at": "2025-06-16T07:20:54.403977",
+    "size": 63952,
+    "sha256": "528d022dce6725f8a0811fd91d8e6513445c81ef33353a5c3234eab932551abf"
+  },
+  "Font Awesome/webfonts/fa-brands-400.ttf": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-brands-400.ttf",
+    "downloaded_at": "2025-06-16T07:20:54.431114",
+    "size": 187208,
+    "sha256": "20c4a58bc9d1d69e935d06f1528923646a715be5e218665655cade8f5f1b8c00"
+  },
+  "Font Awesome/webfonts/fa-v4compatibility.ttf": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-v4compatibility.ttf",
+    "downloaded_at": "2025-06-16T07:20:54.416067",
+    "size": 10172,
+    "sha256": "0515a423f828ce4e6accf92a2ea0b03d19d31cc86d9af0373291e1fd4db5f348"
+  },
+  "Font Awesome/webfonts/fa-solid-900.ttf": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/webfonts/fa-solid-900.ttf",
+    "downloaded_at": "2025-06-16T07:20:54.440762",
+    "size": 394628,
+    "sha256": "67a65763c7f80903d81603bbeb9049fc2bf28508479b83ed011fe24c71fa950a"
+  },
+  "jQuery/dist/jquery.min.js": {
+    "library": "jquery",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.433900",
+    "size": 87533,
+    "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+  },
+  "React/umd/react.production.min.js": {
+    "library": "react",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.539092",
+    "size": 10737,
+    "sha256": "4b4969fa4ef3594324da2c6d78ce8766fbbc2fd121fff395aedf997db0a99a06"
+  },
+  "React/umd/react-dom.production.min.js": {
+    "library": "react-dom",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.561091",
+    "size": 131882,
+    "sha256": "21758ed084cd0e37e735722ee4f3957ea960628a29dfa6c3ce1a1d47a2d6e4f7"
+  },
+  "Vue/dist/vue.global.prod.js": {
+    "library": "vue",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.prod.js",
+    "downloaded_at": "2025-06-16T07:20:54.685171",
+    "size": 131294,
+    "sha256": "628497cb69df7b1d31236479cad68c9bb3f265060afd5506a0c004b394dfa47e"
+  },
+  "PrismJS/prism.min.js": {
+    "library": "prismjs",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.786268",
+    "size": 19644,
+    "sha256": "bcb5c2f09f97710af96fbe88af9ce3ce9d5392c4e6ee811b4081e2b13e3d0345"
+  },
+  "PrismJS/themes/prism.min.css": {
+    "library": "prismjs",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css",
+    "downloaded_at": "2025-06-16T07:20:54.785880",
+    "size": 1789,
+    "sha256": "928e23e6b9fcef82c5f1d1f05b6f7fc5a6e187c60195e59fbf16fc9d071ee057"
+  },
+  "Highlight.js/highlight.min.js": {
+    "library": "highlight.js",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js",
+    "downloaded_at": "2025-06-16T07:20:54.889371",
+    "size": 2593,
+    "sha256": "cdb438b2bc35e8d8d5cc5affda0d65a6e655f6e7875bda74ce802ad828f7e625"
+  },
+  "Highlight.js/styles/default.min.css": {
+    "library": "highlight.js",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/default.min.css",
+    "downloaded_at": "2025-06-16T07:20:54.895108",
+    "size": 1144,
+    "sha256": "fbde0ac0921d86c356c41532e7319c887a23bd1b8ff00060cab447249f03c7cf"
+  },
+  "Swiper/swiper-bundle.min.css": {
+    "library": "swiper",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css",
+    "downloaded_at": "2025-06-16T07:20:54.997771",
+    "size": 17863,
+    "sha256": "cc1700672684b8502fd5b8a66508d126f7c44b4426a6434c687a2042ee52fefa"
+  },
+  "Swiper/swiper-bundle.min.js": {
+    "library": "swiper",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.010800",
+    "size": 135403,
+    "sha256": "a805b3ae8a5e3dd1bd1151f3e0bcbf8e055f1515cc90b38599b01cbaad990f76"
+  },
+  "Chart.js/dist/chart.umd.min.js": {
+    "library": "chart.js",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.135816",
+    "size": 204783,
+    "sha256": "87899805686b553e6ff3c8bfed71f38dca31ac0c295f52fe5ef5f318a85c9b61"
+  },
+  "Lit/lit.min.js": {
+    "library": "lit",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/lit@2.7.4/polyfill-support.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.244465",
+    "size": 4076,
+    "sha256": "841696901a02725c83e8e38b062c42ffa0c6e6b9763353710c5a047900fa9ea6"
+  },
+  "Leaflet/leaflet.css": {
+    "library": "leaflet",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css",
+    "downloaded_at": "2025-06-16T07:20:55.352328",
+    "size": 14806,
+    "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+  },
+  "Leaflet/leaflet.js": {
+    "library": "leaflet",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js",
+    "downloaded_at": "2025-06-16T07:20:55.370741",
+    "size": 147552,
+    "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+  },
+  "Leaflet/images/marker-icon.png": {
+    "library": "leaflet",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon.png",
+    "downloaded_at": "2025-06-16T07:20:55.451354",
+    "size": 1466,
+    "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437"
+  },
+  "Leaflet/images/layers-2x.png": {
+    "library": "leaflet",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/layers-2x.png",
+    "downloaded_at": "2025-06-16T07:20:55.447346",
+    "size": 1259,
+    "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf"
+  },
+  "AOS/dist/aos.js": {
+    "library": "aos",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js",
+    "downloaded_at": "2025-06-16T07:20:55.479899",
+    "size": 14690,
+    "sha256": "a5005b2e414770fd5ccb40bc221a12771966d02b5c1f9c89da48bd8e3811d377"
+  },
+  "AOS/dist/aos.css": {
+    "library": "aos",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css",
+    "downloaded_at": "2025-06-16T07:20:55.475100",
+    "size": 26053,
+    "sha256": "1aa8845fd06e475aefe733d4e55b36a92fcd487975049c8172341827ac9cc03e"
+  },
+  "Leaflet/images/layers.png": {
+    "library": "leaflet",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/layers.png",
+    "downloaded_at": "2025-06-16T07:20:55.443485",
+    "size": 696,
+    "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6"
+  },
+  "Axios/dist/axios.min.js": {
+    "library": "axios",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.583038",
+    "size": 41481,
+    "sha256": "29d600462a30694efd15b9848b4ca42d178cd067009275c35a30580121114304"
+  },
+  "Lodash/lodash.min.js": {
+    "library": "lodash",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.698584",
+    "size": 73015,
+    "sha256": "a9705dfc47c0763380d851ab1801be6f76019f6b67e40e9b873f8b4a0603f7a9"
+  },
+  "Moment.js/dist/moment.min.js": {
+    "library": "moment",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.804501",
+    "size": 58103,
+    "sha256": "f343aa319a17a3fc372ee6ad5af482b9bf6a298cb22652b4aa7502604821071f"
+  },
+  "Day.js/dayjs.min.js": {
+    "library": "dayjs",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js",
+    "downloaded_at": "2025-06-16T07:20:55.902296",
+    "size": 7160,
+    "sha256": "9cfdb93f38afcf2d076abecd66d32bfd3383cdf1967654ebc26a26605daf4173"
+  },
+  "Popper.js/dist/umd/popper.min.js": {
+    "library": "",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+    "downloaded_at": "2025-06-16T07:20:56.011785",
+    "size": 20122,
+    "sha256": "c212f4b505a86352aed62b24a8f16f999f821ecbe6456c7f3c8a04bc87968782"
+  },
+  "Tippy.js/dist/tippy-bundle.umd.min.js": {
+    "library": "tippy.js",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js",
+    "downloaded_at": "2025-06-16T07:20:56.120382",
+    "size": 25717,
+    "sha256": "3f0fe70eb26ccf28f6887a192e29d38dd7ef7c2f079a73304ad42ddc7bed37de"
+  },
+  "Tippy.js/dist/tippy.css": {
+    "library": "tippy.js",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy.css",
+    "downloaded_at": "2025-06-16T07:20:56.124509",
+    "size": 1409,
+    "sha256": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  "Animate.css/animate.min.css": {
+    "library": "animate.css",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css",
+    "downloaded_at": "2025-06-16T07:20:56.262535",
+    "size": 71750,
+    "sha256": "5fbaeb9f8e25d7e0143bae61d4b1802c16ce7390b96ceb2d498b0d96ff4c853f"
+  },
+  "Normalize.css/normalize.min.css": {
+    "library": "normalize.css",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css",
+    "downloaded_at": "2025-06-16T07:20:56.377118",
+    "size": 6138,
+    "sha256": "580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512"
+  },
+  "Three.js/build/three.min.js": {
+    "library": "three",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js",
+    "downloaded_at": "2025-06-16T07:20:56.526966",
+    "size": 651651,
+    "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
+  },
+  "Anime.js/lib/anime.min.js": {
+    "library": "animejs",
+    "version": "",
+    "url": "https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js",
+    "downloaded_at": "2025-06-16T07:20:56.634881",
+    "size": 17741,
+    "sha256": "5cbda29ea5096ac9404c59c77493a2f467d0eb4a27f16c750b61fc0d888dd716"
+  }
+}
