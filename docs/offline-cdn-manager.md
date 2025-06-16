@@ -20,3 +20,18 @@ python offline_asset_manager.py [options]
 - `--headless` – Run without launching the Tkinter GUI.
 
 Run the script with `-h` to see all options. When launched without arguments the GUI opens by default.
+
+## Example config file
+You can extend the built-in catalog with your own CDN links using a JSON file.
+Create `my-assets.json` with the following structure:
+
+```json
+{
+  "assets": [
+    "https://cdn.example.com/mylib/1.0.0/mylib.min.css",
+    "https://cdn.example.com/mylib/1.0.0/mylib.min.js"
+  ]
+}
+```
+
+Then run `python offline_asset_manager.py --config my-assets.json` to download these files alongside the defaults.
