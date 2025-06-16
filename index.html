@@ -36,43 +36,39 @@
 <link rel="stylesheet" href="dark.min.css" id="darkCss" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="tools.css">
 </head>
-<body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode">
+<body class="bg-background text-text font-inter" x-init="$store.theme.init()" :class="$store.theme.mode" x-data="{sidebar:false}">
   <a class="skip-link" href="#main">Skip to content</a>
   <button id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-50 bg-accent text-white rounded-full shadow-lg p-3 hover:bg-accent/80 transition hidden"><i class="fa-solid fa-arrow-up"></i></button>
-<header x-data="{open:false}" class="navbar bg-background/80 backdrop-blur sticky top-0 z-50 border-b border-white/10 shadow-lg">
-  <div class="flex-1">
-    <a href="index.html" class="btn btn-ghost normal-case text-lg">MiniTools 🔧</a>
-  </div>
-  <nav class="hidden md:flex gap-2">
-    <a href="#calculators" class="btn btn-ghost btn-sm">Calculators</a>
-    <a href="#converters" class="btn btn-ghost btn-sm">Converters</a>
-    <a href="#productivity" class="btn btn-ghost btn-sm">Productivity</a>
-    <a href="#generators" class="btn btn-ghost btn-sm">Generators</a>
-    <a href="#developer" class="btn btn-ghost btn-sm">Developer</a>
-    <a href="#text" class="btn btn-ghost btn-sm">Text Tools</a>
-  </nav>
-  <div class="md:hidden flex-none">
-    <button @click="open=true" class="btn btn-ghost" aria-label="Open menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-  <button @click="$store.theme.toggle()" class="btn btn-ghost ml-2" aria-label="Toggle theme">
-    <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
-    <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
-  </button>
-  <nav x-cloak x-bind:class="open ? 'translate-x-0' : '-translate-x-full'" @click.away="open=false" @keydown.escape.window="open=false" class="fixed inset-y-0 left-0 w-64 bg-background p-4 space-y-4 transform transition-transform md:hidden z-50">
-    <button @click="open=false" class="text-accent text-xl mb-4 focus:outline-none focus-visible:ring" aria-label="Close menu">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <a href="#calculators" @click="open=false" class="block hover:text-accent">Calculators</a>
-    <a href="#converters" @click="open=false" class="block hover:text-accent">Converters</a>
-    <a href="#productivity" @click="open=false" class="block hover:text-accent">Productivity</a>
-    <a href="#generators" @click="open=false" class="block hover:text-accent">Generators</a>
-    <a href="#developer" @click="open=false" class="block hover:text-accent">Developer</a>
-    <a href="#text" @click="open=false" class="block hover:text-accent">Text Tools</a>
-  </nav>
-</header>
-<main id="main" class="pt-24">
+  <div class="md:flex">
+    <aside x-bind:class="sidebar ? 'translate-x-0' : '-translate-x-full md:translate-x-0'" @click.away="sidebar=false" @keydown.escape.window="sidebar=false" class="fixed md:static inset-y-0 left-0 w-64 bg-background border-r border-white/10 p-4 space-y-4 transform transition-transform z-40 md:translate-x-0">
+      <button @click="sidebar=false" class="md:hidden text-accent text-xl mb-4 focus:outline-none focus-visible:ring" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <nav class="space-y-2">
+        <a href="#calculators" @click="sidebar=false" class="block hover:text-accent">Calculators</a>
+        <a href="#converters" @click="sidebar=false" class="block hover:text-accent">Converters</a>
+        <a href="#productivity" @click="sidebar=false" class="block hover:text-accent">Productivity</a>
+        <a href="#generators" @click="sidebar=false" class="block hover:text-accent">Generators</a>
+        <a href="#developer" @click="sidebar=false" class="block hover:text-accent">Developer</a>
+        <a href="#text" @click="sidebar=false" class="block hover:text-accent">Text Tools</a>
+      </nav>
+    </aside>
+    <div class="flex-1">
+      <header class="navbar bg-background/80 backdrop-blur sticky top-0 z-50 border-b border-white/10 shadow-lg">
+        <div class="md:hidden flex-none">
+          <button @click="sidebar=true" class="btn btn-ghost" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="flex-1">
+          <a href="index.html" class="btn btn-ghost normal-case text-lg">MiniTools 🔧</a>
+        </div>
+        <button @click="$store.theme.toggle()" class="btn btn-ghost ml-2" aria-label="Toggle theme">
+          <i x-show="$store.theme.mode==='dark'" class="fa-solid fa-sun"></i>
+          <i x-show="$store.theme.mode==='light'" class="fa-solid fa-moon"></i>
+        </button>
+      </header>
+      <main id="main" class="pt-24">
 <section id="hero" class="hero min-h-[60vh] bg-gradient-to-r from-pink-600 to-purple-700 text-center py-20 overflow-hidden relative">
     <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
     <div class="hero-content flex flex-col" data-aos="zoom-in">
@@ -255,6 +251,8 @@
     <p class="mt-2">Built with <span aria-label="love">❤</span> by MiniTools Universe</p>
   </div>
 </footer>
+    </div>
+  </div>
 <script>
   document.addEventListener('alpine:init', () => {
     Alpine.store('theme', {
