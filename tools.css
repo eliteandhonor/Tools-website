@@ -3,7 +3,7 @@
   --mt-surface:#1e1f23;
   --mt-text:#e6eaf1;
   --mt-accent:#91caff;
-  font-family:'Inter',sans-serif;
+  font-family:system-ui,Arial,sans-serif;
 }
 :root.light{
   --mt-bg:#fafbfd;
@@ -12,7 +12,7 @@
   --mt-accent:#3873dd;
 }
 body{background:var(--mt-bg);color:var(--mt-text);}
-.font-inter{font-family:'Inter',sans-serif;}
+.font-inter{font-family:system-ui,Arial,sans-serif;}
 .bg-surface{background-color:var(--mt-surface);}
 .text-accent{color:var(--mt-accent);}
   .ring-accent\/50{--tw-ring-color:rgb(145 202 255 / 0.5);}

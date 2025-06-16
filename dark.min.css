@@ -1,6 +1,6 @@
 :root{--accent:#91caff}
 :root{--accent:#91caff;--transition:.3s}
-body{background:#121212;color:#e0e0e0;line-height:1.6;font-family:'Inter',Arial,sans-serif}
+body{background:#121212;color:#e0e0e0;line-height:1.6;font-family:system-ui,Arial,sans-serif}
 header,footer{background:#1e1e1e;border-bottom:1px solid #333;box-shadow:0 2px 4px rgba(0,0,0,.7);display:flex;align-items:center;gap:1rem}
 nav a{color:var(--accent);transition:color .2s}
 nav a:hover{color:#b3dfff}

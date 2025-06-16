@@ -28,11 +28,8 @@
   }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/vendor/cdn/fontawesome.min.css">
-<link rel="stylesheet" href="/vendor/cdn/bootstrap.min.css">
+<link rel="stylesheet" href="/vendor/cdn/DaisyUI/daisyui.css">
 <link rel="stylesheet" href="/vendor/cdn/animate.min.css">
 <link rel="stylesheet" href="/vendor/cdn/aos.css">
 <link rel="stylesheet" href="style.min.css">
@@ -43,7 +40,7 @@
 tailwind.config = {
   darkMode: 'class',
   plugins: [daisyui],
-  daisyui: { themes: ['dark', 'cupcake'] },
+  daisyui: { themes: ['retro', 'dark'] },
   theme: {
     extend: {
       colors: {
@@ -94,30 +91,30 @@ tailwind.config = {
   </nav>
 </header>
 <main id="main" class="pt-24">
-<section id="hero" class="hero min-h-[60vh] bg-gradient-to-br from-slate-800 to-slate-950 text-center py-20 overflow-hidden relative">
+<section id="hero" class="hero min-h-[60vh] bg-gradient-to-r from-pink-600 to-purple-700 text-center py-20 overflow-hidden relative">
     <div id="stars" class="stars absolute inset-0 pointer-events-none"></div>
-    <div class="hero-content flex flex-col">
-      <h1 class="text-5xl font-bold mb-4 drop-shadow-lg" data-aos="fade-down">All your tools in one place</h1>
-      <p class="mb-6 opacity-80" data-aos="fade-down" data-aos-delay="100">Quick, lightweight utilities that work offline.</p>
-      <div class="relative w-full max-w-md mx-auto" data-aos="zoom-in">
-        <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="input input-bordered w-full pl-10 focus:ring-2 focus:ring-accent" />
-        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-accent"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <div class="hero-content flex flex-col" data-aos="zoom-in">
+      <h1 class="text-6xl font-extrabold mb-4 text-white drop-shadow-lg">MiniTools Universe</h1>
+      <p class="mb-6 text-white/90">Quick, lightweight utilities that work offline.</p>
+      <div class="relative w-full max-w-md mx-auto mt-4">
+        <input x-model="search" placeholder="Search tools..." aria-label="Search tools" class="input input-bordered w-full pl-10" />
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-accent"><i class="fa-solid fa-search"></i></span>
       </div>
     </div>
   </section>
 
-  <section id="features" class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto px-4 text-center">
-    <div class="stat bg-surface rounded-box py-4">
-      <div class="text-3xl mb-2">⚡</div>
-      <div class="stat-title">Fast &amp; light</div>
+  <section id="features" class="my-16 grid gap-6 px-4 text-center md:grid-cols-3 max-w-4xl mx-auto">
+    <div class="bg-surface rounded-box p-6 shadow-md" data-aos="fade-up">
+      <div class="text-4xl mb-2">⚡</div>
+      <p class="font-semibold">Fast &amp; light</p>
     </div>
-    <div class="stat bg-surface rounded-box py-4">
-      <div class="text-3xl mb-2">🔌</div>
-      <div class="stat-title">Offline ready</div>
+    <div class="bg-surface rounded-box p-6 shadow-md" data-aos="fade-up" data-aos-delay="50">
+      <div class="text-4xl mb-2">🔌</div>
+      <p class="font-semibold">Offline ready</p>
     </div>
-    <div class="stat bg-surface rounded-box py-4">
-      <div class="text-3xl mb-2">💻</div>
-      <div class="stat-title">Open source</div>
+    <div class="bg-surface rounded-box p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+      <div class="text-4xl mb-2">💻</div>
+      <p class="font-semibold">Open source</p>
     </div>
   </section>
   <section id="calculators" class="max-w-6xl mx-auto px-4 mt-16">
