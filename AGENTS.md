@@ -17,6 +17,7 @@
 | **OminiReq** | Dependency and tooling advice | Need for new lib/tool; recurring code patterns | Recommend libraries/dev‑tools; update `requirements.txt` (or note npm/dev deps) |
 | **OminiSEO** | Organic‑search optimisation | New page; content changes; scheduled audit | Craft meta tags & JSON‑LD; update sitemap & internal links; run SEO checks |
 | **OminiLogic** | JavaScript logic & algorithm tuning | New tool logic; bug/perf report | Optimise code; expand features; verify correctness & suggest simple tests |
+| **OminiOffline** | Offline readiness & caching validation | Build updates; service worker changes | Verify service worker caching, ensure local asset references & OpenMoji icons, run offline audits |
 
 > **Third‑party libraries only**: CDN links are used by default, but critical assets may be copied to `vendor/` for offline availability.
 
@@ -93,6 +94,7 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] List required Python packages for the asset manager in `requirements.txt` (assigned → **OminiReq**) (packages pinned)
 - [ ] Check that offline bundles and meta tags remain SEO friendly (assigned → **OminiSEO**)
 - [ ] Audit hashing and ZIP logic in `offline_asset_manager.py` (assigned → **OminiLogic**)
+- [ ] Run an offline audit of all pages (assigned → **OminiOffline**)
 
 ### ✅ Completed
 - [x] Redesign `index.html` with improved layout, accessibility and modern styling (assigned → **OminiUI**) (header, hero & footer refreshed)
