@@ -7,7 +7,6 @@ html5validator==0.4.2
 minify-html==0.16.4
 jsmin==3.0.1
 watchdog==6.0.0
-
 # SEO & link checking (aligned with pyseoanalyzer pins)
 pyseoanalyzer==2025.4.3
 beautifulsoup4==4.13.3
@@ -27,3 +26,4 @@ python-slugify==8.0.4
 
 # Testing
 pytest==8.4.0
+
