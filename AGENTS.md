@@ -26,6 +26,10 @@ via CDN links. When preparing an offline bundle or improving load times, downloa
 each CDN file into the `vendor/` directory and update the HTML to point to these
 local paths. `docs/external-libraries.md` lists the snippets to mirror.
 
+`vendor/cdn/` now holds **over 27 libraries**, each stored in its own subdirectory
+(for example `vendor/cdn/bootstrap/bootstrap.min.css`). When redesigning pages,
+agents must remove outdated CDN URLs and rely exclusively on these local copies.
+
 ### Additional Allowed Domains
 The following external domains are explicitly permitted for research and
 dependency retrieval when OminiReq evaluates new tools:
@@ -116,5 +120,6 @@ _No open tasks_
 - [x] Implement offline search with Fuse.js and generated index (assigned → **OminiLogic**) (Fuse integration and index build)
 - [x] Document search setup and usage (assigned → **OminiDoc**) (README updated)
 - [x] Ignore `dist/` in ESLint config to silence vendor build errors (assigned → **OminiReq**)
+- [x] Document vendor/cdn structure and CDN replacement policy (assigned → **OminiDoc**)
 
 ---
