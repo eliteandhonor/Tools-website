@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
   document.querySelectorAll('a[href$=".html"]').forEach(a=>{
-    a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey)return;e.preventDefault();gsap.to('body',{opacity:0,duration:0.4,onComplete:()=>{window.location=a.href;}});});
+    a.addEventListener('click',e=>{
+      if(e.ctrlKey||e.metaKey)return;
+      if(window.gsap){
+        e.preventDefault();
+        gsap.to('body',{opacity:0,duration:0.4,onComplete:()=>{window.location=a.href;}});
+      }
+    });
   });
   document.querySelectorAll('.tool-card').forEach(card=>{
     const arrow=card.querySelector('.fa-arrow-right');

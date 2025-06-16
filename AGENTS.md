@@ -135,4 +135,5 @@ dependency retrieval when OminiReq evaluates new tools:
 
 - [x] Updated esbuild and workbox-cli to latest versions to address security warnings (assigned → **OminiReq**)
 - [x] Integrate DaisyUI plugin with Tailwind and document theme setup (assigned → **OminiTheme**) (plugin added and config updated)
+- [x] Allow link navigation when GSAP fails to load (assigned → **OminiLogic**) (conditional fade animation in `mini.js`)
 ---
