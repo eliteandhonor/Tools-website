@@ -20,3 +20,18 @@ python offline_asset_manager.py [options]
 - `--headless` – Run without launching the Tkinter GUI.
 
 Run the script with `-h` to see all options. When launched without arguments the GUI opens by default.
+
+### Manifest format
+
+After a successful run the tool writes a `manifest.json` file inside the output directory. This file maps each downloaded path to its SHA-256 hash:
+
+```json
+{
+  "cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css": "1d6bf3...",
+  "cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js": "9a2215..."
+}
+```
+
+### ZIP output
+
+If you pass `--zip-output`, the entire output folder is also archived as `<output>.zip`. Using the default output directory this creates `assets_offline.zip` alongside the folder and `manifest.json`.
