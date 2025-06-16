@@ -17,6 +17,7 @@ For full offline capability, copy any CDN-hosted files—such as Google Fonts, B
 Images are replaced by emojis or inline SVG wherever possible to keep pages small and search-friendly.
 
 To fetch the OpenMoji PNGs referenced by `og:image` tags and the web manifest, run `scripts\download-openmoji.ps1` on Windows. This populates the local `assets/` directory so the site works offline.
+
 ## Link checking
 After running `npm run build`, execute `npm run check-links` to scan the `dist/` folder for broken internal links. This command uses [linkinator](https://github.com/JustinBeckwith/linkinator) and skips external URLs. If you do wish to verify external links, make sure any required network proxy is configured via the `HTTP_PROXY` or `HTTPS_PROXY` environment variables.
 
@@ -65,3 +66,4 @@ This project uses a set of "Omini agents" defined in `AGENTS.md` to keep docs, U
 | Color Picker | Color Picker - Copy HEX, RGB and HSL | Color Picker displays color codes instantly so designers can copy them. |
 | Dice Roller | Dice Roller - Roll Virtual Dice Instantly | Dice Roller generates random dice results with animation. |
 | Markdown Editor | Markdown Editor - Write Markdown with Live Preview | Markdown Editor converts Markdown to HTML in real time. |
+
