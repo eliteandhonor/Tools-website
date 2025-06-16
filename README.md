@@ -19,7 +19,7 @@ Images are replaced by emojis or inline SVG wherever possible to keep pages smal
 To fetch the OpenMoji PNGs referenced by `og:image` tags and the web manifest, run `scripts\download-openmoji.ps1` on Windows. This populates the local `assets/` directory so the site works offline.
 
 ## Offline CDN Asset Manager
-For a larger offline setup you can use the Python script `offline_asset_manager.py` to mirror CDN libraries automatically. It provides both a CLI and a Tkinter GUI for downloading assets into a chosen folder. See [docs/offline-cdn-manager.md](docs/offline-cdn-manager.md) for details and usage examples.
+For a larger offline setup you can use the Python script `offline_asset_manager.py` to mirror CDN libraries automatically. It provides both a CLI and a Tkinter GUI for downloading assets into a chosen folder. See [docs/offline-cdn-manager.md](docs/offline-cdn-manager.md) for details, including a JSON example for defining custom asset URLs.
 
 ## Link checking
 After running `npm run build`, execute `npm run check-links` to scan the `dist/` folder for broken internal links. This command uses [linkinator](https://github.com/JustinBeckwith/linkinator) and skips external URLs. If you do wish to verify external links, make sure any required network proxy is configured via the `HTTP_PROXY` or `HTTPS_PROXY` environment variables.
