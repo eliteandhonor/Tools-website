@@ -90,7 +90,7 @@ dependency retrieval when OminiReq evaluates new tools:
 
 - [ ] Document the new Offline CDN Asset Manager and its CLI usage (assigned → **OminiDoc**)
 - [ ] Review the Tkinter GUI for usability and accessibility (assigned → **OminiUI**)
-- [ ] List required Python packages for the asset manager in `requirements.txt` (assigned → **OminiReq**)
+- [x] List required Python packages for the asset manager in `requirements.txt` (assigned → **OminiReq**) (packages pinned)
 - [ ] Check that offline bundles and meta tags remain SEO friendly (assigned → **OminiSEO**)
 - [ ] Audit hashing and ZIP logic in `offline_asset_manager.py` (assigned → **OminiLogic**)
 
