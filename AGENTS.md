@@ -18,6 +18,7 @@
 | **OminiSEO** | Organic‑search optimisation | New page; content changes; scheduled audit | Craft meta tags & JSON‑LD; update sitemap & internal links; run SEO checks |
 | **OminiLogic** | JavaScript logic & algorithm tuning | New tool logic; bug/perf report | Optimise code; expand features; verify correctness & suggest simple tests |
 | **OminiOffline** | Offline readiness & caching validation | Build updates; service worker changes | Verify service worker caching, ensure local asset references & OpenMoji icons, run offline audits |
+| **OminiPy** | Python tooling & offline asset management | Python script updates; CLI/GUI feature | Maintain Python scripts like `download_assets.py`, implement offline asset manager features, ensure cross-platform use |
 
 > **Third‑party libraries only**: CDN links are used by default, but critical assets may be copied to `vendor/` for offline availability.
 
@@ -91,6 +92,12 @@ dependency retrieval when OminiReq evaluates new tools:
 
 - [ ] Check that offline bundles and meta tags remain SEO friendly (assigned → **OminiSEO**)
 - [ ] Run an offline audit of all pages (assigned → **OminiOffline**)
+- [ ] Resolve sidebar overlap and search bar alignment issues (assigned → **OminiUI**)
+- [ ] Run Lighthouse and pa11y audits for accessibility and performance (assigned → **OminiUI**)
+- [ ] Update Node dependencies and fix deprecation/security warnings (assigned → **OminiReq**)
+- [ ] Document CLI and GUI usage of `download_assets.py` (assigned → **OminiDoc**)
+- [ ] Implement manifest hashing and GUI features in `download_assets.py` (assigned → **OminiPy**)
+- [ ] Adjust sidebar toggle logic to prevent overlap bug (assigned → **OminiLogic**)
 
 ### ✅ Completed
 - [x] Redesign `index.html` with improved layout, accessibility and modern styling (assigned → **OminiUI**) (header, hero & footer refreshed)
