@@ -14,6 +14,7 @@
 |-------|---------|--------------|--------------------------|
 | **OminiDoc** | Project & user‑facing documentation | New/updated tool; request for docs | Keep README, guides, and keyword tables current; add usage instructions; log setup changes |
 | **OminiUI** | UI consistency, accessibility, performance | New HTML page or style tweak | Enforce shared design; refactor HTML/CSS; improve a11y & responsiveness |
+| **OminiTheme** | Tailwind/DaisyUI theme management | New design or theming request | Configure DaisyUI themes, update toggle logic and compile Tailwind styles |
 | **OminiReq** | Dependency and tooling advice | Need for new lib/tool; recurring code patterns | Recommend libraries/dev‑tools; update `requirements.txt` (or note npm/dev deps) |
 | **OminiSEO** | Organic‑search optimisation | New page; content changes; scheduled audit | Craft meta tags & JSON‑LD; update sitemap & internal links; run SEO checks |
 | **OminiLogic** | JavaScript logic & algorithm tuning | New tool logic; bug/perf report | Optimise code; expand features; verify correctness & suggest simple tests |
@@ -133,4 +134,5 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Migrate `.eslintignore` to `eslint.config.js`, update lint script and add `"type": "module"` to `package.json` (assigned → **OminiReq**)
 
 - [x] Updated esbuild and workbox-cli to latest versions to address security warnings (assigned → **OminiReq**)
+- [x] Integrate DaisyUI plugin with Tailwind and document theme setup (assigned → **OminiTheme**) (plugin added and config updated)
 ---

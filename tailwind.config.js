@@ -1,7 +1,8 @@
 /* eslint-env node */
-/* global module */
+import daisyui from 'daisyui';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './src/**/*.{html,js,ts,jsx,tsx,vue,md}',
     './public/**/*.html'
@@ -9,5 +10,8 @@ module.exports = {
   theme: {
     extend: {}
   },
-  plugins: []
+  plugins: [daisyui],
+  daisyui: {
+    themes: ['light', 'dark', 'cupcake']
+  }
 }
