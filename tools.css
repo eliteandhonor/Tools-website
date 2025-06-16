@@ -13,6 +13,8 @@
 }
 body{background:var(--mt-bg);color:var(--mt-text);}
 .font-inter{font-family:system-ui,Arial,sans-serif;}
+.bg-background{background-color:var(--mt-bg);}
+.text-text{color:var(--mt-text);}
 .bg-surface{background-color:var(--mt-surface);}
 .text-accent{color:var(--mt-accent);}
   .ring-accent\/50{--tw-ring-color:rgb(145 202 255 / 0.5);}

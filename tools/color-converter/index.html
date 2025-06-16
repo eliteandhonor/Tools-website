@@ -24,7 +24,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Color Converter","operatingSystem":"Any","applicationCategory":"Converter","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert HEX to RGB?","acceptedAnswer":{"@type":"Answer","text":"Enter a HEX value and click convert to see the RGB values."}},{"@type":"Question","name":"Can it convert to HSL?","acceptedAnswer":{"@type":"Answer","text":"Yes, the HSL equivalent displays alongside the RGB output."}},{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Once loaded the converter runs entirely in your browser."}},{"@type":"Question","name":"Is my color saved?","acceptedAnswer":{"@type":"Answer","text":"No, all conversions happen locally and no data is stored."}},{"@type":"Question","name":"Is it free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, the Color Converter is completely free."}}]}</script>
 </head>
-<body>
+<body class="bg-background text-text font-inter">
   <a class="skip-link" href="#main">Skip to content</a>
 <header class="tool-header"><div class="container"><a href="../../index.html" class="logo">MiniTools</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#127765;</button><h1><img src="../../assets/palette.png" alt="" class="emoji" width="24" height="24" role="presentation"> Color Converter</h1></div></header>
 <main id="main" data-aos="fade-in" class="container animate__animated animate__fadeIn">
@@ -34,7 +34,7 @@
 <button id="convert">Convert</button>
 <p id="rgb" aria-live="polite"></p>
 <p id="hsl"></p>
-<div id="preview" style="width:80px;height:80px;border-radius:8px;border:1px solid #ccc;margin-top:1rem"></div>
+<div id="preview" style="width:80px;height:80px;border-radius:8px;border:1px solid var(--mt-text);margin-top:1rem"></div>
 </div>
 <section id="related" class="related-tools">
 <h2>Related Tools</h2>
