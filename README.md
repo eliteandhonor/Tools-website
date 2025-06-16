@@ -4,6 +4,7 @@ This is a simplified demo of the MiniTools Universe static website. It provides 
 
 ## Build instructions
 The repository includes prebuilt `style.min.css` and `app.min.js`, so you can simply open `index.html` without any compilation. If you modify the CSS or JavaScript sources or need a production build, run `npm run build` to regenerate assets and copy pages into `dist/`.
+After upgrading, run `npm audit` to check for remaining advisories. This repo currently uses esbuild 0.25 and workbox-cli 7.3 to address recent security warnings.
 
 ## Site search
 Run `npm install` to fetch dev dependencies, including Fuse.js. `npm run build` will create `search-index.json` from `tools.csv` and copy it with `search.js` into `dist/`. The home page loads `search.js` and `fuse.min.js` from `vendor/cdn/` so you can quickly filter tools offline using the search box.

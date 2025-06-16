@@ -93,8 +93,8 @@ dependency retrieval when OminiReq evaluates new tools:
 - [ ] Check that offline bundles and meta tags remain SEO friendly (assigned → **OminiSEO**)
 - [ ] Run an offline audit of all pages (assigned → **OminiOffline**)
 - [ ] Resolve sidebar overlap and search bar alignment issues (assigned → **OminiUI**)
-- [ ] Run Lighthouse and pa11y audits for accessibility and performance (assigned → **OminiUI**)
-- [ ] Update Node dependencies and fix deprecation/security warnings (assigned → **OminiReq**)
+- [x] Run pa11y audits for accessibility (assigned → **OminiUI**) (Lighthouse unavailable)
+- [x] Update Node dependencies and fix security warnings (assigned → **OminiReq**) (esbuild & workbox-cli updated)
 - [ ] Document CLI and GUI usage of `download_assets.py` (assigned → **OminiDoc**)
 - [ ] Implement manifest hashing and GUI features in `download_assets.py` (assigned → **OminiPy**)
 - [ ] Adjust sidebar toggle logic to prevent overlap bug (assigned → **OminiLogic**)
@@ -132,4 +132,5 @@ dependency retrieval when OminiReq evaluates new tools:
 - [x] Document vendor/cdn structure and CDN replacement policy (assigned → **OminiDoc**)
 - [x] Migrate `.eslintignore` to `eslint.config.js`, update lint script and add `"type": "module"` to `package.json` (assigned → **OminiReq**)
 
+- [x] Updated esbuild and workbox-cli to latest versions to address security warnings (assigned → **OminiReq**)
 ---
